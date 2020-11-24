@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Posiljka>
+	<Posiljatelj>
+		<Sifra_posiljatelj>2</Sifra_posiljatelj>
+		<Naziv_posiljatelj>PROEKS d.o.o.</Naziv_posiljatelj>
+		<Naslov_posiljatelj>Letališka cesta 27A</Naslov_posiljatelj>
+		<Posta_posiljatelj>1000 Ljubljana</Posta_posiljatelj>
+	</Posiljatelj>
+	<Prejemnik>
+		<Sifra_prejemnik>4571</Sifra_prejemnik>
+		<Naziv_prejemnik>NERINVEST NEPREMIÈNINE, EKOLOGIJA,</Naziv_prejemnik>
+	</Prejemnik>
+	<Vsebina>
+		<Skladisce>40</Skladisce>
+		<Vrsta_transakcije>152</Vrsta_transakcije>
+		<Stevilka>20190201</Stevilka>
+		<Datum>12.Mar.19</Datum>
+		<Artikli>
+			<Ident>
+				<Sifra_ident>0012060</Sifra_ident>
+				<Naziv_ident>POLADYN 31 ECO 60 mm</Naziv_ident>
+				<Pakiranje_ident>24,96</Pakiranje_ident>
+				<EM_ident>kg</EM_ident>
+				<Kolicina_ident>199,68</Kolicina_ident>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002783000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002782000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002781000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002786000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002780000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002785000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002787000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>90PL009250POL313618002784000240POL313630123712200311181011</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0012060</Ident_serijske>
+					<Naziv_serijske>POLADYN 31 ECO 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24,96</Kolicina_serijske>
+				</Serijske>
+			</Ident>
+			<Ident>
+				<Sifra_ident>0019960</Sifra_ident>
+				<Naziv_ident>MINERVO ANFO, tip EO fi 60 mm</Naziv_ident>
+				<Pakiranje_ident>24</Pakiranje_ident>
+				<EM_ident>kg</EM_ident>
+				<Kolicina_ident>312</Kolicina_ident>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669037000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669042000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669041000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669040000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669039000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669038000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669044000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669043000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669048000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669047000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669046000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669045000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+				<Serijske>
+					<Barkoda_serijske>SI00204031915669036000</Barkoda_serijske>
+					<Tip_pakiranja_serijske>KARTON</Tip_pakiranja_serijske>
+					<Ident_serijske>0019960</Ident_serijske>
+					<Naziv_serijske>MINERVO ANFO, tip EO fi 60 mm</Naziv_serijske>
+					<Kolicina_serijske>24</Kolicina_serijske>
+				</Serijske>
+			</Ident>
+			<Ident>
+				<Sifra_ident>0020002</Sifra_ident>
+				<Naziv_ident>VRVICA DETONACIJSKA 12g Detonex</Naziv_ident>
+				<Pakiranje_ident>500</Pakiranje_ident>
+				<EM_ident>m</EM_ident>
+				<Kolicina_ident>250</Kolicina_ident>
+				<Serijske>
+					<Barkoda_serijske>90CH001250DX-12g--250m10180004758</Barkoda_serijske>
+					<Tip_pakiranja_serijske>IDENT SERIJSKA</Tip_pakiranja_serijske>
+					<Ident_serijske>0020002</Ident_serijske>
+					<Naziv_serijske>VRVICA DETONACIJSKA 12g Detonex</Naziv_serijske>
+					<Kolicina_serijske>250</Kolicina_serijske>
+				</Serijske>
+			</Ident>
+		</Artikli>
+	</Vsebina>
+</Posiljka>

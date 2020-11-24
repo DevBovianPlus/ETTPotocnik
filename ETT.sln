@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_Web", "ETT_Web\ETT_Web.csproj", "{96B10693-1F5A-4240-8524-AC0240C1C125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_DAL", "ETT_DAL\ETT_DAL.csproj", "{E4A7CED5-8F25-49C0-ADF5-531B485C9DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_Utilities", "ETT_Utilities\ETT_Utilities.csproj", "{9DD1AC5F-3D8D-482C-B046-486FBAC18F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_WebAPI", "ETT_WebAPI\ETT_WebAPI.csproj", "{234BAE01-05E0-4667-882B-C1AC52CDEEBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_UtilityService", "ETT_UtilityService\ETT_UtilityService.csproj", "{17B4241E-9C8C-417F-A719-CF756B3C7EB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96B10693-1F5A-4240-8524-AC0240C1C125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B10693-1F5A-4240-8524-AC0240C1C125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B10693-1F5A-4240-8524-AC0240C1C125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B10693-1F5A-4240-8524-AC0240C1C125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A7CED5-8F25-49C0-ADF5-531B485C9DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A7CED5-8F25-49C0-ADF5-531B485C9DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A7CED5-8F25-49C0-ADF5-531B485C9DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A7CED5-8F25-49C0-ADF5-531B485C9DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD1AC5F-3D8D-482C-B046-486FBAC18F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD1AC5F-3D8D-482C-B046-486FBAC18F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD1AC5F-3D8D-482C-B046-486FBAC18F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD1AC5F-3D8D-482C-B046-486FBAC18F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{234BAE01-05E0-4667-882B-C1AC52CDEEBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234BAE01-05E0-4667-882B-C1AC52CDEEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234BAE01-05E0-4667-882B-C1AC52CDEEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234BAE01-05E0-4667-882B-C1AC52CDEEBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FF0915C-FE10-440B-8138-D4179FEE0CBC}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.bovianplus.si/tfs/tfscollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ETT_Web\\ETT_Web.csproj
+		SccProjectName1 = ETT_Web
+		SccLocalPath1 = ETT_Web
+		SccProjectUniqueName2 = ETT_DAL\\ETT_DAL.csproj
+		SccProjectName2 = ETT_DAL
+		SccLocalPath2 = ETT_DAL
+		SccProjectUniqueName3 = ETT_Utilities\\ETT_Utilities.csproj
+		SccProjectName3 = ETT_Utilities
+		SccLocalPath3 = ETT_Utilities
+		SccProjectUniqueName4 = ETT_WebAPI\\ETT_WebAPI.csproj
+		SccProjectName4 = ETT_WebAPI
+		SccLocalPath4 = ETT_WebAPI
+		SccProjectUniqueName5 = ETT_UtilityService\\ETT_UtilityService.csproj
+		SccProjectName5 = ETT_UtilityService
+		SccLocalPath5 = ETT_UtilityService
+	EndGlobalSection
+EndGlobal

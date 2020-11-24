@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Welcome.master.cs" Inherits="ETT_Web.MasterPages.Welcome" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="../Content/Content.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function PrepareTimeValue(value) {
+            if (value < 10)
+                value = "0" + value;
+            return value;
+        }
+        function UpdateTime(s, e) {
+            var dateTime = new Date();
+            var timeString = PrepareTimeValue(dateTime.getHours()) + ":" + PrepareTimeValue(dateTime.getMinutes()) + ":" +
+                PrepareTimeValue(dateTime.getSeconds());
+            clientLblClock.SetText(GetDateFormat() + ', ' + timeString);
+        }
+
+        var weekDay = ['Ned', 'Pon', 'Tor', 'Sre', 'Čet', 'Pet', 'Sob'];
+        var month = ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Avg', 'Sep', 'Okt', 'Nov', 'Dec'];
+
+        var date = new Date();
+        function GetDateFormat() {
+            return weekDay[date.getDay()] + ' ' + date.getDate() + ' ' + month[date.getMonth()] + ' ' + date.getFullYear();
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #728699">
+    <script src='<%= ResolveUrl("~/Scripts/CommonJS.js") %>'></script>
+    <form id="form1" runat="server">
+        <header class="container-fluid" style="background-color: #667C90">
+            <div class="d-flex flex-row p-2 justify-content-around flex-wrap align-items-center">
+                <dx:ASPxLabel ID="lblClock" runat="server" Text="" ClientInstanceName="clientLblClock" Font-Bold="true" ForeColor="White" ></dx:ASPxLabel>
+                <dx:ASPxTimer ID="TimerClock" runat="server" ClientInstanceName="clientClock" Interval="1000">
+                    <ClientSideEvents Init="UpdateTime" Tick="UpdateTime" />
+                </dx:ASPxTimer>
+                <a href ="../Home.aspx"><img src="../Images/potocnik_logo_tr.png" width="200" /></a>
+                <img src="../Images/lock.png" width="32" height="32" alt="#"/>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="modal fade" id="warningButtonModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div><i class="material-icons" style="font-size: 48px; color: white">error_outline</i></div>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title" id="warningButtonModalTitle"></h5>
+                        <p id="warningButtonModalBody"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zapri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer style="padding: 10px 5px; background-color: #fff; position: absolute; right: 0; bottom: 0; left: 0; text-align: center;">
+            Copyright © 2019 <span style="color: #3C8DBC">Bovianplus</span>
+        </footer>
+    </form>
+</body>
+</html>
