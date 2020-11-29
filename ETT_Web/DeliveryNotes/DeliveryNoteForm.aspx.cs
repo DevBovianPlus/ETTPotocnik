@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -205,7 +206,7 @@ namespace ETT_Web.DeliveryNotes
 
         #region Common
 
-        private void ClearSessionsAndRedirect(bool isIDDeleted = false, bool exitFormPage = true)
+        private void ClearSessionsAndRedirect(bool isIDDeleted = false, bool exitFormPage = true, bool showProcessingNotification = false)
         {
             string redirectString = "";
             List<QueryStrings> queryStrings = new List<QueryStrings> {
@@ -218,6 +219,11 @@ namespace ETT_Web.DeliveryNotes
             {
                 queryStrings.Insert(0, new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = ((int)Enums.UserAction.Edit).ToString() });
                 redirectString = GenerateURI("DeliveryNoteForm.aspx", queryStrings);
+            }
+            else if (exitFormPage && showProcessingNotification)
+            {
+                queryStrings.Insert(0, new QueryStrings() { Attribute = Enums.QueryStringName.notifyProcessing.ToString(), Value = "true" });
+                redirectString = GenerateURI("DeliveryNoteTable.aspx", queryStrings);
             }
             else
                 redirectString = GenerateURI("DeliveryNoteTable.aspx", queryStrings);
@@ -452,20 +458,25 @@ namespace ETT_Web.DeliveryNotes
                 }
                 string physicalPath = Server.MapPath(document.Url);
 
-                ParseXML(physicalPath);
-            }
-            this.Master.NavigationBarMain.DataBind();
-
-        }
-
-        private void ParseXML(string xmlPath)
-        {
-            try
-            {
                 //TODO: Shrani DeliveryNote in nastavi na status In_Process
                 GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.In_Process);
                 AddOrEditEntityObject((userAction == (int)Enums.UserAction.Add ? true : false));
+                int userId = PrincipalHelper.GetUserID();
+                Task.Run(() =>
+                {
+                    ParseXML(physicalPath, userId);
+                    //TODO obvestiti uproabnika o daljšem obdobju parsanja...glej status.
+                });
 
+            }
+            this.Master.NavigationBarMain.DataBind();
+            ClearSessionsAndRedirect(false, true, true);
+        }
+
+        private void ParseXML(string xmlPath, int userID)
+        {
+            try
+            {
                 XDocument doc = XDocument.Load(new StreamReader(xmlPath, Encoding.UTF8));
                 int locationID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupLocation));
                 int supplierID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupSupplier));
@@ -488,10 +499,10 @@ namespace ETT_Web.DeliveryNotes
                     atomes = SetHierarchyOfAtomes(doc.Root.Element(Enums.XMLTagName.Units.ToString()), list);
                 }
 
-                deliveryNoteRepo.SaveSummaryToDeliveryNoteItem(topLevelList, deliveryNoteID, locationID, supplierID, atomes, PrincipalHelper.GetUserID());
+                deliveryNoteRepo.SaveSummaryToDeliveryNoteItem(topLevelList, deliveryNoteID, locationID, supplierID, atomes, userID);
 
-                deliveryNoteRepo.SaveInventoryDeliveries(atomes, deliveryNoteID, locationID, PrincipalHelper.GetUserID());
-                GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.Completed);
+                deliveryNoteRepo.SaveInventoryDeliveries(atomes, deliveryNoteID, locationID, userID);
+                //GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.Completed);
                 ASPxGridViewDeliveryNoteItem.DataBind();
             }
             catch (Exception ex)
@@ -532,31 +543,77 @@ namespace ETT_Web.DeliveryNotes
             int unitsCount = 0;
             List<SummaryItemModel> topLevelItems = new List<SummaryItemModel>();
 
-            foreach (var item in summaryItems)
+            var repacking = summaryItems.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
+            if (repacking == null)
             {
-                XElement element = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).FirstOrDefault();
-                XElement searchElement = element;
-                if (searchElement != null)
+                foreach (var item in summaryItems)
                 {
-                    while (true)
+                    XElement element = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).FirstOrDefault();
+                    XElement searchElement = element;
+                    if (searchElement != null)
                     {
-                        if (searchElement.Name == unitsNode)
-                            unitsCount++;
+                        while (true)
+                        {
+                            if (searchElement.Name == unitsNode)
+                                unitsCount++;
 
-                        if (searchElement.Name == rootNode)
-                            break;
+                            if (searchElement.Name == rootNode)
+                                break;
 
-                        searchElement = searchElement.Parent;
+                            searchElement = searchElement.Parent;
+                        }
+
+                        if (unitsCount == 1)
+                        {
+                            int elementCount = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).Count();
+                            item.ProductItemCount = item.ItemQuantity * elementCount;
+                            topLevelItems.Add(item);
+                        }
+
+                        unitsCount = 0;
                     }
-
-                    if (unitsCount == 1)
+                }
+            }
+            else
+            {
+                int maxNum = 0;
+                string maxPackagingLevel = "00";
+                //želimo pridobiti drugi največu packaging level, da bomo lahko zračunali količine in preverili če je v vsem repackingu isti izdelek
+                foreach (var item in summaryItems)
+                {
+                    //izpustimo repacking summaryItem
+                    if (item.SID != repacking.SID)
                     {
-                        int elementCount = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).Count();
-                        item.ProductItemCount = item.ItemQuantity * elementCount;
-                        topLevelItems.Add(item);
+                        var level = CommonMethods.ParseInt(item.PackagingLevel);
+                        if (level > maxNum)
+                        {
+                            maxNum = level;
+                            maxPackagingLevel = item.PackagingLevel;
+                        }
                     }
+                }
 
-                    unitsCount = 0;
+                //pridobimo vse summaryItems ki imajo drugi največji packaging level
+                var packagingLevelSummaryItems = summaryItems.Where(si => si.PackagingLevel == maxPackagingLevel).ToList();
+                //pridobimo ime izdelka (vzamemo naziv do prvega presledka)
+                string productName = packagingLevelSummaryItems.First().ProducerProductName.Substring(0, packagingLevelSummaryItems.First().ProducerProductName.IndexOf(" "));
+                //pridobimo število summay itemsoc ki vsebujejo to ime izdelka
+                int summaryItemsCount = packagingLevelSummaryItems.Where(si => si.ProducerProductName.Contains(productName)).Count();
+
+                //če je summaryItemsCount enako število objektov v packagingLevelSummaryItems potem vemo da je v Paketu Repacking samo en izdelek
+                if (summaryItemsCount == packagingLevelSummaryItems.Count)
+                {
+                    //TODO: izračunamo količino (ItemQuantity * število paketov - packagingLevelSummaryItems.Count)
+                    //V deliveryNoteItem shranimo samo en zapis ki je Repacking
+                    repacking.ProducerProductName = packagingLevelSummaryItems.First().ProducerProductName;
+                    repacking.ProductItemCount = packagingLevelSummaryItems.Sum(pis => pis.ItemQuantity);
+                    repacking.Notes = "Repacking dobavnica z enakim izdelkom";
+                    topLevelItems.Add(repacking);
+                }
+                else
+                {
+                    //Obstaja več izdelkov v istem paketu (Repacking)
+                    //V deliveryNoteItem shranimo toliko zapisev kot je različnih izdelkov. UID bodo vseboavli enako, razlikovalo se bo samo naziv izdelka, količina,...
                 }
             }
 

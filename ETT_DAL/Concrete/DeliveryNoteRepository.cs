@@ -212,7 +212,7 @@ namespace ETT_DAL.Concrete
                         item.SID = obj.SID;
 
                         item.SupplierProductCode = obj.ProducerProductCode;
-                        item.SupplierProductName = obj.ProducerProductName.Substring(0, obj.ProducerProductName.IndexOf(" ") + 1);
+                        item.SupplierProductName = obj.ProducerProductName.Substring(0, obj.ProducerProductName.IndexOf(" "));
 
                         //poiščemo artikel v šifrantu po imenu če obstaja. Če ne dodamo novega
                         var productItem = productRepo.GetProductByName(item.SupplierProductName, uow);
@@ -274,6 +274,7 @@ namespace ETT_DAL.Concrete
                         item.PackagingLevel = obj.PackagingLevel;
                         item.ProductionDate = obj.ProductionDate;
                         item.ProductItemCount = obj.ProductItemCount;
+                        item.Notes = obj.Notes;
 
                         item.tsUpdate = DateTime.Now;
                         item.tsUpdateUserID = userID;
