@@ -26,7 +26,7 @@ namespace ETT_DAL.Abstract
         List<DeliveryNoteItem> GetDeliveryNoteItemsByDeliveryNoteID(int dnId, Session currentSession = null);
 
         //InventoryDeliveries
-        void SaveInventoryDeliveries(List<Item> model, int deliveryNoteID, int locationID, int userID = 0);
+        void SaveInventoryDeliveries(List<Item> model, int deliveryNoteID, int locationID, int userID = 0, bool isRepacking = false);
         List<PackageItem> GroupByPackagesUIDs(int deliveryNoteItemID, Session currentSession = null);
 
         DeliveryNoteStatus GetDeliveryNoteStatusByCode(Enums.DeliveryNoteStatus status, Session currentSession = null);

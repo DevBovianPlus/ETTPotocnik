@@ -212,7 +212,7 @@ namespace ETT_DAL.Concrete
                         item.SID = obj.SID;
 
                         item.SupplierProductCode = obj.ProducerProductCode;
-                        item.SupplierProductName = obj.ProducerProductName.Substring(0, obj.ProducerProductName.IndexOf(" "));
+                        item.SupplierProductName = obj.ProducerProductName.Contains(" ") ? obj.ProducerProductName.Substring(0, obj.ProducerProductName.IndexOf(" ")) : obj.ProducerProductName;
 
                         //poiščemo artikel v šifrantu po imenu če obstaja. Če ne dodamo novega
                         var productItem = productRepo.GetProductByName(item.SupplierProductName, uow);
@@ -318,7 +318,7 @@ namespace ETT_DAL.Concrete
 
         //InventoryDeliveries
 
-        public void SaveInventoryDeliveries(List<Item> model, int deliveryNoteID, int locationID, int userID = 0)
+        public void SaveInventoryDeliveries(List<Item> model, int deliveryNoteID, int locationID, int userID = 0, bool isRepacking = false)
         {
             try
             {
@@ -332,7 +332,7 @@ namespace ETT_DAL.Concrete
                         InventoryDeliveries item = new InventoryDeliveries(uow);
                         item.InventoryDeliveriesID = 0;
 
-                        string topLevelPackageSID = GetTopLevelSID(obj);
+                        string topLevelPackageSID = GetTopLevelSID(obj, isRepacking);
                         var deliveryNoteItem = deliveryNoteItems.Where(dni => !String.IsNullOrEmpty(topLevelPackageSID) && dni.SID == topLevelPackageSID).FirstOrDefault();
                         item.DeliveryNoteItemID = deliveryNoteItem;
 
@@ -434,10 +434,13 @@ namespace ETT_DAL.Concrete
             }
         }
 
-        private string GetTopLevelSID(Item item)
+        private string GetTopLevelSID(Item item, bool isRepacking)
         {
+            //če ima dobavnica summaryItem z nazivom Repacking potem moremo izbrati naslednji toplelvel item ki je za tem repacking-om
+            int index = isRepacking ? 1 : 0;
+
             //Ob sestavljanju stringa packagesIDs smo top level package postavili na prvo mesto stringa - glej DeliveryNoteForm, metoda ConstructAtomeHierarchySID
-            return String.IsNullOrEmpty(item.PackagesSIDs) ? "" : item.PackagesSIDs.Split(CommonMethods.PackageDelimiter)[0].Trim();
+            return String.IsNullOrEmpty(item.PackagesSIDs) ? "" : item.PackagesSIDs.Split(CommonMethods.PackageDelimiter)[index].Trim();
 
 
         }

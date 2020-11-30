@@ -483,6 +483,7 @@ namespace ETT_Web.DeliveryNotes
                 var rootName = doc.Root.Name;
                 List<SummaryItemModel> topLevelList = new List<SummaryItemModel>();
                 List<Item> atomes = new List<Item>();
+                bool isRepacking = false;
 
                 if (rootName == Enums.XMLTagName.Posiljka.ToString())
                 {
@@ -494,14 +495,16 @@ namespace ETT_Web.DeliveryNotes
                 {
                     var obj = doc.Root.Element(Enums.XMLTagName.SummaryItems.ToString());
                     List<SummaryItemModel> list = GetSummaryItems(obj);
+                    var repacking = list.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
+                    isRepacking = repacking == null ? false : true;
 
-                    topLevelList = FindTopLevelSummaryItems(list, doc.Root.Element(Enums.XMLTagName.Units.ToString()));
+                    topLevelList = FindTopLevelSummaryItems(list, doc.Root.Element(Enums.XMLTagName.Units.ToString()), isRepacking);
                     atomes = SetHierarchyOfAtomes(doc.Root.Element(Enums.XMLTagName.Units.ToString()), list);
                 }
 
                 deliveryNoteRepo.SaveSummaryToDeliveryNoteItem(topLevelList, deliveryNoteID, locationID, supplierID, atomes, userID);
 
-                deliveryNoteRepo.SaveInventoryDeliveries(atomes, deliveryNoteID, locationID, userID);
+                deliveryNoteRepo.SaveInventoryDeliveries(atomes, deliveryNoteID, locationID, userID, isRepacking);
                 //GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.Completed);
                 ASPxGridViewDeliveryNoteItem.DataBind();
             }
@@ -536,15 +539,15 @@ namespace ETT_Web.DeliveryNotes
             return list;
         }
 
-        private List<SummaryItemModel> FindTopLevelSummaryItems(List<SummaryItemModel> summaryItems, XElement rootUnits)
+        private List<SummaryItemModel> FindTopLevelSummaryItems(List<SummaryItemModel> summaryItems, XElement rootUnits, bool isDeloveryNoteRepacking)
         {
             string unitsNode = Enums.XMLTagName.Units.ToString();
             string rootNode = Enums.XMLTagName.Shipment.ToString();
             int unitsCount = 0;
             List<SummaryItemModel> topLevelItems = new List<SummaryItemModel>();
 
-            var repacking = summaryItems.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
-            if (repacking == null)
+            
+            if (!isDeloveryNoteRepacking)
             {
                 foreach (var item in summaryItems)
                 {
@@ -597,7 +600,7 @@ namespace ETT_Web.DeliveryNotes
                 var packagingLevelSummaryItems = summaryItems.Where(si => si.PackagingLevel == maxPackagingLevel).ToList();
                 //pridobimo ime izdelka (vzamemo naziv do prvega presledka)
                 string productName = packagingLevelSummaryItems.First().ProducerProductName.Substring(0, packagingLevelSummaryItems.First().ProducerProductName.IndexOf(" "));
-                //pridobimo število summay itemsoc ki vsebujejo to ime izdelka
+                //pridobimo število summary itemsov ki vsebujejo to ime izdelka
                 int summaryItemsCount = packagingLevelSummaryItems.Where(si => si.ProducerProductName.Contains(productName)).Count();
 
                 //če je summaryItemsCount enako število objektov v packagingLevelSummaryItems potem vemo da je v Paketu Repacking samo en izdelek
@@ -614,6 +617,26 @@ namespace ETT_Web.DeliveryNotes
                 {
                     //Obstaja več izdelkov v istem paketu (Repacking)
                     //V deliveryNoteItem shranimo toliko zapisev kot je različnih izdelkov. UID bodo vseboavli enako, razlikovalo se bo samo naziv izdelka, količina,...
+                    //pridobimo seznam različnih izdelkov
+                    var distinctProducts = packagingLevelSummaryItems.GroupBy(p => p.ProducerProductName.Substring(0, p.ProducerProductName.IndexOf(" "))).ToList();
+                    int productCount = 1;
+                    foreach (var item in distinctProducts)
+                    {
+                        var newTopLevelItem = new SummaryItemModel();
+                        newTopLevelItem.CountOfTradeUnits = item.Count();
+                        newTopLevelItem.PSN = item.Select(i=>i.PSN).First();
+                        newTopLevelItem.SID = item.Select(i => i.SID).First();
+                        newTopLevelItem.ItemQuantity = 0;
+                        newTopLevelItem.Notes = String.Format("Repacking dobavnica z različnimi izdelki - ({0}/{1})", productCount, distinctProducts.Count);
+                        newTopLevelItem.PackagingLevel = repacking.PackagingLevel;
+                        newTopLevelItem.ProducerProductCode = repacking.ProducerProductCode;
+                        newTopLevelItem.ProducerProductName = item.Key;
+                        newTopLevelItem.UnitOfMeasure = repacking.UnitOfMeasure;
+                        newTopLevelItem.ProductItemCount = item.Sum(i => i.ItemQuantity);
+                        productCount++;
+
+                        topLevelItems.Add(newTopLevelItem);
+                    }
                 }
             }
 
