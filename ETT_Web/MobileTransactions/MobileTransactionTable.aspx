@@ -8,6 +8,12 @@
     <script type="text/javascript">
 
         function CallbackPanelMobileTransaction_EndCallback(s, e) {
+            LoadingPanel.Hide();
+
+            if (s.cpErrorDifferentBuyers != "" && s.cpErrorDifferentBuyers != undefined) {
+                ShowModal('Preveč kupcev!', 'Na posamezni izdajnici je lahko samo en kupec!')
+                delete (s.cpErrorDifferentBuyers);
+            }
         }
 
         function HandleUserAction(s, e) {
@@ -38,6 +44,32 @@
             }
         }
 
+        function IsBuyer_SelectionChanged(s, e)
+        {
+            if(gridMobileTransaction.GetSelectedRowCount() > 0)
+                btnTransferToIssueDocument.SetVisible(true);
+            else
+                btnTransferToIssueDocument.SetVisible(false);
+        }
+
+        function TransferMobileTransactionsToIssueDocument_Click(s, e)
+        {
+            LoadingPanel.Show();
+            CallbackPanelMobileTransaction.PerformCallback("TransferToIssueDocument");
+        }
+
+         function ShowModal(title, message, yeNoModal) {
+            $('.modal-title').empty();
+            $('.modal-title').append(title);
+
+            $('.modal-body-desc').empty();
+            $('.modal-body-desc').append(message);
+
+            if (yeNoModal)
+                $('#questionModal').modal("show");
+            else
+                $('#modal').modal("show");
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
@@ -48,8 +80,8 @@
             <dx:PanelContent>
                 <dx:ASPxGridView ID="ASPxGridViewMobileTransaction" Width="100%" runat="server" KeyFieldName="MobileTransactionID" DataSourceID="XpoDSMobileTransaction"
                     CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridMobileTransaction" OnCustomColumnDisplayText="ASPxGridViewMobileTransaction_CustomColumnDisplayText"
-                    OnDataBound="ASPxGridViewMobileTransaction_DataBound ">
-                    <ClientSideEvents RowDblClick="HandleUserAction" />
+                    OnDataBound="ASPxGridViewMobileTransaction_DataBound" OnCommandButtonInitialize="ASPxGridViewMobileTransaction_CommandButtonInitialize">
+                    <ClientSideEvents RowDblClick="HandleUserAction" SelectionChanged="IsBuyer_SelectionChanged" />
                     <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
                         AllowHideDataCellsByColumnMinWidth="true">
                     </SettingsAdaptivity>
@@ -73,6 +105,7 @@
 
                     <Columns>
                         
+                        <dx:GridViewCommandColumn ShowSelectCheckbox="true" Caption="Izberi" Width="50px" />
 
                         <dx:GridViewDataTextColumn Caption="Prenešeno" FieldName="InventoryDeliveriesLocationID.NeedsMatching"  MinWidth="70" MaxWidth="250" Width="2%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
@@ -100,6 +133,8 @@
                         <dx:GridViewDataTextColumn Caption="Koda artikla" FieldName="UIDCode" MinWidth="150" MaxWidth="250" Width="5%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID.LocationToID.IsBuyer" Visible="false"  MinWidth="200" MaxWidth="250" Width="5%">
+                        </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:ASPxGridView>
 
@@ -124,6 +159,13 @@
                             <Image Url="../Images/trash.png" UrlHottracked="../Images/trashHover.png" />
                             <ClientSideEvents Click="HandleUserAction" />
                         </dx:ASPxButton>
+
+                        <dx:ASPxButton ID="btnTransferToIssueDocument" runat="server" Text="Prenesi na izdajnico" AutoPostBack="false"
+                            Height="25" Width="50" ClientInstanceName="btnTransferToIssueDocument" ClientVisible="false">
+                            <Paddings PaddingLeft="10" PaddingRight="10" />
+                            <Image Url="../Images/trash.png" UrlHottracked="../Images/trashHover.png" />
+                            <ClientSideEvents Click="TransferMobileTransactionsToIssueDocument_Click" />
+                        </dx:ASPxButton>
                     </div>
                     <div class="col-sm-3 text-right">
                         <dx:ASPxButton ID="btnAdd" runat="server" Text="Dodaj" AutoPostBack="false"
@@ -146,6 +188,24 @@
     </dx:ASPxCallbackPanel>
 
     <dx:XpoDataSource ID="XpoDSMobileTransaction" runat="server" ServerMode="true"
-        DefaultSorting="MobileTransactionID DESC" TypeName="ETT_DAL.ETTPotocnik.MobileTransaction">
+        DefaultSorting="InventoryDeliveriesLocationID.LocationToID.IsBuyer DESC" TypeName="ETT_DAL.ETTPotocnik.MobileTransaction">
     </dx:XpoDataSource>
+
+    <div id="modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: yellow; border-top-left-radius: 6px; border-top-right-radius: 6px;">
+                    <div class="w-100"><i class="material-icons" style="font-size: 48px; color: orange">warning</i></div>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-body-desc"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </asp:Content>

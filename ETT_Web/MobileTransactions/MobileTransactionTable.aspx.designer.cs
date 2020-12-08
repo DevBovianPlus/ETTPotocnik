@@ -49,6 +49,15 @@ namespace ETT_Web.MobileTransactions {
         protected global::DevExpress.Web.ASPxButton btnDelete;
         
         /// <summary>
+        /// btnTransferToIssueDocument control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnTransferToIssueDocument;
+        
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>

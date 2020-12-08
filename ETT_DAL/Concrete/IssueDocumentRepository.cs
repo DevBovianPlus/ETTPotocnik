@@ -15,6 +15,8 @@ namespace ETT_DAL.Concrete
     {
         Session session;
         ISettingsRepository settingsRepo;
+        IClientRepository clientRepo;
+        IProductRepository productRepo;
 
         public IssueDocumentRepository(Session session = null)
         {
@@ -24,6 +26,8 @@ namespace ETT_DAL.Concrete
                 this.session = session;
 
             settingsRepo = new SettingsRepository(session);
+            clientRepo = new ClientRepository(session);
+            productRepo = new ProductRepository(session);
         }
 
         public IssueDocument GetIssueDocumentByID(int ID, Session currentSession = null)
@@ -239,6 +243,61 @@ namespace ETT_DAL.Concrete
                 CommonMethods.getError(ex, ref error);
                 throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_37, error, CommonMethods.GetCurrentMethodName()));
             }
+        }
+
+        public int CreateIssueDocumentFromMobileTransactions(List<int> mobileTransactionsID, int userID)
+        {
+            XPQuery<MobileTransaction> mobileTrans = session.Query<MobileTransaction>();
+
+            var mobileTransactions = mobileTrans.Where(mt => mobileTransactionsID.Any(mti => mti == mt.MobileTransactionID)).ToList();
+            if (mobileTransactions != null && mobileTransactions.Count > 0)
+            {
+                //from locationID we get buyer
+                IssueDocument document = new IssueDocument(session);
+
+                document.IssueDocumentID = 0;
+                document.IssueNumber = GetNextIssueDocumentNumber();
+                document.BuyerID = null;
+                document.IssueStatus = GetIssueDocumentStatusByCode(Enums.IssueDocumentStatus.DELOVNA);
+                document.IssueDate = DateTime.Now;
+                document.Name = "Izdaja materiala za kupca: ";//TODO: naziv kupca
+                document.Notes = "Prenos iz mobilnih transkacij";
+                document.InternalDocument = "000000";
+                document.InvoiceNumber = DateTime.Now.Year.ToString() + "/000000";
+                document.tsInsert = DateTime.Now;
+                document.tsInsertUserID = userID;
+                document.tsUpdate = DateTime.Now;
+                document.tsUpdateUserID = userID;
+
+                document.Save();
+                using (UnitOfWork uow = XpoHelper.GetNewUnitOfWork())
+                {
+                    var issueDocument = GetIssueDocumentByID(document.IssueDocumentID, uow);
+                    IssueDocumentPosition pos = null;
+                    foreach (var item in mobileTransactions)
+                    {
+                        pos = new IssueDocumentPosition(uow);
+
+                        pos.IssueDocumentID = issueDocument;
+                        pos.SupplierID = clientRepo.GetClientByID(item.SupplierID.ClientID, uow);
+                        pos.Quantity = item.Quantity;
+                        pos.UID250 = item.UIDCode;
+                        pos.Name = item.ProductID.Name;
+                        pos.Notes = "Prenos iz mobilnih transakcij";
+                        pos.tsInsert = DateTime.Now;
+                        pos.tsInsertUserID = userID;
+                        pos.tsUpdate = DateTime.Now;
+                        pos.tsUpdateUserID = userID;
+                        pos.ProductID = productRepo.GetProductByID(item.ProductID.ProductID, uow);
+                    }
+
+                    uow.CommitChanges();
+                }
+
+                return document.IssueDocumentID;
+            }
+
+            return -1;
         }
     }
 }
