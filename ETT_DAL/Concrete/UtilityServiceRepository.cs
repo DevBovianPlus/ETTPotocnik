@@ -64,10 +64,11 @@ namespace ETT_DAL.Concrete
             {
                 UnitOfWork uow = XpoHelper.GetNewUnitOfWork();
                 XPQuery<InventoryDeliveries> id = uow.Query<InventoryDeliveries>();
-
+                int iCnt = 0;
                 var transactionForMatching = GetInventoryDeliveryLocationsThatNeedsMatching(uow);
                 foreach (var item in transactionForMatching)
                 {
+                    iCnt++;
                     var uid = item.MobileTransactions.FirstOrDefault().UIDCode;
                     var deliveries = id.Where(inv => inv.PackagesUIDs.Contains(uid)).ToList();
 
@@ -76,6 +77,7 @@ namespace ETT_DAL.Concrete
                         MatchDeliveriesAndTransactions(item, deliveries, uow);
                         item.NeedsMatching = false;
                     }
+                    uow.CommitChanges();
                 }
 
                 uow.CommitChanges();
