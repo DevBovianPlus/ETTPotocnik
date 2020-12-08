@@ -1,9 +1,12 @@
 ﻿using DevExpress.Web;
 using DevExpress.Xpo;
+using ETT_DAL.Abstract;
+using ETT_DAL.Concrete;
 using ETT_DAL.Helpers;
 using ETT_Utilities.Common;
 using ETT_Web.Infrastructure;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +18,7 @@ namespace ETT_Web.MobileTransactions
     public partial class MobileTransactionTable : ServerMasterPage
     {
         Session session;
+        IIssueDocumentRepository issueDocumentRepo;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -24,6 +28,7 @@ namespace ETT_Web.MobileTransactions
             XpoDSMobileTransaction.Session = session;
 
             ASPxGridViewMobileTransaction.Settings.GridLines = GridLines.Both;
+            issueDocumentRepo = new IssueDocumentRepository(session);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,6 +41,25 @@ namespace ETT_Web.MobileTransactions
             if (e.Parameter == "RefreshGrid")
             {
                 ASPxGridViewMobileTransaction.DataBind();
+            }
+            else if (e.Parameter == "TransferToIssueDocument")
+            {
+                //pridobimo seznam izbranih lokacij
+                List<string> selectedItems = ASPxGridViewMobileTransaction.GetSelectedFieldValues("InventoryDeliveriesLocationID.LocationToID.Name").OfType<string>().ToList();
+
+                //preverimi če imajo vse izbrane transkacije enakega kupca
+                int count = selectedItems.Count(si => si == selectedItems[0]);
+                if (selectedItems.Count == count)
+                {
+                    List<int> selectedItemsID = ASPxGridViewMobileTransaction.GetSelectedFieldValues("MobileTransactionID").OfType<int>().ToList();
+                    issueDocumentRepo.CreateIssueDocumentFromMobileTransactions(selectedItemsID, PrincipalHelper.GetUserID());
+                }
+                else
+                {
+                    CallbackPanelMobileTransaction.JSProperties["cpErrorDifferentBuyers"] = true;
+                    ASPxGridViewMobileTransaction.Selection.UnselectAll();
+                    return;
+                }
             }
             else
             {
@@ -68,6 +92,16 @@ namespace ETT_Web.MobileTransactions
                 else
                     e.DisplayText = "DA";
             }
+        }
+
+        protected void ASPxGridViewMobileTransaction_CommandButtonInitialize(object sender, ASPxGridViewCommandButtonEventArgs e)
+        {
+            object isBuyer = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.LocationToID.IsBuyer");
+
+            if (CommonMethods.ParseBool(isBuyer))
+                e.Visible = true;
+            else
+                e.Visible = false;
         }
     }
 }

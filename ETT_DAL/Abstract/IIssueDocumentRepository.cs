@@ -23,5 +23,7 @@ namespace ETT_DAL.Abstract
 
         IssueDocumentStatus GetIssueDocumentStatusByID(int ID, Session currentSession = null);
         IssueDocumentStatus GetIssueDocumentStatusByCode(object statusCode, Session currentSession = null);
+
+        int CreateIssueDocumentFromMobileTransactions(List<int> mobileTransactionsID, int userID);
     }
 }

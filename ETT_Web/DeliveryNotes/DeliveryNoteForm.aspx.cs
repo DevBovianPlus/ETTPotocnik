@@ -579,6 +579,7 @@ namespace ETT_Web.DeliveryNotes
             }
             else
             {
+                var repacking = summaryItems.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
                 int maxNum = 0;
                 string maxPackagingLevel = "00";
                 //želimo pridobiti drugi največu packaging level, da bomo lahko zračunali količine in preverili če je v vsem repackingu isti izdelek

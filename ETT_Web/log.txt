@@ -15473,3 +15473,76 @@ ASP._global_asax
 http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=37
 
 
+8. dec. 2020 19:04:48 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne torek, 08. december 2020 ob 19:04:46 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocument"("IssueNumber","BuyerID","IssueDate","Name","Notes","InternalDocument","InvoiceNumber","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","IssueStatus")values(@p1,null,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{2020/7},{8. dec. 2020 19:04:38},{Izdaja materiala za kupca: },{Prenos iz mobilnih transkacij},{000000},{2020/000000},{8. dec. 2020 19:04:38},{1},{8. dec. 2020 19:04:38},{1},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:52de2800-1f7d-4ff4-92e3-cc9130a22cae
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.CreateIssueDocumentFromMobileTransactions(List`1 mobileTransactionsID, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 272
+   at ETT_Web.MobileTransactions.MobileTransactionTable.CallbackPanelMobileTransaction_Callback(Object sender, CallbackEventArgsBase e) in D:\GitHub\ETTPotocnik\ETT_Web\MobileTransactions\MobileTransactionTable.aspx.cs:line 55
+   at DevExpress.Web.ASPxCallbackPanel.OnCallback(CallbackEventArgsBase e)
+   at DevExpress.Web.ASPxCallbackPanel.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument) -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:52de2800-1f7d-4ff4-92e3-cc9130a22cae
+Error Number:515,State:2,Class:16
+ 
+DevExpress.Web.ASPxCallbackPanel
+http://localhost:53299/MobileTransactions/MobileTransactionTable.aspx
+
+
