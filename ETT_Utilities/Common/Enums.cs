@@ -48,6 +48,7 @@ namespace ETT_Utilities.Common
             showPreviewReport,
             successMessage,
             activeTab,
+            notifyProcessing,
         }
 
         public enum SystemServiceSatus

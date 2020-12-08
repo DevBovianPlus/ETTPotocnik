@@ -6,6 +6,20 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
+        $(document).ready(function () {
+            var notifyProcessing = GetUrlQueryStrings()['notifyProcessing'];
+             
+            if (notifyProcessing) {
+                $("#notifyProcessingModal").modal("show");
+
+                //we delete successMessage query string so we show modal only once!
+                var params = QueryStringsToObject();
+                delete params.notifyProcessing;
+                var path = window.location.pathname + '?' + SerializeQueryStrings(params);
+                history.pushState({}, document.title, path);
+            }
+        });
+
 
         function RowDoubleClick(s, e) {
              gridDeliveryNote.GetRowValues(gridDeliveryNote.GetFocusedRowIndex(), 'DeliveryNoteID', OnGetRowValues);
@@ -87,4 +101,23 @@
     <dx:XpoDataSource ID="XpoDSDeliveryNote" runat="server" ServerMode="true"
         DefaultSorting="DeliveryNoteID DESC" TypeName="ETT_DAL.ETTPotocnik.DeliveryNote">
     </dx:XpoDataSource>
+
+    <!-- Session end Modal -->
+    <div id="notifyProcessingModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: yellow; border-top-left-radius: 6px; border-top-right-radius: 6px;">
+                    <div class="w-100"><i class="material-icons" style="font-size: 48px; color: orange">warning</i></div>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <h3>Elektronska dobavnica v obdelavi!</h3>
+                    <p>Elektronsko dobavnico ste uspšeno poslali v obdelavo. Zaradi same velikosti lahko obdelava traja dlje časa. Ko se obdelava zaključi se spremeni status na dobavnici.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </asp:Content>

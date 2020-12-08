@@ -20,5 +20,8 @@ namespace ETT_DAL.Models.XML
         public int CountOfTradeUnits { get; set; }
         public bool IsTopLevelElement { get; set; }
         public int ProductItemCount { get; set; }
+
+        //26.11.2020
+        public string Notes { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿"`n"
 Write-Host "Pred začetkom namestitve je potrebno imeti installUtil.exe v istem direktoriju kot skripto in servis `n"
 
-$ServiceName = Read-Host "Vnesi DisplayName servisa za namestitev in zagon"
+$ServiceName = Read-Host "Vnesi naziv servisa za namestitev in zagon"
 $ServiceFile = Read-Host "`n Vnesi naziv in koncnicno namestitvenega programa (.exe)"
 
 Write-Host $Location
 
-$confirm = Read-Host "`n Želite namestiti winwos service? (y/n)"
+$confirm = Read-Host "`n Želite namestiti windows service? (y/n)"
 
 if($confirm -eq "y")
 {
