@@ -99,8 +99,9 @@ namespace ETT_Web.MobileTransactions
         protected void ASPxGridViewMobileTransaction_CommandButtonInitialize(object sender, ASPxGridViewCommandButtonEventArgs e)
         {
             object isBuyer = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.LocationToID.IsBuyer");
+            object needsMatching = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.NeedsMatching");
 
-            if (CommonMethods.ParseBool(isBuyer))
+            if (CommonMethods.ParseBool(isBuyer) && CommonMethods.ParseBool(needsMatching))
                 e.Visible = true;
             else
                 e.Visible = false;
