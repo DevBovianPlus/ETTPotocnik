@@ -14,5 +14,6 @@ namespace ETT_DAL.Abstract
         int SaveInventoryDeliveries(InventoryDeliveries model, int userID = 0);
         bool DeleteInventoryDeliveries(int lId);
         bool DeleteInventoryDeliveries(InventoryDeliveries model);
+        int CountInventoryDeliverisByPackageUID(string uid, Session currentSession = null);
     }
 }

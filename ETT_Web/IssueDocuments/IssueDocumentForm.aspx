@@ -373,7 +373,7 @@
                                 </span>
 
                                 <span class="AddEditButtons">
-                                    <dx:ASPxButton ID="btnCompleteIssueDocument" runat="server" Text="Prenesi izdajnico" AutoPostBack="false"
+                                    <dx:ASPxButton ID="btnCompleteIssueDocument" runat="server" Text="Zaključi izdajnico" AutoPostBack="false"
                                         Height="25" Width="110" ClientInstanceName="btnCompleteIssueDocument" UseSubmitBehavior="false" ClientVisible="false" OnClick="btnCompleteIssueDocument_Click">
                                         <Paddings PaddingLeft="10" PaddingRight="10" />
                                         <Image Url="../Images/completeIssue.png" UrlHottracked="../Images/completeIssueHover.png" />

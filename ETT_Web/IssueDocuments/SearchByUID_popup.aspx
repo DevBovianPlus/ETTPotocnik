@@ -54,8 +54,8 @@
                         <div class="row m-0 pb-3">
                             <div class="col">
                                 <dx:ASPxGridView ID="ASPxGridViewInventoryDeliveries" runat="server" KeyFieldName="InventoryDeliveriesID" DataSourceID="XpoDSInventoryDeliveries"
-                                    CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridInventoryDeliveries"
-                                    OnDataBound="ASPxGridViewInventoryDeliveries_DataBound">
+                                    CssClass="gridview-no-header-padding mw-100" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridInventoryDeliveries"
+                                    OnDataBound="ASPxGridViewInventoryDeliveries_DataBound" Width="100%">
                                     <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
                                         AllowHideDataCellsByColumnMinWidth="true">
                                     </SettingsAdaptivity>
@@ -79,12 +79,12 @@
 
                                     <Columns>
                                         <dx:GridViewCommandColumn ShowSelectCheckbox="true" Width="60px" />
-                                        <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="15%">
+                                        <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="100" Width="15%">
                                             <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
                                         </dx:GridViewDataDateColumn>
-                                        <dx:GridViewDataTextColumn Caption="Artikel" FieldName="InventoryStockID.ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%" />
-                                        <dx:GridViewDataTextColumn Caption="UID koda" FieldName="AtomeUID250" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%" />
-                                        <dx:GridViewDataTextColumn Caption="Koda proizvajalca" FieldName="SupplierProductCode" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%" />
+                                        <dx:GridViewDataTextColumn Caption="Artikel" FieldName="InventoryStockID.ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="150" Width="20%" />
+                                        <dx:GridViewDataTextColumn Caption="UID koda" FieldName="AtomeUID250" AdaptivePriority="1" MinWidth="100" MaxWidth="150" Width="20%" />
+                                        <%--<dx:GridViewDataTextColumn Caption="Koda proizvajalca" FieldName="SupplierProductCode" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%" />--%>
                                     </Columns>
                                 </dx:ASPxGridView>
                             </div>
@@ -116,7 +116,7 @@
     </dx:ASPxCallbackPanel>
 
     <dx:XpoDataSource ID="XpoDSInventoryDeliveries" runat="server" ServerMode="true"
-        DefaultSorting="InventoryDeliveriesID DESC" TypeName="ETT_DAL.ETTPotocnik.InventoryDeliveries" Criteria="Contains([AtomeUID250], ?)">
+        DefaultSorting="InventoryDeliveriesID DESC" TypeName="ETT_DAL.ETTPotocnik.InventoryDeliveries" Criteria="Contains([PackagesUIDs], ?)">
         <CriteriaParameters>
             <asp:SessionParameter Name="SearchUIDValue" SessionField="SearchUIDValue" />
         </CriteriaParameters>

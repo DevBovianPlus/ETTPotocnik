@@ -15546,3 +15546,756 @@ DevExpress.Web.ASPxCallbackPanel
 http://localhost:53299/MobileTransactions/MobileTransactionTable.aspx
 
 
+10. dec. 2020 21:54:26 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne četrtek, 10. december 2020 ob 21:54:24 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocument"("IssueNumber","BuyerID","IssueDate","Name","Notes","InternalDocument","InvoiceNumber","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","IssueStatus")values(@p1,null,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{2020/8},{10. dec. 2020 21:53:45},{Izdaja materiala za kupca: },{Prenos iz mobilnih transkacij},{000000},{2020/000000},{10. dec. 2020 21:53:45},{1},{10. dec. 2020 21:53:45},{1},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:1abb70ed-e0f4-4385-bf72-e41128600a97
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.CreateIssueDocumentFromMobileTransactions(List`1 mobileTransactionsID, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 272
+   at ETT_Web.MobileTransactions.MobileTransactionTable.CallbackPanelMobileTransaction_Callback(Object sender, CallbackEventArgsBase e) in D:\GitHub\ETTPotocnik\ETT_Web\MobileTransactions\MobileTransactionTable.aspx.cs:line 55
+   at DevExpress.Web.ASPxCallbackPanel.OnCallback(CallbackEventArgsBase e)
+   at DevExpress.Web.ASPxCallbackPanel.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument) -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'BuyerID', table 'ETTPotocnikRazvoj.dbo.IssueDocument'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:1abb70ed-e0f4-4385-bf72-e41128600a97
+Error Number:515,State:2,Class:16
+ 
+DevExpress.Web.ASPxCallbackPanel
+http://localhost:53299/MobileTransactions/MobileTransactionTable.aspx
+
+
+22. dec. 2020 11:29:33 UserRepositoryError - GET method  in method : UserLogIn Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'select top 1 N0."UserID",N0."RoleID",N0."Username",N0."Password",N0."EmployeeID",N0."GrantAppAccess",N0."Notes",N0."tsInsert",N0."tsInsertUserID",N0."tsUpdate",N0."tsUpdateUserID" from "dbo"."Users" N0
+where (not (N0."Username" is null) and (N0."Username" = @p0) and not (N0."Password" is null) and (N0."Password" = @p1))' with parameters '{martin},{superadmin}' exception 'System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+ClientConnectionId:3774c2b8-817d-457a-a785-256bf54cf30c
+Error Number:10054,State:0,Class:20' ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception: An existing connection was forcibly closed by the remote host
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ProcessSelectData(SelectStatement selects)
+   at DevExpress.Xpo.DB.DataStoreBase.ProcessSelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreForkBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.ThreadSafeDataLayer.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.InternalLoadData(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.LoadObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.SimpleObjectLayer.LoadObjects(Session session, ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjectsInternal(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.<>c__DisplayClass109_0.<GetObjects>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery query)
+   at DevExpress.Xpo.Session.GetObjects(XPClassInfo classInfo, CriteriaOperator criteria, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted, Boolean force)
+   at DevExpress.Xpo.XPQueryBase.SessionGetObjects(XPClassInfo classInfo, CriteriaOperator condition, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted)
+   at DevExpress.Xpo.XPQueryBase.GetSingleObject(CriteriaOperator val, Boolean allowDefault, SortAction sort, Boolean single, Nullable`1 elementAt)
+   at DevExpress.Xpo.XPQueryBase.ExecuteSingle(MethodCallExpression call, Boolean allowDefault, SortAction sort)
+   at DevExpress.Xpo.XPQueryBase.Execute(Expression expression)
+   at DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 35 -------- System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+ClientConnectionId:3774c2b8-817d-457a-a785-256bf54cf30c
+Error Number:10054,State:0,Class:20 -------- System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+ETT_DAL
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 61
+   at ETT_Web.Infrastructure.Authentication.Authenticate(String username, String password, Boolean rememberMe) in D:\GitHub\ETTPotocnik\ETT_Web\Infrastructure\Authentication.cs:line 38
+   at ETT_Web.Home.LoginCallback_Callback(Object source, CallbackEventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Home.aspx.cs:line 98
+22. dec. 2020 11:29:45 UserRepositoryError - GET method  in method : UserLogIn Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'select top 1 N0."UserID",N0."RoleID",N0."Username",N0."Password",N0."EmployeeID",N0."GrantAppAccess",N0."Notes",N0."tsInsert",N0."tsInsertUserID",N0."tsUpdate",N0."tsUpdateUserID" from "dbo"."Users" N0
+where (not (N0."Username" is null) and (N0."Username" = @p0) and not (N0."Password" is null) and (N0."Password" = @p1))' with parameters '{martin},{superadmin}' exception 'System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+ClientConnectionId:1abb70ed-e0f4-4385-bf72-e41128600a97
+Error Number:10054,State:0,Class:20' ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception: An existing connection was forcibly closed by the remote host
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ProcessSelectData(SelectStatement selects)
+   at DevExpress.Xpo.DB.DataStoreBase.ProcessSelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreForkBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.ThreadSafeDataLayer.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.InternalLoadData(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.LoadObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.SimpleObjectLayer.LoadObjects(Session session, ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjectsInternal(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.<>c__DisplayClass109_0.<GetObjects>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery query)
+   at DevExpress.Xpo.Session.GetObjects(XPClassInfo classInfo, CriteriaOperator criteria, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted, Boolean force)
+   at DevExpress.Xpo.XPQueryBase.SessionGetObjects(XPClassInfo classInfo, CriteriaOperator condition, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted)
+   at DevExpress.Xpo.XPQueryBase.GetSingleObject(CriteriaOperator val, Boolean allowDefault, SortAction sort, Boolean single, Nullable`1 elementAt)
+   at DevExpress.Xpo.XPQueryBase.ExecuteSingle(MethodCallExpression call, Boolean allowDefault, SortAction sort)
+   at DevExpress.Xpo.XPQueryBase.Execute(Expression expression)
+   at DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 35 -------- System.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(SqlCommand cmd, _SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.<>c__DisplayClass118_0.<InternalGetData>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.InternalGetData(IDbCommand command, CriteriaOperatorCollection targets, Int32 skipClause, Int32 topClause, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+ClientConnectionId:1abb70ed-e0f4-4385-bf72-e41128600a97
+Error Number:10054,State:0,Class:20 -------- System.ComponentModel.Win32Exception (0x80004005): An existing connection was forcibly closed by the remote host
+ETT_DAL
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 61
+   at ETT_Web.Infrastructure.Authentication.Authenticate(String username, String password, Boolean rememberMe) in D:\GitHub\ETTPotocnik\ETT_Web\Infrastructure\Authentication.cs:line 38
+   at ETT_Web.Home.LoginCallback_Callback(Object source, CallbackEventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Home.aspx.cs:line 98
+22. dec. 2020 11:29:52 UserRepositoryError - GET method  in method : UserLogIn Error :  -------- System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnectionInternal()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnection()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.GetCommandFromPool(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ProcessSelectData(SelectStatement selects)
+   at DevExpress.Xpo.DB.DataStoreBase.ProcessSelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreForkBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.ThreadSafeDataLayer.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.InternalLoadData(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.LoadObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.SimpleObjectLayer.LoadObjects(Session session, ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjectsInternal(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.<>c__DisplayClass109_0.<GetObjects>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery query)
+   at DevExpress.Xpo.Session.GetObjects(XPClassInfo classInfo, CriteriaOperator criteria, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted, Boolean force)
+   at DevExpress.Xpo.XPQueryBase.SessionGetObjects(XPClassInfo classInfo, CriteriaOperator condition, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted)
+   at DevExpress.Xpo.XPQueryBase.GetSingleObject(CriteriaOperator val, Boolean allowDefault, SortAction sort, Boolean single, Nullable`1 elementAt)
+   at DevExpress.Xpo.XPQueryBase.ExecuteSingle(MethodCallExpression call, Boolean allowDefault, SortAction sort)
+   at DevExpress.Xpo.XPQueryBase.Execute(Expression expression)
+   at DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 35
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20 -------- System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+ETT_DAL
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 61
+   at ETT_Web.Infrastructure.Authentication.Authenticate(String username, String password, Boolean rememberMe) in D:\GitHub\ETTPotocnik\ETT_Web\Infrastructure\Authentication.cs:line 38
+   at ETT_Web.Home.LoginCallback_Callback(Object source, CallbackEventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Home.aspx.cs:line 98
+22. dec. 2020 11:30:15 UserRepositoryError - GET method  in method : UserLogIn Error :  -------- System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnectionInternal()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnection()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.GetCommandFromPool(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ProcessSelectData(SelectStatement selects)
+   at DevExpress.Xpo.DB.DataStoreBase.ProcessSelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreForkBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.ThreadSafeDataLayer.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.InternalLoadData(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.LoadObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.SimpleObjectLayer.LoadObjects(Session session, ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjectsInternal(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.<>c__DisplayClass109_0.<GetObjects>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery query)
+   at DevExpress.Xpo.Session.GetObjects(XPClassInfo classInfo, CriteriaOperator criteria, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted, Boolean force)
+   at DevExpress.Xpo.XPQueryBase.SessionGetObjects(XPClassInfo classInfo, CriteriaOperator condition, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted)
+   at DevExpress.Xpo.XPQueryBase.GetSingleObject(CriteriaOperator val, Boolean allowDefault, SortAction sort, Boolean single, Nullable`1 elementAt)
+   at DevExpress.Xpo.XPQueryBase.ExecuteSingle(MethodCallExpression call, Boolean allowDefault, SortAction sort)
+   at DevExpress.Xpo.XPQueryBase.Execute(Expression expression)
+   at DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 35
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20 -------- System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+ETT_DAL
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 61
+   at ETT_Web.Infrastructure.Authentication.Authenticate(String username, String password, Boolean rememberMe) in D:\GitHub\ETTPotocnik\ETT_Web\Infrastructure\Authentication.cs:line 38
+   at ETT_Web.Home.LoginCallback_Callback(Object source, CallbackEventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Home.aspx.cs:line 98
+22. dec. 2020 11:30:23 UserRepositoryError - GET method  in method : UserLogIn Error :  -------- System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnectionInternal()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.OpenConnection()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand()
+   at DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.GetCommandFromPool(Query query)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectDataSimple(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(Query query, CriteriaOperatorCollection targets, Boolean includeMetadata)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ProcessSelectData(SelectStatement selects)
+   at DevExpress.Xpo.DB.DataStoreBase.ProcessSelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.DB.DataStoreForkBase.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.ThreadSafeDataLayer.SelectData(SelectStatement[] selects)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.InternalLoadData(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Helpers.ObjectCollectionLoader.LoadObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.SimpleObjectLayer.LoadObjects(Session session, ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjectsInternal(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.<>c__DisplayClass109_0.<GetObjects>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery[] queries)
+   at DevExpress.Xpo.Session.GetObjects(ObjectsQuery query)
+   at DevExpress.Xpo.Session.GetObjects(XPClassInfo classInfo, CriteriaOperator criteria, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted, Boolean force)
+   at DevExpress.Xpo.XPQueryBase.SessionGetObjects(XPClassInfo classInfo, CriteriaOperator condition, SortingCollection sorting, Int32 skipSelectedRecords, Int32 topSelectedRecords, Boolean selectDeleted)
+   at DevExpress.Xpo.XPQueryBase.GetSingleObject(CriteriaOperator val, Boolean allowDefault, SortAction sort, Boolean single, Nullable`1 elementAt)
+   at DevExpress.Xpo.XPQueryBase.ExecuteSingle(MethodCallExpression call, Boolean allowDefault, SortAction sort)
+   at DevExpress.Xpo.XPQueryBase.Execute(Expression expression)
+   at DevExpress.Xpo.XPQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 35
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20 -------- System.ComponentModel.Win32Exception (0x80004005): The network path was not found
+ETT_DAL
+   at ETT_DAL.Concrete.UserRepository.UserLogIn(String userName, String password) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UserRepository.cs:line 61
+   at ETT_Web.Infrastructure.Authentication.Authenticate(String username, String password, Boolean rememberMe) in D:\GitHub\ETTPotocnik\ETT_Web\Infrastructure\Authentication.cs:line 38
+   at ETT_Web.Home.LoginCallback_Callback(Object source, CallbackEventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Home.aspx.cs:line 98
+23. dec. 2020 13:53:22 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne sreda, 23. december 2020 ob 13:53:21 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_issuedocumenttable.aspx.143a7276.e9cvvgox.0.cs(1604): error CS0433: The type 'DevExpress.Xpo.XpoDataSource' exists in both 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v16.1\v4.0_16.1.11.0__b88d1754d700e49a\DevExpress.Xpo.v16.1.dll' and 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v19.1\v4.0_19.1.3.0__b88d1754d700e49a\DevExpress.Xpo.v19.1.dll'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_issuedocumenttable.aspx.143a7276.e9cvvgox.0.cs(1604): error CS0433: The type 'DevExpress.Xpo.XpoDataSource' exists in both 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v16.1\v4.0_16.1.11.0__b88d1754d700e49a\DevExpress.Xpo.v16.1.dll' and 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v19.1\v4.0_19.1.3.0__b88d1754d700e49a\DevExpress.Xpo.v19.1.dll'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx
+
+
+23. dec. 2020 13:53:32 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne sreda, 23. december 2020 ob 13:53:31 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_deliverynotetable.aspx.9bdc9023.v5aihkw2.0.cs(1658): error CS0433: The type 'DevExpress.Xpo.XpoDataSource' exists in both 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v16.1\v4.0_16.1.11.0__b88d1754d700e49a\DevExpress.Xpo.v16.1.dll' and 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v19.1\v4.0_19.1.3.0__b88d1754d700e49a\DevExpress.Xpo.v19.1.dll'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpCompileException (0x80004005): c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_deliverynotetable.aspx.9bdc9023.v5aihkw2.0.cs(1658): error CS0433: The type 'DevExpress.Xpo.XpoDataSource' exists in both 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v16.1\v4.0_16.1.11.0__b88d1754d700e49a\DevExpress.Xpo.v16.1.dll' and 'c:\Windows\Microsoft.NET\assembly\GAC_MSIL\DevExpress.Xpo.v19.1\v4.0_19.1.3.0__b88d1754d700e49a\DevExpress.Xpo.v19.1.dll'
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx?
+
+
+24. dec. 2020 08:49:45 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne četrtek, 24. december 2020 ob 08:49:43 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: IssueDocumentRepositoryError - SAVE method in method : SaveIssueDocumentPosition Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocumentPosition"("IssueDocumentID","SupplierID","Quantity","UID250","Name","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","Notes","ProductID","MobileTransactionID")values(@p1,@p2,@p3,@p4,null,@p5,@p6,@p7,@p8,@p9,@p10,null) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{8},{6},{0},{4500201114007493},{24. dec. 2020 08:49:39},{1},{24. dec. 2020 08:49:39},{1},{},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 144 -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 152
+   at ETT_Web.IssueDocuments.IssueDocument_popup.AddOrEditEntityObject(Boolean add)
+   at ETT_Web.IssueDocuments.IssueDocument_popup.ProcessUserAction()
+   at ETT_Web.IssueDocuments.IssueDocument_popup.btnConfirm_Click(Object sender, EventArgs e)
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocument_popup_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_de5fhoj5.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: IssueDocumentRepositoryError - SAVE method in method : SaveIssueDocumentPosition Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocumentPosition"("IssueDocumentID","SupplierID","Quantity","UID250","Name","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","Notes","ProductID","MobileTransactionID")values(@p1,@p2,@p3,@p4,null,@p5,@p6,@p7,@p8,@p9,@p10,null) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{8},{6},{0},{4500201114007493},{24. dec. 2020 08:49:39},{1},{24. dec. 2020 08:49:39},{1},{},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 144 -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 152
+   at ETT_Web.IssueDocuments.IssueDocument_popup.AddOrEditEntityObject(Boolean add)
+   at ETT_Web.IssueDocuments.IssueDocument_popup.ProcessUserAction()
+   at ETT_Web.IssueDocuments.IssueDocument_popup.btnConfirm_Click(Object sender, EventArgs e)
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: IssueDocumentRepositoryError - SAVE method in method : SaveIssueDocumentPosition Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocumentPosition"("IssueDocumentID","SupplierID","Quantity","UID250","Name","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","Notes","ProductID","MobileTransactionID")values(@p1,@p2,@p3,@p4,null,@p5,@p6,@p7,@p8,@p9,@p10,null) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{8},{6},{0},{4500201114007493},{24. dec. 2020 08:49:39},{1},{24. dec. 2020 08:49:39},{1},{},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 144 -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 152
+   at ETT_Web.IssueDocuments.IssueDocument_popup.AddOrEditEntityObject(Boolean add)
+   at ETT_Web.IssueDocuments.IssueDocument_popup.ProcessUserAction()
+   at ETT_Web.IssueDocuments.IssueDocument_popup.btnConfirm_Click(Object sender, EventArgs e)
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocument_popup_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_de5fhoj5.3.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: IssueDocumentRepositoryError - SAVE method in method : SaveIssueDocumentPosition Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'insert into "dbo"."IssueDocumentPosition"("IssueDocumentID","SupplierID","Quantity","UID250","Name","tsInsert","tsInsertUserID","tsUpdate","tsUpdateUserID","Notes","ProductID","MobileTransactionID")values(@p1,@p2,@p3,@p4,null,@p5,@p6,@p7,@p8,@p9,@p10,null) set @p0=SCOPE_IDENTITY() set @r=1' with parameters '{},{8},{6},{0},{4500201114007493},{24. dec. 2020 08:49:39},{1},{24. dec. 2020 08:49:39},{1},{},{1},{1}' exception 'System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16' ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log[T](String category, LogHandler`1 handler, MessageHandler`1 createMessageHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 144 -------- System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'ETTPotocnikRazvoj.dbo.IssueDocumentPosition'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__1()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+ClientConnectionId:d3750f45-94ea-4fdb-bc3e-927a255dbe67
+Error Number:515,State:2,Class:16
+   at ETT_DAL.Concrete.IssueDocumentRepository.SaveIssueDocumentPosition(IssueDocumentPosition model, Int32 userID) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\IssueDocumentRepository.cs:line 152
+   at ETT_Web.IssueDocuments.IssueDocument_popup.AddOrEditEntityObject(Boolean add)
+   at ETT_Web.IssueDocuments.IssueDocument_popup.ProcessUserAction()
+   at ETT_Web.IssueDocuments.IssueDocument_popup.btnConfirm_Click(Object sender, EventArgs e)
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/IssueDocuments/IssueDocument_popup.aspx
+
+
+24. dec. 2020 09:25:41 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne četrtek, 24. december 2020 ob 09:25:39 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Exception: Failed to access the value of the bound data source's data field which is not presented by any column within the grid's column collection. Check the SettingsDataSecurity.AllowReadUnlistedFieldsFromClientApi property value. Refer to http://www.devexpress.com/kbid=T633512 article for more details.
+   at DevExpress.Web.Internal.GridRenderHelper.ValidateDataAccessFromClientSide(Boolean allowReadUnexposedColumnsFromClientApi, Boolean allowReadUnlistedFieldsFromClientApi, String[] keyFieldNames, String[] fieldNames, IEnumerable`1 allDataColumns, IEnumerable`1 dataColumnsInvisibleForEndUser)
+   at DevExpress.Web.Internal.GridRenderHelper.ValidateDataAccessFromClientSide(String[] fieldNames)
+   at DevExpress.Web.ASPxGridBase.FBGetRowValues(String[] args)
+   at DevExpress.Web.ASPxGridBase.GetFunctionalCallbackResultCore()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResultCore()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResultHtml()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResult()
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.GetCallbackResult()
+ 
+DevExpress.Web.ASPxGridView
+http://localhost:53299/IssueDocuments/IssueDocumentTable.aspx
+
+
+24. dec. 2020 09:26:34 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne četrtek, 24. december 2020 ob 09:26:33 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Exception: Failed to access the value of the bound data source's data field which is not presented by any column within the grid's column collection. Check the SettingsDataSecurity.AllowReadUnlistedFieldsFromClientApi property value. Refer to http://www.devexpress.com/kbid=T633512 article for more details.
+   at DevExpress.Web.Internal.GridRenderHelper.ValidateDataAccessFromClientSide(Boolean allowReadUnexposedColumnsFromClientApi, Boolean allowReadUnlistedFieldsFromClientApi, String[] keyFieldNames, String[] fieldNames, IEnumerable`1 allDataColumns, IEnumerable`1 dataColumnsInvisibleForEndUser)
+   at DevExpress.Web.Internal.GridRenderHelper.ValidateDataAccessFromClientSide(String[] fieldNames)
+   at DevExpress.Web.ASPxGridBase.FBGetRowValues(String[] args)
+   at DevExpress.Web.ASPxGridBase.GetFunctionalCallbackResultCore()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResultCore()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResultHtml()
+   at DevExpress.Web.ASPxGridBase.GetCallbackResult()
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.GetCallbackResult()
+ 
+DevExpress.Web.ASPxGridView
+http://localhost:53299/IssueDocuments/IssueDocumentTable.aspx
+
+

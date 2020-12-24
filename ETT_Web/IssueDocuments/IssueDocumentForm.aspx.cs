@@ -29,7 +29,7 @@ namespace ETT_Web.IssueDocuments
         IssueDocument model;
         IIssueDocumentRepository issueDocumentRepo;
         IClientRepository clientRepo;
-
+        IUtilityServiceRepository utilityRepo;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -50,6 +50,7 @@ namespace ETT_Web.IssueDocuments
 
             issueDocumentRepo = new IssueDocumentRepository(session);
             clientRepo = new ClientRepository(session);
+            utilityRepo = new UtilityServiceRepository(session);
 
             ASPxGridViewIssueDocumentPosition.Settings.GridLines = GridLines.Both;
 
@@ -119,7 +120,7 @@ namespace ETT_Web.IssueDocuments
             MemoNotes.Text = model.Notes;
             txtIssueStatus.Text = model.IssueStatus.Name;
 
-            if (model.IssueStatus.Code == Enums.IssueDocumentStatus.PRENOS.ToString())
+            if (model.IssueStatus.Code == Enums.IssueDocumentStatus.ZAKLJUCENO.ToString())
                 EnableButtons();
             else
                 EnableButtons(true);
@@ -155,8 +156,11 @@ namespace ETT_Web.IssueDocuments
             model.InvoiceNumber = txtInvoiceNumber.Text;
             model.Notes = MemoNotes.Text;
 
-            if(completeIssueDocument)
-                model.IssueStatus = issueDocumentRepo.GetIssueDocumentStatusByCode(Enums.IssueDocumentStatus.PRENOS, model.Session);
+            if (completeIssueDocument)
+            {
+                model.IssueStatus = issueDocumentRepo.GetIssueDocumentStatusByCode(Enums.IssueDocumentStatus.ZAKLJUCENO, model.Session);
+                utilityRepo.ClearStockByIssueDocumentID(model.IssueDocumentPositions.ToList());
+            }
 
             issueDocumentID = issueDocumentRepo.SaveIssueDocument(model, PrincipalHelper.GetUserID());
 
@@ -185,25 +189,32 @@ namespace ETT_Web.IssueDocuments
 
         #region Common
 
-        private void ClearSessionsAndRedirect(bool isIDDeleted = false, bool exitFormPage = true)
+        private void ClearSessionsAndRedirect(bool isIDDeleted = false, bool exitFormPage = true, bool completeAndPrint = false)
         {
             string redirectString = "";
             List<QueryStrings> queryStrings = new List<QueryStrings> {
                 new QueryStrings() { Attribute = Enums.QueryStringName.recordId.ToString(), Value = issueDocumentID.ToString() }
             };
 
-            if (isIDDeleted)
-                redirectString = "IssueDocumentTable.aspx";
-            else if (!exitFormPage)
+            if (completeAndPrint)//ko zaključimo izdajnico se redirectamo na printanje
             {
-                queryStrings.Insert(0, new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = ((int)Enums.UserAction.Edit).ToString() });
-                redirectString = GenerateURI("IssueDocumentForm.aspx", queryStrings);
+                Response.Redirect(ConcatenateURLForPrint(issueDocumentID, "IssueDocument", true));
             }
             else
-                redirectString = GenerateURI("IssueDocumentTable.aspx", queryStrings);
+            {
+                if (isIDDeleted)
+                    redirectString = "IssueDocumentTable.aspx";
+                else if (!exitFormPage)
+                {
+                    queryStrings.Insert(0, new QueryStrings() { Attribute = Enums.QueryStringName.action.ToString(), Value = ((int)Enums.UserAction.Edit).ToString() });
+                    redirectString = GenerateURI("IssueDocumentForm.aspx", queryStrings);
+                }
+                else
+                    redirectString = GenerateURI("IssueDocumentTable.aspx", queryStrings);
 
-            List<Enums.EmployeeSession> list = Enum.GetValues(typeof(Enums.EmployeeSession)).Cast<Enums.EmployeeSession>().ToList();
-            ClearAllSessions(list, redirectString);
+                List<Enums.EmployeeSession> list = Enum.GetValues(typeof(Enums.EmployeeSession)).Cast<Enums.EmployeeSession>().ToList();
+                ClearAllSessions(list, redirectString);
+            }
         }
 
         private void ProcessUserAction(bool exitFormPage = true, bool completeIssueDocument = false)
@@ -227,7 +238,7 @@ namespace ETT_Web.IssueDocuments
 
             if (isValid)
             {
-                ClearSessionsAndRedirect(isDeleteing, exitFormPage);
+                ClearSessionsAndRedirect(isDeleteing, exitFormPage, completeIssueDocument);
             }
         }
         #endregion

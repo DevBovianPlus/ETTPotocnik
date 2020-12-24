@@ -402,3 +402,10 @@ body {
         transform: scale(1);
     }
 }
+.exit-logo-html5 {
+    background-image: url('/Images/signOutHover.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}

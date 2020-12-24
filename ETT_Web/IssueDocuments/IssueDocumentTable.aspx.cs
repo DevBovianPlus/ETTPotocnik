@@ -49,7 +49,7 @@ namespace ETT_Web.IssueDocuments
         private void RedirectBasedOnUserAction(Enums.UserAction action)
         {
             object valueID = 0;
-            if(action != Enums.UserAction.Add)
+            if (action != Enums.UserAction.Add)
                 valueID = ASPxGridViewIssueDocument.GetRowValues(ASPxGridViewIssueDocument.FocusedRowIndex, "IssueDocumentID");
 
             ClearAllSessions(Enum.GetValues(typeof(Enums.IssueDocumentSession)).Cast<Enums.IssueDocumentSession>().ToList());
@@ -69,6 +69,10 @@ namespace ETT_Web.IssueDocuments
             {
                 ClearAllSessions(Enum.GetValues(typeof(Enums.IssueDocumentSession)).Cast<Enums.IssueDocumentSession>().ToList());
                 ASPxWebControl.RedirectOnCallback(GenerateURI("IssueDocumentForm.aspx", (int)Enums.UserAction.Edit, split[1]));
+            }
+            else if (split[0] == "PrintDocument")
+            {
+                ASPxWebControl.RedirectOnCallback(ConcatenateURLForPrint(split[1], "IssueDocument", true));
             }
         }
     }

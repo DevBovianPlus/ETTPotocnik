@@ -104,6 +104,8 @@ namespace ETT_DAL.ETTPotocnik
             get { return fUnitOfMeasureID; }
             set { SetPropertyValue<MeasuringUnit>(nameof(UnitOfMeasureID), ref fUnitOfMeasureID, value); }
         }
+        [Association(@"IssueDocumentPositionReferencesMobileTransaction")]
+        public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
     }
 
 }

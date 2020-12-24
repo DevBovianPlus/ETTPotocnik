@@ -31,6 +31,15 @@ namespace ETT_Web.IssueDocuments {
         protected global::DevExpress.Web.ASPxButton btnDelete;
         
         /// <summary>
+        /// btnPrintSelected control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnPrintSelected;
+        
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>

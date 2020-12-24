@@ -114,6 +114,8 @@ namespace ETT_DAL.Concrete
         {
             try
             {
+                XPQuery<InventoryDeliveries> invDeliveries = session.Query<InventoryDeliveries>();
+
                 MobileTransaction mobile = new MobileTransaction(session);
                 mobile.InventoryDeliveriesLocationID = null;
                 mobile.MobileTransactionID = 0;
@@ -133,7 +135,7 @@ namespace ETT_DAL.Concrete
                 }
 
                 mobile.InventoryDeliveriesLocationID = SaveInventoryDeliveriesLocation(model, mobile.Session);
-
+                mobile.Quantity = invDeliveries.Count(inv => inv.PackagesUIDs.Contains(mobile.UIDCode));//kosovna količina
                 mobile.Save();
 
                 return mobile.MobileTransactionID;

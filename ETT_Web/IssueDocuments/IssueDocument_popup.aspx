@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="col p-0">
                                         <dx:ASPxTextBox runat="server" ID="txtName" ClientInstanceName="txtName"
-                                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="400" AutoCompleteType="Disabled">
+                                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="400" AutoCompleteType="Disabled" ClientEnabled="false" BackColor="LightGray">
                                             <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                         </dx:ASPxTextBox>
                                     </div>
@@ -117,7 +117,7 @@
                                             PopupVerticalAlign="WindowCenter"
                                             KeyFieldName="ClientID" TextFormatString="{0}" CssClass="text-box-input"
                                             Paddings-PaddingTop="0" Paddings-PaddingBottom="0" Width="100%" Font-Size="13px"
-                                            OnLoad="ASPxGridLookupLoad_WidthLarge" DataSourceID="XpoDSSupplier" IncrementalFilteringMode="Contains">
+                                            OnLoad="ASPxGridLookupLoad_WidthLarge" DataSourceID="XpoDSSupplier" IncrementalFilteringMode="Contains" ClientEnabled="false" BackColor="LightGray">
                                             <ClearButton DisplayMode="OnHover" />
                                             <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                             <GridViewStyles>
@@ -164,7 +164,7 @@
                                     </div>
                                     <div class="col-4 p-0">
                                         <dx:ASPxTextBox runat="server" ID="txtQuantity" ClientInstanceName="txtQuantity"
-                                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="300" AutoCompleteType="Disabled">
+                                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="300" AutoCompleteType="Disabled" ClientEnabled="false" BackColor="LightGray">
                                             <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                             <ClientSideEvents KeyPress="isNumberKey_decimal" />
                                         </dx:ASPxTextBox>

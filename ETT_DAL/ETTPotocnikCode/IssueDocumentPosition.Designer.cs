@@ -97,6 +97,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return fProductID; }
             set { SetPropertyValue<Product>(nameof(ProductID), ref fProductID, value); }
         }
+        MobileTransaction fMobileTransactionID;
+        [Association(@"IssueDocumentPositionReferencesMobileTransaction")]
+        public MobileTransaction MobileTransactionID
+        {
+            get { return fMobileTransactionID; }
+            set { SetPropertyValue<MobileTransaction>(nameof(MobileTransactionID), ref fMobileTransactionID, value); }
+        }
     }
 
 }
