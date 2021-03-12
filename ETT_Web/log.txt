@@ -16299,3 +16299,175 @@ DevExpress.Web.ASPxGridView
 http://localhost:53299/IssueDocuments/IssueDocumentTable.aspx
 
 
+30. jan. 2021 19:14:50 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne sobota, 30. januar 2021 ob 19:14:49 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocumentform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_dzugvdel.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocumentform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_dzugvdel.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/IssueDocuments/IssueDocumentForm.aspx?action=2&recordId=1
+
+
+30. jan. 2021 19:16:28 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne sobota, 30. januar 2021 ob 19:16:27 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocumentform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_dzugvdel.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.issuedocuments_issuedocumentform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_dzugvdel.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.<>c.<ClearStockByIssueDocumentID>b__14_0(IssueDocumentPosition p) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at ETT_DAL.Concrete.UtilityServiceRepository.ClearStockByIssueDocumentID(List`1 pos) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 237
+   at ETT_Web.IssueDocuments.IssueDocumentForm.AddOrEditEntityObject(Boolean add, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 162
+   at ETT_Web.IssueDocuments.IssueDocumentForm.ProcessUserAction(Boolean exitFormPage, Boolean completeIssueDocument) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 231
+   at ETT_Web.IssueDocuments.IssueDocumentForm.btnCompleteIssueDocument_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\IssueDocuments\IssueDocumentForm.aspx.cs:line 286
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/IssueDocuments/IssueDocumentForm.aspx?action=2&recordId=1
+
+
