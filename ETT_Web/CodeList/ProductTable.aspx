@@ -74,10 +74,10 @@
                     <SettingsText EmptyDataRow="Trenutno ni podatka o artiklih. Dodaj novega." />
 
                     <Columns>
-                        <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
+                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
                         <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
                         <dx:GridViewDataTextColumn Caption="Dobavitelj koda" FieldName="SupplierCode" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
-                        <dx:GridViewDataTextColumn Caption="Kategorija" FieldName="CategoryID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="15%" />
+                        <dx:GridViewDataTextColumn Caption="Tip eksploziva" FieldName="CategoryID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="15%" />
                         <dx:GridViewDataTextColumn Caption="Merska enota" FieldName="MeasuringUnitID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="15%" />
                         <dx:GridViewDataTextColumn Caption="Opombe" FieldName="Notes" AdaptivePriority="3" MinWidth="300" MaxWidth="400" Width="40%" />
                     </Columns>

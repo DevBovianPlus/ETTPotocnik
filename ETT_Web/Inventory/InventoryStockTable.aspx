@@ -75,7 +75,7 @@
                         <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="12%">
                             <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
                         </dx:GridViewDataDateColumn>
-                        <dx:GridViewDataTextColumn Caption="Artikel" FieldName="ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="35%" />
+                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="35%" />
                         <dx:GridViewDataTextColumn Caption="Lokacija" FieldName="LocationID.Name" AdaptivePriority="2" MinWidth="200" MaxWidth="250" Width="20%" />
                         <dx:GridViewDataTextColumn Caption="Količina" FieldName="Quantity" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="12%" 
                             PropertiesTextEdit-DisplayFormatString="N2" />

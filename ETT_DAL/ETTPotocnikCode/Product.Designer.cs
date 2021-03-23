@@ -91,8 +91,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return ftsUpdateUserID; }
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
-        [Association(@"DeliveryNoteItemReferencesProduct")]
-        public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
         [Association(@"InventoryStockReferencesProduct")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
         [Association(@"IssueDocumentPositionReferencesProduct")]

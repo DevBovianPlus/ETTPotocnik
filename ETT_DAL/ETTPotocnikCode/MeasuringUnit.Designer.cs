@@ -70,8 +70,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return ftsUpdateUserID; }
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
-        [Association(@"DeliveryNoteItemReferencesMeasuringUnit")]
-        public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
         [Association(@"ProductReferencesMeasuringUnit")]
         public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
         [Association(@"InventoryDeliveriesReferencesMeasuringUnit")]

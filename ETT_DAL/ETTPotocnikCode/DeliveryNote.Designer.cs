@@ -33,14 +33,12 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<string>(nameof(DeliveryNoteNumber), ref fDeliveryNoteNumber, value); }
         }
         Client fSupplierID;
-        [Association(@"DeliveryNoteReferencesClient")]
         public Client SupplierID
         {
             get { return fSupplierID; }
             set { SetPropertyValue<Client>(nameof(SupplierID), ref fSupplierID, value); }
         }
         Location fLocationID;
-        [Association(@"DeliveryNoteReferencesLocation")]
         public Location LocationID
         {
             get { return fLocationID; }
@@ -91,7 +89,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
         DeliveryNoteStatus fDeliveryNoteStatusID;
-        [Association(@"DeliveryNoteReferencesDeliveryNoteStatus")]
         public DeliveryNoteStatus DeliveryNoteStatusID
         {
             get { return fDeliveryNoteStatusID; }
@@ -103,6 +100,12 @@ namespace ETT_DAL.ETTPotocnik
         {
             get { return fProcessError; }
             set { SetPropertyValue<string>(nameof(ProcessError), ref fProcessError, value); }
+        }
+        DateTime fRecivedMaterialDate;
+        public DateTime RecivedMaterialDate
+        {
+            get { return fRecivedMaterialDate; }
+            set { SetPropertyValue<DateTime>(nameof(RecivedMaterialDate), ref fRecivedMaterialDate, value); }
         }
         [Association(@"DeliveryNoteItemReferencesDeliveryNote")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }

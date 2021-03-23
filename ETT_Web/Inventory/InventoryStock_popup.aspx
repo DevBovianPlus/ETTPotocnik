@@ -28,7 +28,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row m-0 d-flex align-items-center pb-2">
         <div class="col-0 pr-0" style="margin-right: 20px;">
-            <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="ARTIKEL : *" Font-Bold="true"></dx:ASPxLabel>
+            <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="K. IME EKSPLOZIVA: *" Font-Bold="true"></dx:ASPxLabel>
         </div>
         <div class="col no-padding-left">
             <dx:ASPxGridLookup ID="GridLookupProduct" runat="server" ClientInstanceName="lookUpProduct"

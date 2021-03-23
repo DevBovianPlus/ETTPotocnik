@@ -168,8 +168,6 @@ namespace ETT_DAL.ETTPotocnik
         }
         [Association(@"ContactPersonReferencesClient")]
         public XPCollection<ContactPerson> ContactPersons { get { return GetCollection<ContactPerson>(nameof(ContactPersons)); } }
-        [Association(@"DeliveryNoteReferencesClient")]
-        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
         [Association(@"ProductReferencesClient")]
         public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
         [Association(@"IssueDocumentReferencesClient")]

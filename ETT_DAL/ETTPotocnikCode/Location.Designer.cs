@@ -75,8 +75,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return fIsWarehouse; }
             set { SetPropertyValue<bool>(nameof(IsWarehouse), ref fIsWarehouse, value); }
         }
-        [Association(@"DeliveryNoteReferencesLocation")]
-        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
         [Association(@"InventoryStockReferencesLocation")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
         [Association(@"InventoryDeliveriesReferencesLocation")]

@@ -33,7 +33,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<DeliveryNote>(nameof(DeliveryNoteID), ref fDeliveryNoteID, value); }
         }
         MeasuringUnit fMeasuringUnitID;
-        [Association(@"DeliveryNoteItemReferencesMeasuringUnit")]
         public MeasuringUnit MeasuringUnitID
         {
             get { return fMeasuringUnitID; }
@@ -112,7 +111,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<int>(nameof(ProductItemCount), ref fProductItemCount, value); }
         }
         Product fProductID;
-        [Association(@"DeliveryNoteItemReferencesProduct")]
         public Product ProductID
         {
             get { return fProductID; }
