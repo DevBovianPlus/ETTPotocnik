@@ -176,6 +176,8 @@ namespace ETT_DAL.ETTPotocnik
         public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
         [Association(@"MobileTransactionReferencesClient")]
         public XPCollection<MobileTransaction> MobileTransactions { get { return GetCollection<MobileTransaction>(nameof(MobileTransactions)); } }
+        [Association(@"LocationReferencesClient")]
+        public XPCollection<Location> Locations { get { return GetCollection<Location>(nameof(Locations)); } }
     }
 
 }

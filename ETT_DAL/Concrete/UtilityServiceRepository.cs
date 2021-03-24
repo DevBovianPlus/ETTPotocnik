@@ -48,7 +48,7 @@ namespace ETT_DAL.Concrete
                 else
                     idl = session.Query<InventoryDeliveriesLocation>();
 
-                return idl.Where(i => i.NeedsMatching).ToList();
+                return idl.Where(i => i.NeedsMatching && !i.LocationToID.IsBuyer).ToList();
             }
             catch (Exception ex)
             {
@@ -58,14 +58,20 @@ namespace ETT_DAL.Concrete
             }
         }
 
-        public void MatchMobileTransWithInventoryDeliveries()
+        /// <summary>
+        /// Razknjiževanje mobilnih transakcij
+        /// </summary>
+        /// <param name="issueDocumentTransactions">Seznam InventoryDeliveriesLocation zapisov, ki smo jih potegnali iz MobileTransaction objektov. 
+        /// Ti objekti so bili prenešeni na izdajnico in je potrebno razknjižiti njihovo količino.
+        /// </param>
+        public void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null)
         {
             try
             {
                 UnitOfWork uow = XpoHelper.GetNewUnitOfWork();
                 XPQuery<InventoryDeliveries> id = uow.Query<InventoryDeliveries>();
                 int iCnt = 0;
-                var transactionForMatching = GetInventoryDeliveryLocationsThatNeedsMatching(uow);
+                var transactionForMatching = issueDocumentTransactions ?? GetInventoryDeliveryLocationsThatNeedsMatching(uow);
                 foreach (var item in transactionForMatching)
                 {
                     iCnt++;
@@ -147,7 +153,7 @@ namespace ETT_DAL.Concrete
             InventoryStock InvStock = new InventoryStock(unitOfWork);
             InvStock.ProductID = delivery.DeliveryNoteItemID.ProductID;
             InvStock.LocationID = cLocation;
-            InvStock.Quantity = (bAddItems)  ? InvStock.Quantity + delivery.Quantity : InvStock.Quantity - delivery.Quantity;
+            InvStock.Quantity = (bAddItems) ? InvStock.Quantity + delivery.Quantity : InvStock.Quantity - delivery.Quantity;
             InvStock.QuantityPcs = (bAddItems) ? InvStock.QuantityPcs + 1 : InvStock.QuantityPcs - 1;
             InvStock.Notes = "";
 
@@ -185,7 +191,7 @@ namespace ETT_DAL.Concrete
                 }
                 else
                 {
-                    CreateNewRecordForStock(false, item.LocationFromID, item, delivery, unitOfWork);                   
+                    CreateNewRecordForStock(false, item.LocationFromID, item, delivery, unitOfWork);
                 }
             }
 
@@ -221,6 +227,18 @@ namespace ETT_DAL.Concrete
 
             //    recordInventoryStock.Save();
             //}
+        }
+
+        public void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos)
+        {
+            if (pos != null)
+            {
+                //Poiščemo vse InventoryDeliverisLocation ki imajo NeedsMatching na true in jih zapišemo v seznam
+                var result = pos.Where(p => p.MobileTransactionID.InventoryDeliveriesLocationID.NeedsMatching).Select(idl => idl.MobileTransactionID.InventoryDeliveriesLocationID).ToList();
+
+                if (result != null && result.Count > 0)
+                    MatchMobileTransWithInventoryDeliveries(result);
+            }
         }
     }
 }

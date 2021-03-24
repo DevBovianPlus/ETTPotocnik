@@ -245,22 +245,25 @@ namespace ETT_DAL.Concrete
             }
         }
 
-        public int CreateIssueDocumentFromMobileTransactions(List<int> mobileTransactionsID, int userID)
+        public int CreateIssueDocumentFromMobileTransactions(List<int> mobileTransactionsID, int userID, int buyerID)
         {
-            XPQuery<MobileTransaction> mobileTrans = session.Query<MobileTransaction>();
+            UnitOfWork uow = XpoHelper.GetNewUnitOfWork();
+            XPQuery<MobileTransaction> mobileTrans = uow.Query<MobileTransaction>();
+            XPQuery<InventoryDeliveries> invDeliveries = uow.Query<InventoryDeliveries>();
 
             var mobileTransactions = mobileTrans.Where(mt => mobileTransactionsID.Any(mti => mti == mt.MobileTransactionID)).ToList();
             if (mobileTransactions != null && mobileTransactions.Count > 0)
             {
+                var buyer = clientRepo.GetClientByID(buyerID, session);
                 //from locationID we get buyer
                 IssueDocument document = new IssueDocument(session);
 
                 document.IssueDocumentID = 0;
                 document.IssueNumber = GetNextIssueDocumentNumber();
-                document.BuyerID = null;
+                document.BuyerID = buyer;
                 document.IssueStatus = GetIssueDocumentStatusByCode(Enums.IssueDocumentStatus.DELOVNA);
                 document.IssueDate = DateTime.Now;
-                document.Name = "Izdaja materiala za kupca: ";//TODO: naziv kupca
+                document.Name = $"Izdaja materiala za kupca: {buyer.Name}";
                 document.Notes = "Prenos iz mobilnih transkacij";
                 document.InternalDocument = "000000";
                 document.InvoiceNumber = DateTime.Now.Year.ToString() + "/000000";
@@ -270,34 +273,58 @@ namespace ETT_DAL.Concrete
                 document.tsUpdateUserID = userID;
 
                 document.Save();
-                using (UnitOfWork uow = XpoHelper.GetNewUnitOfWork())
+
+                var issueDocument = GetIssueDocumentByID(document.IssueDocumentID, uow);
+                IssueDocumentPosition pos = null;
+                foreach (var item in mobileTransactions)
                 {
-                    var issueDocument = GetIssueDocumentByID(document.IssueDocumentID, uow);
-                    IssueDocumentPosition pos = null;
-                    foreach (var item in mobileTransactions)
-                    {
-                        pos = new IssueDocumentPosition(uow);
+                    pos = new IssueDocumentPosition(uow);
 
-                        pos.IssueDocumentID = issueDocument;
-                        pos.SupplierID = clientRepo.GetClientByID(item.SupplierID.ClientID, uow);
-                        pos.Quantity = item.Quantity;
-                        pos.UID250 = item.UIDCode;
-                        pos.Name = item.ProductID.Name;
-                        pos.Notes = "Prenos iz mobilnih transakcij";
-                        pos.tsInsert = DateTime.Now;
-                        pos.tsInsertUserID = userID;
-                        pos.tsUpdate = DateTime.Now;
-                        pos.tsUpdateUserID = userID;
-                        pos.ProductID = productRepo.GetProductByID(item.ProductID.ProductID, uow);
-                    }
+                    pos.IssueDocumentID = issueDocument;
+                    pos.SupplierID = clientRepo.GetClientByID(item.SupplierID.ClientID, uow);
+                    
+                    //Kosovna količina
+                    pos.Quantity = item.Quantity <= 0 ? invDeliveries.Count(inv => inv.PackagesUIDs.Contains(item.UIDCode)) : item.Quantity;// če se še ni shranila količina na mobilnih transkacijah jo poiščemo v invnetoryDeliveries
 
-                    uow.CommitChanges();
+                    pos.UID250 = item.UIDCode;
+                    pos.Name = item.ProductID.Name;
+                    pos.Notes = "Prenos iz mobilnih transakcij";
+                    pos.tsInsert = DateTime.Now;
+                    pos.tsInsertUserID = userID;
+                    pos.tsUpdate = DateTime.Now;
+                    pos.tsUpdateUserID = userID;
+                    pos.ProductID = productRepo.GetProductByID(item.ProductID.ProductID, uow);
+                    pos.MobileTransactionID = item;
                 }
+
+                uow.CommitChanges();
+
 
                 return document.IssueDocumentID;
             }
 
             return -1;
+        }
+
+        public List<IssueDocumentPosition> GetIssueDocumentPositionsByDocumentID(int ID, Session currentSession = null)
+        {
+            try
+            {
+                XPQuery<IssueDocumentPosition> issueDocumentPos = null;
+
+                if (currentSession != null)
+                    issueDocumentPos = currentSession.Query<IssueDocumentPosition>();
+                else
+                    issueDocumentPos = session.Query<IssueDocumentPosition>();
+
+                return issueDocumentPos.Where(isdp => isdp.IssueDocumentID.IssueDocumentID == ID).ToList();
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_37, error, CommonMethods.GetCurrentMethodName()));
+            }
         }
     }
 }

@@ -45,14 +45,16 @@ namespace ETT_Web.MobileTransactions
             else if (e.Parameter == "TransferToIssueDocument")
             {
                 //pridobimo seznam izbranih lokacij
-                List<string> selectedItems = ASPxGridViewMobileTransaction.GetSelectedFieldValues("InventoryDeliveriesLocationID.LocationToID.Name").OfType<string>().ToList();
+                List<int> selectedItems = ASPxGridViewMobileTransaction.GetSelectedFieldValues("InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID").OfType<int>().ToList();
 
                 //preverimi če imajo vse izbrane transkacije enakega kupca
                 int count = selectedItems.Count(si => si == selectedItems[0]);
-                if (selectedItems.Count == count)
+                if (selectedItems.Count > 0 && selectedItems.Count == count)
                 {
                     List<int> selectedItemsID = ASPxGridViewMobileTransaction.GetSelectedFieldValues("MobileTransactionID").OfType<int>().ToList();
-                    issueDocumentRepo.CreateIssueDocumentFromMobileTransactions(selectedItemsID, PrincipalHelper.GetUserID());
+                    issueDocumentRepo.CreateIssueDocumentFromMobileTransactions(selectedItemsID, PrincipalHelper.GetUserID(), selectedItems[0]);
+                    ASPxGridViewMobileTransaction.Selection.UnselectAll();
+                    CallbackPanelMobileTransaction.JSProperties["cpErrorIssueDocumentCreated"] = true;
                 }
                 else
                 {
@@ -97,8 +99,9 @@ namespace ETT_Web.MobileTransactions
         protected void ASPxGridViewMobileTransaction_CommandButtonInitialize(object sender, ASPxGridViewCommandButtonEventArgs e)
         {
             object isBuyer = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.LocationToID.IsBuyer");
+            object needsMatching = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.NeedsMatching");
 
-            if (CommonMethods.ParseBool(isBuyer))
+            if (CommonMethods.ParseBool(isBuyer) && CommonMethods.ParseBool(needsMatching))
                 e.Visible = true;
             else
                 e.Visible = false;

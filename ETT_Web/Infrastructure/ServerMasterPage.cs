@@ -553,5 +553,20 @@ namespace ETT_Web.Infrastructure
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CommonJS", String.Format("ShowWarningPopup('{0}', '{1}');", title, body), true);
         }
+
+        public string ConcatenateURLForPrint(object valueID, string printReport, bool showPreview)
+        {
+            List<QueryStrings> list = new List<QueryStrings> {
+                new QueryStrings { Attribute = Enums.QueryStringName.printReport.ToString(), Value = printReport },
+                new QueryStrings { Attribute = Enums.QueryStringName.showPreviewReport.ToString(), Value = showPreview.ToString() }
+            };
+
+            if (valueID != null)
+            {
+                list.Add(new QueryStrings { Attribute = Enums.QueryStringName.printId.ToString(), Value = valueID.ToString() });
+            }
+
+            return GenerateURI("../Reports/ReportPreview.aspx", list);
+        }
     }
 }

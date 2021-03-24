@@ -95,9 +95,9 @@ namespace ETT_Web.IssueDocuments
             else
                 model.SupplierID = clientRepo.GetClientByID(supplierID, model.Session);
 
-            model.Quantity = CommonMethods.ParseDecimal(txtQuantity.Text);
+            //model.Quantity = CommonMethods.ParseDecimal(txtQuantity.Text);
             model.UID250 = !String.IsNullOrEmpty(txtUID250.Text) ? txtUID250.Text : model.UID250;
-            model.Name = txtName.Text;
+            //model.Name = txtName.Text;
             model.Notes = MemoNotes.Text;
 
             issueDocumentRepo.SaveIssueDocumentPosition(model, PrincipalHelper.GetUserID());
@@ -196,8 +196,11 @@ namespace ETT_Web.IssueDocuments
 
                     model.UID250 = txtUID250.Text = inventory.AtomeUID250;
                     GridLookupSupplier.Value = inventory.DeliveryNoteItemID.DeliveryNoteID.SupplierID.ClientID;
-                    txtName.Text = inventory.InventoryStockID.ProductID.Name;
+                    model.Name = txtName.Text = inventory.InventoryStockID.ProductID.Name;
                     txtUIDSearchString.Text = "";
+                    int count = inventoryRepo.CountInventoryDeliverisByPackageUID(model.UID250);
+                    txtQuantity.Text = count.ToString();
+                    model.Quantity = count;                   
 
                     GetIssueDocumentProvider().SetIssueDocumentPositionModel(model);
                 }

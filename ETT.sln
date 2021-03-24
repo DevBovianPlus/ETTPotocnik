@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_WebAPI", "ETT_WebAPI\ET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_UtilityService", "ETT_UtilityService\ETT_UtilityService.csproj", "{17B4241E-9C8C-417F-A719-CF756B3C7EB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_SchedularLibrary", "ETT_SchedularLibrary\ETT_SchedularLibrary.csproj", "{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,32 +41,15 @@ Global
 		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B4241E-9C8C-417F-A719-CF756B3C7EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FF0915C-FE10-440B-8138-D4179FEE0CBC}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs.bovianplus.si/tfs/tfscollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ETT_Web\\ETT_Web.csproj
-		SccProjectName1 = ETT_Web
-		SccLocalPath1 = ETT_Web
-		SccProjectUniqueName2 = ETT_DAL\\ETT_DAL.csproj
-		SccProjectName2 = ETT_DAL
-		SccLocalPath2 = ETT_DAL
-		SccProjectUniqueName3 = ETT_Utilities\\ETT_Utilities.csproj
-		SccProjectName3 = ETT_Utilities
-		SccLocalPath3 = ETT_Utilities
-		SccProjectUniqueName4 = ETT_WebAPI\\ETT_WebAPI.csproj
-		SccProjectName4 = ETT_WebAPI
-		SccLocalPath4 = ETT_WebAPI
-		SccProjectUniqueName5 = ETT_UtilityService\\ETT_UtilityService.csproj
-		SccProjectName5 = ETT_UtilityService
-		SccLocalPath5 = ETT_UtilityService
 	EndGlobalSection
 EndGlobal

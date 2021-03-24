@@ -16,6 +16,16 @@
             gridIssueDocument.PerformCallback("DoubleClick;" + value);
         }
 
+        function btnPrintSelected_Click(s, e)
+        {
+            gridIssueDocument.GetRowValues(gridIssueDocument.GetFocusedRowIndex(), 'IssueDocumentID;IssueStatus.Code', OnGetPrintRowValues);
+        }
+
+        function OnGetPrintRowValues(value) {
+            var status = '<%= ETT_Utilities.Common.Enums.IssueDocumentStatus.ZAKLJUCENO.ToString() %>';
+            if(value[1] === status)
+                gridIssueDocument.PerformCallback("PrintDocument;" + value[0]);
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
@@ -50,6 +60,7 @@
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataTextColumn Caption="Štev. izdajnice" FieldName="IssueNumber" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="10%" />
             <dx:GridViewDataTextColumn Caption="Status" FieldName="IssueStatus.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
+            <dx:GridViewDataTextColumn Caption="Status" FieldName="IssueStatus.Code" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" Visible="false" />
             <dx:GridViewDataTextColumn Caption="Kupec" FieldName="BuyerID.Name" AdaptivePriority="2" MinWidth="200" MaxWidth="250" Width="20%" />
             <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
             <dx:GridViewDataTextColumn Caption="Interni dokument" FieldName="InternalDocument" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
@@ -67,6 +78,13 @@
             </dx:ASPxButton>
         </div>
         <div class="col-sm-3 text-right">
+            <dx:ASPxButton ID="btnPrintSelected" runat="server" Text="Natisni" AutoPostBack="false"
+                Height="25" Width="90" ClientInstanceName="btnPrintSelected">
+                <Paddings PaddingLeft="10" PaddingRight="10" />
+                <Image Url="../Images/print.png" UrlHottracked="../Images/printHover.png" />
+                <ClientSideEvents Click="btnPrintSelected_Click" />
+            </dx:ASPxButton>
+
             <dx:ASPxButton ID="btnAdd" runat="server" Text="Dodaj" AutoPostBack="false"
                 Height="25" Width="90" ClientInstanceName="btnAdd" OnClick="btnAdd_Click">
                 <Paddings PaddingLeft="10" PaddingRight="10" />

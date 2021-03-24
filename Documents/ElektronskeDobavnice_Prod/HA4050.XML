@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File Id: DA4050v1_698178, Request Id: 102124223, Program Version: 1.0.43 -->
+<Shipment FileCreator="MAXAM: Customer Delivery Note XML (EU)" FileType="FEEM-Std" FileVersion="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FEEM-Std.xsd">
+ <MessageID>HR001_202012080920487</MessageID>
+ <MessageTime>2020-12-08T09:20:48+01:00</MessageTime>
+ <MessageType>Shipment</MessageType>
+ <ShipmentNumber>DA4050</ShipmentNumber>
+ <DeliveryNoteNumber>DA4050</DeliveryNoteNumber>
+ <ExpectedDeliveryDate>2020-12-09</ExpectedDeliveryDate>
+ <Sender>
+  <Code>HR001</Code>
+  <Name>DETINES - Mahovo Factory</Name>
+  <Name2>144-Mahovo Plant (DMM)</Name2>
+  <AddressCode>73255</AddressCode>
+  <Address>Mahovo 170</Address>
+  <Zipcode>44201</Zipcode>
+  <City>Martinska Ves</City>
+  <Country>HR</Country>
+ </Sender>
+ <Shipper>
+  <Code/>
+  <Name/>
+ </Shipper>
+ <Receiver>
+  <Code>96019</Code>
+  <Name>IVAN POTOČNIK s.p.</Name>
+  <AddressCode>225921</AddressCode>
+  <Address>Zavrh pri Galiciji 7c</Address>
+  <Zipcode>3310</Zipcode>
+  <City>Žalec</City>
+  <Country>SI</Country>
+ </Receiver>
+ <DeliveryComment>20201209.PV12</DeliveryComment>
+ <SummaryItems>
+  <SummaryItem PSN="ES008" SID="U03-0001">
+   <ProducerProductCode>SCCN0122500</ProducerProductCode>
+   <ProducerProductName>RIOCORD PV12</ProducerProductName>
+   <ItemQuantity>2</ItemQuantity>
+   <CountOfTradeUnits>2</CountOfTradeUnits>
+   <PackagingLevel>03</PackagingLevel>
+   <ProductionDate>2020-07-24</ProductionDate>
+   <NEW>6.0</NEW>
+   <Length>500</Length>
+   <UnitOfMeasure>MTR</UnitOfMeasure>
+  </SummaryItem>
+  <SummaryItem PSN="ES008" SID="I00-0001">
+   <ProducerProductCode>SCCN0122500</ProducerProductCode>
+   <ProducerProductName>RIOCORD PV12</ProducerProductName>
+   <ItemQuantity>1</ItemQuantity>
+   <PackagingLevel>00</PackagingLevel>
+   <ProductionDate>2020-07-24</ProductionDate>
+   <NEW>3.0</NEW>
+   <Length>250</Length>
+   <UnitOfMeasure>MTR</UnitOfMeasure>
+  </SummaryItem>
+ </SummaryItems>
+ <Units>
+  <Unit PSN="ES008" UID="5203200724500097" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500193" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500194" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500098" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500195" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500196" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500099" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500197" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500198" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500100" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500199" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500200" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500101" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500201" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500202" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500102" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500203" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500204" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500103" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500205" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500206" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500104" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500207" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500208" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500105" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500209" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500210" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500106" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500211" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500212" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500107" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500213" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500214" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500108" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500215" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500216" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500109" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500217" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500218" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500110" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500219" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500220" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500111" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500221" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500222" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500112" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500223" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500224" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500113" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500225" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500226" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500117" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500233" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500234" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500118" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500235" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500236" SID="I00-0001"/>
+   </Items>
+  </Unit>
+  <Unit PSN="ES008" UID="5203200724500128" SID="U03-0001">
+   <Items>
+    <Item PSN="ES008" UID="5200200724500255" SID="I00-0001"/>
+    <Item PSN="ES008" UID="5200200724500256" SID="I00-0001"/>
+   </Items>
+  </Unit>
+ </Units>
+</Shipment>

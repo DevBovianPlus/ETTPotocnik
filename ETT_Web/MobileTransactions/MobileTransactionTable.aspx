@@ -14,6 +14,10 @@
                 ShowModal('Preveč kupcev!', 'Na posamezni izdajnici je lahko samo en kupec!')
                 delete (s.cpErrorDifferentBuyers);
             }
+            else if (s.cpErrorIssueDocumentCreated != "" && s.cpErrorIssueDocumentCreated != undefined) {
+                ShowModal('Izdajnica ustvarjena!', 'Uspešno se ustvarili izdajnico za izbran material', true);
+                delete (s.cpErrorIssueDocumentCreated);
+            }
         }
 
         function HandleUserAction(s, e) {
@@ -58,15 +62,15 @@
             CallbackPanelMobileTransaction.PerformCallback("TransferToIssueDocument");
         }
 
-         function ShowModal(title, message, yeNoModal) {
+         function ShowModal(title, message, successModal) {
             $('.modal-title').empty();
             $('.modal-title').append(title);
 
             $('.modal-body-desc').empty();
             $('.modal-body-desc').append(message);
 
-            if (yeNoModal)
-                $('#questionModal').modal("show");
+            if (successModal)
+                $('#modalSuccess').modal("show");
             else
                 $('#modal').modal("show");
         }
@@ -135,6 +139,8 @@
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID.LocationToID.IsBuyer" Visible="false"  MinWidth="200" MaxWidth="250" Width="5%">
                         </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID" Visible="false"  MinWidth="200" MaxWidth="250" Width="5%">
+                        </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:ASPxGridView>
 
@@ -158,16 +164,16 @@
                             <Paddings PaddingLeft="10" PaddingRight="10" />
                             <Image Url="../Images/trash.png" UrlHottracked="../Images/trashHover.png" />
                             <ClientSideEvents Click="HandleUserAction" />
-                        </dx:ASPxButton>
-
+                        </dx:ASPxButton>                        
+                    </div>
+                    <div class="col-sm-3 text-right">
                         <dx:ASPxButton ID="btnTransferToIssueDocument" runat="server" Text="Prenesi na izdajnico" AutoPostBack="false"
                             Height="25" Width="50" ClientInstanceName="btnTransferToIssueDocument" ClientVisible="false">
                             <Paddings PaddingLeft="10" PaddingRight="10" />
-                            <Image Url="../Images/trash.png" UrlHottracked="../Images/trashHover.png" />
+                            <Image Url="../Images/issueDocumentTransfer.png" UrlHottracked="../Images/issueDocumentTransferHover.png" />
                             <ClientSideEvents Click="TransferMobileTransactionsToIssueDocument_Click" />
                         </dx:ASPxButton>
-                    </div>
-                    <div class="col-sm-3 text-right">
+
                         <dx:ASPxButton ID="btnAdd" runat="server" Text="Dodaj" AutoPostBack="false"
                             Height="25" Width="90" ClientInstanceName="btnAdd" ClientVisible="false">
                             <Paddings PaddingLeft="10" PaddingRight="10" />
@@ -198,6 +204,24 @@
             <div class="modal-content">
                 <div class="modal-header text-center" style="background-color: yellow; border-top-left-radius: 6px; border-top-right-radius: 6px;">
                     <div class="w-100"><i class="material-icons" style="font-size: 48px; color: orange">warning</i></div>
+                    <button type="button" class="close m-0 p-0" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-body-desc"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalSuccess" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: lightgrey; border-top-left-radius: 6px; border-top-right-radius: 6px;">
+                    <div class="w-100"><i class="far fa-thumbs-up" style="font-size: 48px; color: limegreen"></i></div>
                     <button type="button" class="close m-0 p-0" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">

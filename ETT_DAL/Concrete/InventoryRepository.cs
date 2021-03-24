@@ -98,5 +98,26 @@ namespace ETT_DAL.Concrete
                 throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_36, error, CommonMethods.GetCurrentMethodName()));
             }
         }
+
+        public int CountInventoryDeliverisByPackageUID(string uid, Session currentSession = null)
+        {
+            try
+            {
+                XPQuery<InventoryDeliveries> invDel = null;
+
+                if (currentSession != null)
+                    invDel = currentSession.Query<InventoryDeliveries>();
+                else
+                    invDel = session.Query<InventoryDeliveries>();
+
+                return invDel.Count(i => i.PackagesUIDs.Contains(uid));
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_34, error, CommonMethods.GetCurrentMethodName()));
+            }
+        }
     }
 }
