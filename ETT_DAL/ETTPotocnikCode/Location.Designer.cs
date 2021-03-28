@@ -75,6 +75,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return fIsWarehouse; }
             set { SetPropertyValue<bool>(nameof(IsWarehouse), ref fIsWarehouse, value); }
         }
+        Client fBuyerID;
+        [Association(@"LocationReferencesClient")]
+        public Client BuyerID
+        {
+            get { return fBuyerID; }
+            set { SetPropertyValue<Client>(nameof(BuyerID), ref fBuyerID, value); }
+        }
         [Association(@"InventoryStockReferencesLocation")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
         [Association(@"InventoryDeliveriesReferencesLocation")]
@@ -83,6 +90,8 @@ namespace ETT_DAL.ETTPotocnik
         public XPCollection<InventoryDeliveriesLocation> InventoryDeliveriesLocations { get { return GetCollection<InventoryDeliveriesLocation>(nameof(InventoryDeliveriesLocations)); } }
         [Association(@"InventoryDeliveriesLocationReferencesLocation1")]
         public XPCollection<InventoryDeliveriesLocation> InventoryDeliveriesLocations1 { get { return GetCollection<InventoryDeliveriesLocation>(nameof(InventoryDeliveriesLocations1)); } }
+        [Association(@"DeliveryNoteReferencesLocation")]
+        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
     }
 
 }

@@ -76,6 +76,8 @@ namespace ETT_DAL.ETTPotocnik
         public XPCollection<InventoryDeliveries> InventoryDeliveriesCollection { get { return GetCollection<InventoryDeliveries>(nameof(InventoryDeliveriesCollection)); } }
         [Association(@"MobileTransactionReferencesMeasuringUnit")]
         public XPCollection<MobileTransaction> MobileTransactions { get { return GetCollection<MobileTransaction>(nameof(MobileTransactions)); } }
+        [Association(@"DeliveryNoteItemReferencesMeasuringUnit")]
+        public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
     }
 
 }

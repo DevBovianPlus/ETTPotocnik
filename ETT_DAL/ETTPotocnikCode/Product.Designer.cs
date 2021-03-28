@@ -93,10 +93,12 @@ namespace ETT_DAL.ETTPotocnik
         }
         [Association(@"InventoryStockReferencesProduct")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
-        [Association(@"IssueDocumentPositionReferencesProduct")]
-        public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
         [Association(@"MobileTransactionReferencesProduct")]
         public XPCollection<MobileTransaction> MobileTransactions { get { return GetCollection<MobileTransaction>(nameof(MobileTransactions)); } }
+        [Association(@"DeliveryNoteItemReferencesProduct")]
+        public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
+        [Association(@"IssueDocumentPositionReferencesProduct")]
+        public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
     }
 
 }
