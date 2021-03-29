@@ -70,6 +70,18 @@
         <PanelCollection>
             <dx:PanelContent>
                 <div class="row m-0 d-flex align-items-center pb-2">
+                    <div class="col-0 pr-0" style="margin-right: 75px;">
+                        <dx:ASPxLabel ID="ASPxLabel7" runat="server" Font-Size="12px" Text="PSN: *" Font-Bold="true"></dx:ASPxLabel>
+                    </div>
+                    <div class="col-5 no-padding-left">
+                        <dx:ASPxTextBox runat="server" ID="txtPSN" ClientInstanceName="clientTxtPSN"
+                            CssClass="text-box-input" Font-Size="13px" Width="40%" MaxLength="150" AutoCompleteType="Disabled">
+                            <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+                        </dx:ASPxTextBox>
+                    </div>
+                </div>
+
+                <div class="row m-0 d-flex align-items-center pb-2">
                     <div class="col-0 pr-0" style="margin-right: 61px;">
                         <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="NAZIV : *" Font-Bold="true"></dx:ASPxLabel>
                     </div>

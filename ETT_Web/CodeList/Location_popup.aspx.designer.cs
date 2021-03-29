@@ -85,6 +85,24 @@ namespace ETT_Web.CodeList {
         protected global::DevExpress.Web.ASPxMemo MemoNotes;
         
         /// <summary>
+        /// ASPxLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel4;
+        
+        /// <summary>
+        /// memAdditionalData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxMemo memAdditionalData;
+        
+        /// <summary>
         /// btnConfirmPopup control.
         /// </summary>
         /// <remarks>

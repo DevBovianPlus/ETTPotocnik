@@ -65,6 +65,7 @@
             <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
             <dx:GridViewDataTextColumn Caption="Interni dokument" FieldName="InternalDocument" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
             <dx:GridViewDataTextColumn Caption="Štev. računa" FieldName="InvoiceNumber" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
+            <dx:GridViewDataTextColumn Caption="Dovoljenje za prodajo" FieldName="PermissionDoc" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
         </Columns>
     </dx:ASPxGridView>
 

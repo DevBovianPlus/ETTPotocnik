@@ -66,25 +66,37 @@ namespace ETT_DAL.Concrete
         /// </param>
         public void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null)
         {
+            int iCnt = 0;
+
             try
             {
                 UnitOfWork uow = XpoHelper.GetNewUnitOfWork();
                 XPQuery<InventoryDeliveries> id = uow.Query<InventoryDeliveries>();
-                int iCnt = 0;
+
                 var transactionForMatching = issueDocumentTransactions ?? GetInventoryDeliveryLocationsThatNeedsMatching(uow);
                 foreach (var item in transactionForMatching)
                 {
-                    iCnt++;
-                    var uid = item.MobileTransactions.FirstOrDefault().UIDCode;
-                    var deliveries = id.Where(inv => inv.PackagesUIDs.Contains(uid)).ToList();
-
-                    if (deliveries != null && deliveries.Count > 0)
+                    if (item.MobileTransactions != null)
                     {
-                        MatchDeliveriesAndTransactions(item, deliveries, uow);
-                        item.NeedsMatching = false;
+                        iCnt++;
+                        var uid = item.MobileTransactions.FirstOrDefault().UIDCode;
+                        var deliveries = id.Where(inv => inv.PackagesUIDs.Contains(uid)).ToList();
+
+                        if (deliveries != null && deliveries.Count > 0)
+                        {
+                            MatchDeliveriesAndTransactions(item, deliveries, uow);
+                            item.NeedsMatching = false;
+                        }
+
+                        if (iCnt % 1000 == 0)
+                        {
+                            CommonMethods.LogThis("Zapis: " + iCnt + "/ " + transactionForMatching.Count());
+                        }
                     }
                     uow.CommitChanges();
                 }
+
+
 
                 uow.CommitChanges();
             }
@@ -92,6 +104,7 @@ namespace ETT_DAL.Concrete
             {
                 string error = "";
                 CommonMethods.getError(ex, ref error);
+                error = iCnt + " - " + error;
                 throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_41, error, CommonMethods.GetCurrentMethodName()));
             }
         }
@@ -186,8 +199,8 @@ namespace ETT_DAL.Concrete
                 if (recordInventoryFromWarehouseStock != null)
                 {
                     //odštejemo zalogo, ker smo prestavili iz skladišča na drugo lokacijo
-                    recordInventoryFromWarehouseStock.Quantity -= delivery.Quantity;   // zakaj sta 2 qnt !!!!!!
-                    recordInventoryFromWarehouseStock.QuantityPcs -= 1;
+                    recordInventoryFromWarehouseStock.Quantity -= delivery.Quantity;   // količina v kg
+                    recordInventoryFromWarehouseStock.QuantityPcs -= 1; // količina v kos
                 }
                 else
                 {
@@ -200,7 +213,7 @@ namespace ETT_DAL.Concrete
                 if (recordInventoryToWarehouseStock != null)
                 {
                     //odštejemo zalogo, ker smo prestavili iz skladišča na drugo lokacijo
-                    recordInventoryToWarehouseStock.Quantity += delivery.Quantity;   // zakaj sta 2 qnt !!!!!!
+                    recordInventoryToWarehouseStock.Quantity += delivery.Quantity;
                     recordInventoryToWarehouseStock.QuantityPcs += 1;
                 }
                 else

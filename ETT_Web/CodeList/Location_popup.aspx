@@ -65,6 +65,17 @@
         </div>
     </div>
 
+    <div class="row m-0 d-flex align-items-center pb-2">
+        <div class="col-0 pr-0 mr-3">
+            <dx:ASPxLabel ID="ASPxLabel4" runat="server" Font-Size="12px" Text="DODATNI PODATKI: " Font-Bold="true"></dx:ASPxLabel>
+        </div>
+        <div class="col no-padding-left">
+            <dx:ASPxMemo ID="memAdditionalData" runat="server" Width="100%" Rows="3" MaxLength="300" CssClass="text-box-input" AutoCompleteType="Disabled">
+                <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+            </dx:ASPxMemo>
+        </div>
+    </div>
+
     <div class="row m-0 text-right">
         <div class="col-12">
             <span class="AddEditButtons">

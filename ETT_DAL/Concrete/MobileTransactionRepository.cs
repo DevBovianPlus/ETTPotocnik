@@ -130,7 +130,7 @@ namespace ETT_DAL.Concrete
 
                 if (mobile.MobileTransactionID == 0)
                 {
-                    mobile.tsInsert = DateTime.Now;
+                    mobile.tsInsert = model.created_at;
                     mobile.tsInsertUserID = model.user_id;
                 }
 

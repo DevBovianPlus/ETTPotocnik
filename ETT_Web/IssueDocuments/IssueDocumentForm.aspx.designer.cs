@@ -157,6 +157,24 @@ namespace ETT_Web.IssueDocuments {
         protected global::DevExpress.Web.ASPxMemo MemoNotes;
         
         /// <summary>
+        /// ASPxLabel8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel8;
+        
+        /// <summary>
+        /// txtPermissonDoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtPermissonDoc;
+        
+        /// <summary>
         /// CallbackPanel control.
         /// </summary>
         /// <remarks>

@@ -75,6 +75,7 @@ namespace ETT_Web.CodeList
             txtName.Text = model.Name;
             GridLookupSupplier.Value = model.SupplierID != null ? model.SupplierID.ClientID : 0;
             txtSupplierCode.Text = model.SupplierCode;
+            txtPSN.Text = model.PSN;
             GridLookupCategory.Value = model.CategoryID != null ? model.CategoryID.CategorieID : 0;
             GridLookupMeasuringUnit.Value = model.MeasuringUnitID != null ? model.MeasuringUnitID.MeasuringUnitID : 0;
             MemoNotes.Text = model.Notes;
@@ -101,6 +102,7 @@ namespace ETT_Web.CodeList
                 model.SupplierID = clientRepo.GetClientByID(supplierID);
 
             model.SupplierCode = txtSupplierCode.Text;
+            model.PSN = txtPSN.Text;
 
             int categoryID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupCategory));
             if (model.CategoryID != null)

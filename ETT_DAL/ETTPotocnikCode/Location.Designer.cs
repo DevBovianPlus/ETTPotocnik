@@ -82,6 +82,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return fBuyerID; }
             set { SetPropertyValue<Client>(nameof(BuyerID), ref fBuyerID, value); }
         }
+        string fAdditionalInfo;
+        [Size(500)]
+        public string AdditionalInfo
+        {
+            get { return fAdditionalInfo; }
+            set { SetPropertyValue<string>(nameof(AdditionalInfo), ref fAdditionalInfo, value); }
+        }
         [Association(@"DeliveryNoteReferencesLocation")]
         public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
         [Association(@"InventoryStockReferencesLocation")]

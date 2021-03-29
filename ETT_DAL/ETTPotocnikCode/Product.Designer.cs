@@ -91,6 +91,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return ftsUpdateUserID; }
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
+        string fPSN;
+        [Size(20)]
+        public string PSN
+        {
+            get { return fPSN; }
+            set { SetPropertyValue<string>(nameof(PSN), ref fPSN, value); }
+        }
         [Association(@"DeliveryNoteItemReferencesProduct")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
         [Association(@"InventoryStockReferencesProduct")]

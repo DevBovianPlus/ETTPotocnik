@@ -60,6 +60,7 @@ namespace ETT_Web.CodeList
             txtName.Text = model.Name;
             chbxIsBuyer.Checked = model.IsBuyer;
             MemoNotes.Text = model.Notes;
+            memAdditionalData.Text = model.AdditionalInfo;
             CheckBoxIsWarehouse.Checked = model.IsWarehouse;
         }
 
@@ -78,6 +79,7 @@ namespace ETT_Web.CodeList
             model.Name = txtName.Text;
             model.IsBuyer = chbxIsBuyer.Checked;
             model.Notes = MemoNotes.Text;
+            model.AdditionalInfo = memAdditionalData.Text;
             model.IsWarehouse = CheckBoxIsWarehouse.Checked;
 
             locationRepo.SaveLocation(model, PrincipalHelper.GetUserID());

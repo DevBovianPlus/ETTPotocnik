@@ -16471,3 +16471,145 @@ ASP._global_asax
 http://localhost:53299/IssueDocuments/IssueDocumentForm.aspx?action=2&recordId=1
 
 
+29. mar. 2021 08:19:39 Zapis: 1000/ 8872
+29. mar. 2021 08:21:57 Zapis: 1072/ 8872
+29. mar. 2021 08:22:57 Zapis: 1093/ 8872
+29. mar. 2021 08:49:49 Zapis: 2000/ 8872
+29. mar. 2021 09:19:56 Zapis: 3000/ 8872
+29. mar. 2021 09:49:42 Zapis: 4000/ 8872
+29. mar. 2021 11:17:00 Zapis: 1000/ 8872
+29. mar. 2021 11:45:50 Zapis: 2000/ 8872
+29. mar. 2021 12:14:54 Zapis: 3000/ 8872
+29. mar. 2021 12:44:02 Zapis: 4000/ 8872
+29. mar. 2021 13:45:11 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne ponedeljek, 29. marec 2021 ob 13:44:33 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 4225 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 80
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 106
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 42
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_crnvtpmr.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 4225 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 80
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 106
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 42
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 4225 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 80
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 106
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 42
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\ee52b506\1ac85738\App_Web_crnvtpmr.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 4225 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 80
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions) in D:\GitHub\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 106
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in D:\GitHub\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 42
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/Admin/Admin.aspx
+
+
+29. mar. 2021 16:01:58 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne ponedeljek, 29. marec 2021 ob 16:01:57 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'.
+   at System.Web.UI.CollectionBuilder.AppendLiteralString(String s)
+   at System.Web.UI.TemplateParser.ProcessLiteral()
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'.
+   at System.Web.UI.CollectionBuilder.AppendLiteralString(String s)
+   at System.Web.UI.TemplateParser.ProcessLiteral()
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding) -------- System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'.
+   at System.Web.UI.CollectionBuilder.AppendLiteralString(String s)
+   at System.Web.UI.TemplateParser.ProcessLiteral()
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpParseException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'. ---> System.Web.HttpException (0x80004005): Literal content ('<dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer"Width="10%" />') is not allowed within a 'DevExpress.Web.GridViewColumnCollection'.
+   at System.Web.UI.CollectionBuilder.AppendLiteralString(String s)
+   at System.Web.UI.TemplateParser.ProcessLiteral()
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx
+
+

@@ -74,6 +74,7 @@
                     <SettingsText EmptyDataRow="Trenutno ni podatka o artiklih. Dodaj novega." />
 
                     <Columns>
+                        <dx:GridViewDataTextColumn Caption="PSN" FieldName="PSN" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="10%" />
                         <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
                         <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
                         <dx:GridViewDataTextColumn Caption="Dobavitelj koda" FieldName="SupplierCode" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
@@ -85,7 +86,7 @@
 
                 <dx:ASPxPopupControl ID="PopupControlProduct" runat="server" ContentUrl="Product_popup.aspx"
                     ClientInstanceName="popupControProduct" Modal="True" HeaderText="ARTIKEL"
-                    CloseAction="CloseButton" Width="720px" Height="410px" PopupHorizontalAlign="WindowCenter"
+                    CloseAction="CloseButton" Width="720px" Height="450px" PopupHorizontalAlign="WindowCenter"
                     PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
                     AllowResize="true" ShowShadow="true"
                     OnWindowCallback="PopupControlProduct_WindowCallback">

@@ -155,6 +155,8 @@ namespace ETT_Web.IssueDocuments
             model.InternalDocument = txtInternalDocument.Text;
             model.InvoiceNumber = txtInvoiceNumber.Text;
             model.Notes = MemoNotes.Text;
+            model.PermissionDoc = txtPermissonDoc.Text;
+
 
             if (completeIssueDocument)
             {

@@ -104,6 +104,12 @@ namespace ETT_DAL.ETTPotocnik
             get { return fProcessError; }
             set { SetPropertyValue<string>(nameof(ProcessError), ref fProcessError, value); }
         }
+        DateTime fRecivedMaterialDate;
+        public DateTime RecivedMaterialDate
+        {
+            get { return fRecivedMaterialDate; }
+            set { SetPropertyValue<DateTime>(nameof(RecivedMaterialDate), ref fRecivedMaterialDate, value); }
+        }
         [Association(@"DeliveryNoteItemReferencesDeliveryNote")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
     }

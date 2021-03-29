@@ -104,6 +104,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return fIssueStatus; }
             set { SetPropertyValue<IssueDocumentStatus>(nameof(IssueStatus), ref fIssueStatus, value); }
         }
+        string fPermissionDoc;
+        [Size(50)]
+        public string PermissionDoc
+        {
+            get { return fPermissionDoc; }
+            set { SetPropertyValue<string>(nameof(PermissionDoc), ref fPermissionDoc, value); }
+        }
         [Association(@"IssueDocumentPositionReferencesIssueDocument")]
         public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
     }

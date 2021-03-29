@@ -13,7 +13,7 @@
         var confirmCompletingIssueDocument = false;
 
         $(document).ready(function () {
-            
+
             $("#submitIssue").on('click', function () {
                 HideModal();
                 LoadingPanel.Show();
@@ -66,7 +66,7 @@
 
         function ValidateInputFields() {
             var process = false;
-            var inputItems = [txtName, txtInvoiceNumber];
+            var inputItems = [txtName, txtInvoiceNumber, clienttxtPermissonDoc];
             var dateEditItems = [DateEditIssueDocumentDate];
             var lookupItmes = [lookUpBuyer];
             process = InputFieldsValidation(lookupItmes, inputItems, dateEditItems, null, null, null);
@@ -279,6 +279,21 @@
                                         <dx:ASPxMemo ID="MemoNotes" runat="server" Width="100%" Rows="3" MaxLength="2000" CssClass="text-box-input" AutoCompleteType="Disabled">
                                             <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                         </dx:ASPxMemo>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 pb-3">
+                            <div class="col-lg-8 mb-2 mb-lg-0">
+                                <div class="row m-0 align-items-center justify-content-center">
+                                    <div class="col-0 p-0 mr-3">
+                                        <dx:ASPxLabel ID="ASPxLabel8" runat="server" Font-Size="12px" Text="DOVOLJENJE ZA PRODAJO : *" Font-Bold="true"></dx:ASPxLabel>
+                                    </div>
+                                    <div class="col p-0">
+                                        <dx:ASPxTextBox runat="server" ID="txtPermissonDoc" ClientInstanceName="clienttxtPermissonDoc"
+                                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="300" AutoCompleteType="Disabled">
+                                            <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+                                        </dx:ASPxTextBox>
                                     </div>
                                 </div>
                             </div>

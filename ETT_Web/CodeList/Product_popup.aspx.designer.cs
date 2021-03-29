@@ -22,6 +22,24 @@ namespace ETT_Web.CodeList {
         protected global::DevExpress.Web.ASPxCallbackPanel CallbackPanel;
         
         /// <summary>
+        /// ASPxLabel7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel7;
+        
+        /// <summary>
+        /// txtPSN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtPSN;
+        
+        /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
         /// <remarks>

@@ -52,9 +52,9 @@
                     CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridLocation"
                     OnDataBound="ASPxGridViewLocation_DataBound" OnCustomColumnDisplayText="ASPxGridViewLocation_CustomColumnDisplayText">
                     <ClientSideEvents RowDblClick="HandleUserAction" />
-                    <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
+          <%--          <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
                         AllowHideDataCellsByColumnMinWidth="true">
-                    </SettingsAdaptivity>
+                    </SettingsAdaptivity>--%>
                     <SettingsBehavior AllowEllipsisInText="true" />
                     <Paddings Padding="0" />
                     <Settings ShowVerticalScrollBar="True"
@@ -74,16 +74,17 @@
                     <SettingsText EmptyDataRow="Trenutno ni podatka o lokacijah. Dodaj novo." />
 
                     <Columns>
-                        <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
-                        <dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
-                        <dx:GridViewDataTextColumn Caption="Je skladišče?" FieldName="IsWarehouse" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
-                        <dx:GridViewDataTextColumn Caption="Dodatni podatki" FieldName="Notes" AdaptivePriority="2" MinWidth="400" MaxWidth="500" Width="50%" />
+                        <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" Width="25%" />
+                        <dx:GridViewDataTextColumn Caption="Je kupec?" FieldName="IsBuyer" Width="7%" />
+                        <dx:GridViewDataTextColumn Caption="Je skladišče?" FieldName="IsWarehouse" Width="7%" />
+                        <dx:GridViewDataTextColumn Caption="Dovoljenja" FieldName="Notes" Width="25%" />
+                        <dx:GridViewDataTextColumn Caption="Dodatni podatki" FieldName="AdditionalInfo" Width="30%" />
                     </Columns>
                 </dx:ASPxGridView>
 
                 <dx:ASPxPopupControl ID="PopupControlLocation" runat="server" ContentUrl="Location_popup.aspx"
                     ClientInstanceName="popupControLocation" Modal="True" HeaderText="LOKACIJA"
-                    CloseAction="CloseButton" Width="680px" Height="285px" PopupHorizontalAlign="WindowCenter"
+                    CloseAction="CloseButton" Width="680px" Height="585px" PopupHorizontalAlign="WindowCenter"
                     PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
                     AllowResize="true" ShowShadow="true"
                     OnWindowCallback="PopupControlLocation_WindowCallback">
