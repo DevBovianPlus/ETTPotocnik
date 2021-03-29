@@ -83,7 +83,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ETTPotocnik.xpo" />
+    <None Include="ETTPotocnik.xpo">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ETTPotocnik.xpo.diagram">
       <DependentUpon>ETTPotocnik.xpo</DependentUpon>
     </None>

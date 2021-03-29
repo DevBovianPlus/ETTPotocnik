@@ -109,7 +109,7 @@
 
                     <Columns>
                         
-                        <dx:GridViewCommandColumn ShowSelectCheckbox="true" Caption="Izberi" Width="50px" />
+                        <dx:GridViewCommandColumn ShowSelectCheckbox="true" Caption="Izberi" Width="25px" />
 
                         <dx:GridViewDataTextColumn Caption="Prenešeno" FieldName="InventoryDeliveriesLocationID.NeedsMatching"  MinWidth="70" MaxWidth="250" Width="2%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
@@ -131,7 +131,7 @@
                         <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name"  MinWidth="200" MaxWidth="250" Width="5%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Artikel" FieldName="ProductID.Name"  MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="ProductID.Name"  MinWidth="200" MaxWidth="250" Width="5%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataTextColumn Caption="Koda artikla" FieldName="UIDCode" MinWidth="150" MaxWidth="250" Width="5%">

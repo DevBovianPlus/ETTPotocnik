@@ -333,7 +333,7 @@
 
                                                 <Columns>
                                                     <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
-                                                    <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="30%" />
+                                                    <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="30%" />
                                                     <dx:GridViewDataTextColumn Caption="UID" FieldName="UID250" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
                                                     <dx:GridViewDataTextColumn Caption="Količina" FieldName="Quantity" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
                                                 </Columns>
