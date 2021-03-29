@@ -83,7 +83,7 @@
 
                 <div class="row m-0 d-flex align-items-center pb-2">
                     <div class="col-0 pr-0" style="margin-right: 61px;">
-                        <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="NAZIV : *" Font-Bold="true"></dx:ASPxLabel>
+                        <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="K.IME EKSPLOZIVA : *" Font-Bold="true"></dx:ASPxLabel>
                     </div>
                     <div class="col no-padding-left">
                         <dx:ASPxTextBox runat="server" ID="txtName" ClientInstanceName="clientTxtName"
@@ -171,7 +171,7 @@
 
                 <div class="row m-0 d-flex align-items-center pb-2">
                     <div class="col-0 pr-0" style="margin-right: 28px;">
-                        <dx:ASPxLabel ID="ASPxLabel4" runat="server" Font-Size="12px" Text="KATEGORIJA : *" Font-Bold="true"></dx:ASPxLabel>
+                        <dx:ASPxLabel ID="ASPxLabel4" runat="server" Font-Size="12px" Text="TIP EKSPLOZIVA : *" Font-Bold="true"></dx:ASPxLabel>
                     </div>
                     <div class="col-5 no-padding-left">
                         <dx:ASPxGridLookup ID="GridLookupCategory" runat="server" ClientInstanceName="lookUpCategory"

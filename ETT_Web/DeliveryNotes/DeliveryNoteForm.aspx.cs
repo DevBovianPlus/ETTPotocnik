@@ -154,6 +154,7 @@ namespace ETT_Web.DeliveryNotes
 
             model.DeliveryNoteDate = DateEditDeliveryNoteDate.Date;
             model.DeliveryNoteNumber = txtDeliveryNoteNumber.Text;
+            model.RecivedMaterialDate = DateEditDeliveryNoteDate.Date;
 
             int supplierID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupSupplier));
             if (model.SupplierID != null)

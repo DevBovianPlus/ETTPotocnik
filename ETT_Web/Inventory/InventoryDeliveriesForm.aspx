@@ -99,7 +99,7 @@
                             <div class="col-lg-6 mb-2 mb-lg-0">
                                 <div class="row m-0 align-items-center">
                                     <div class="col-0 p-0" style="margin-right: 55px;">
-                                        <dx:ASPxLabel ID="ASPxLabel1" runat="server" Font-Size="12px" Text="ARTIKEL : *" Font-Bold="true"></dx:ASPxLabel>
+                                        <dx:ASPxLabel ID="ASPxLabel1" runat="server" Font-Size="12px" Text="KOMERCIALNO IME EKSPLOZIVA : *" Font-Bold="true"></dx:ASPxLabel>
                                     </div>
                                     <div class="col p-0">
                                         <dx:ASPxGridLookup ID="GridLookupProduct" runat="server" ClientInstanceName="lookUpProduct"
@@ -323,7 +323,7 @@
                                         <Columns>
                                             <dx:GridViewDataTextColumn Caption="UID" FieldName="InventoryDeliveriesID.AtomeUID250" AllowTextTruncationInAdaptiveMode="true" MinWidth="150" MaxWidth="200" Width="13%" />
                                             <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="13%" PropertiesDateEdit-DisplayFormatString="dd. MMMM yyyy" />
-                                            <dx:GridViewDataTextColumn Caption="Artikel" FieldName="InventoryDeliveriesID.InventoryStockID.ProductID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="30%" />
+                                            <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="InventoryDeliveriesID.InventoryStockID.ProductID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="30%" />
                                             <dx:GridViewDataTextColumn Caption="Iz lokacije" FieldName="LocationFromID.Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="20%" />
                                             <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="LocationToID.Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="20%" />
 

@@ -49,7 +49,7 @@
             <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="15%">
                 <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
             </dx:GridViewDataDateColumn>
-            <dx:GridViewDataTextColumn Caption="Artikel" FieldName="InventoryStockID.ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%">
+            <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="InventoryStockID.ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%">
                 <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
             </dx:GridViewDataTextColumn>
             <dx:GridViewDataTextColumn Caption="UID koda" FieldName="AtomeUID250" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%" >

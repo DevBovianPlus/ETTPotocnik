@@ -31,11 +31,11 @@
 
         function HandleUserAction(s, e) {
             //vrne vrednost ki predstavlja akcijo uporabnika (add, edit, delete)
-           /* var actionParameter = HandleUserActionsOnTabs(gridDeliveryNoteItem, btnAdd, btnEdit, btnDelete, s);
-
-            if (actionParameter != "") {
-                callbackPanel.PerformCallback(actionParameter);
-            }*/
+            /* var actionParameter = HandleUserActionsOnTabs(gridDeliveryNoteItem, btnAdd, btnEdit, btnDelete, s);
+ 
+             if (actionParameter != "") {
+                 callbackPanel.PerformCallback(actionParameter);
+             }*/
 
             gridDeliveryNoteItem.GetRowValues(gridDeliveryNoteItem.GetFocusedRowIndex(), 'DeliveryNoteItemID', OnGetRowValues);
         }
@@ -243,14 +243,31 @@
                                     </div>
                                 </div>
 
+                                <div class="col-lg-6 mb-2 mb-lg-0">
+                                    <div class="row m-0 align-items-center">
+                                        <div class="col-0 p-0" style="margin-right: 55px;">
+                                            <dx:ASPxLabel ID="ASPxLabel6" runat="server" Font-Size="12px" Text="DATUM PREJETJA : *" Font-Bold="true"></dx:ASPxLabel>
+                                        </div>
+                                        <div class="col p-0">
+                                            <dx:ASPxDateEdit ID="dtPrejetjeMateriala" runat="server" EditFormat="Date" Width="100%"
+                                                CssClass="text-box-input date-edit-padding" Font-Size="13px"
+                                                ClientInstanceName="dtPrejetjeMaterialaClient">
+                                                <FocusedStyle CssClass="focus-text-box-input" />
+                                                <CalendarProperties TodayButtonText="Danes" ClearButtonText="Izbriši" />
+                                                <DropDownButton Visible="true"></DropDownButton>
+                                                <ClientSideEvents Init="SetFocus" />
+                                            </dx:ASPxDateEdit>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                 <div class="row m-0 pb-3">
+                                <div class="row m-0 pb-3">
                                     <div class="col-lg-12">
                                         <div class="row m-0 align-items-center">
-                                            <div class="col-0 p-0" style="margin-right: 41px;">
+                                            <div class="col-0 p-0" style="margin-right: 41px; margin-top: 20px">
                                                 <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="NAPAKA : " Font-Bold="true"></dx:ASPxLabel>
                                             </div>
-                                            <div class="col p-0">
+                                            <div class="col p-0" style="margin-right: 41px; margin-top: 20px">
                                                 <dx:ASPxMemo ID="memError" runat="server" Width="100%" Rows="2" MaxLength="500" CssClass="text-box-input" AutoCompleteType="Disabled">
                                                     <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                 </dx:ASPxMemo>

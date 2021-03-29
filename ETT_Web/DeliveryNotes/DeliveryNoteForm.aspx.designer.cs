@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ETT_Web.DeliveryNotes {
-    
-    
-    public partial class DeliveryNoteForm {
-        
+namespace ETT_Web.DeliveryNotes
+{
+
+
+    public partial class DeliveryNoteForm
+    {
+
         /// <summary>
         /// deliveryNoteItem control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl deliveryNoteItem;
-        
+
         /// <summary>
         /// deliveryNoteProductBadge control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl deliveryNoteProductBadge;
-        
+
         /// <summary>
         /// ASPxLabel1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
-        
+
         /// <summary>
         /// DateEditDeliveryNoteDate control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxDateEdit DateEditDeliveryNoteDate;
-        
+
         /// <summary>
         /// ASPxLabel2 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
-        
+
         /// <summary>
         /// txtDeliveryNoteNumber control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtDeliveryNoteNumber;
-        
+
         /// <summary>
         /// ASPxLabel3 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel3;
-        
+
         /// <summary>
         /// GridLookupSupplier control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupSupplier;
-        
+
         /// <summary>
         /// ASPxLabel4 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel4;
-        
+
         /// <summary>
         /// GridLookupLocation control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupLocation;
-        
+
         /// <summary>
         /// ASPxLabel17 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel17;
-        
+
         /// <summary>
         /// MemoNotes control.
         /// </summary>
@@ -119,7 +121,25 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo MemoNotes;
-        
+
+        /// <summary>
+        /// ASPxLabel6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel6;
+
+        /// <summary>
+        /// dtPrejetjeMateriala control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxDateEdit dtPrejetjeMateriala;
+
         /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
@@ -128,7 +148,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel5;
-        
+
         /// <summary>
         /// memError control.
         /// </summary>
@@ -137,7 +157,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo memError;
-        
+
         /// <summary>
         /// DocumentUpload control.
         /// </summary>
@@ -146,7 +166,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::ETT_Web.Widgets.UploadAttachment DocumentUpload;
-        
+
         /// <summary>
         /// btnProcessXMLFile control.
         /// </summary>
@@ -155,7 +175,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnProcessXMLFile;
-        
+
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -164,7 +184,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSave;
-        
+
         /// <summary>
         /// btnSaveChanges control.
         /// </summary>
@@ -173,7 +193,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSaveChanges;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -182,7 +202,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancel;
-        
+
         /// <summary>
         /// CallbackPanel control.
         /// </summary>
@@ -191,7 +211,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxCallbackPanel CallbackPanel;
-        
+
         /// <summary>
         /// ASPxGridViewDeliveryNoteItem control.
         /// </summary>
@@ -200,7 +220,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridViewDeliveryNoteItem;
-        
+
         /// <summary>
         /// PopupControlUsers control.
         /// </summary>
@@ -209,7 +229,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl PopupControlUsers;
-        
+
         /// <summary>
         /// btnEdit control.
         /// </summary>
@@ -218,7 +238,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnEdit;
-        
+
         /// <summary>
         /// XpoDSDeliveryNoteItem control.
         /// </summary>
@@ -227,7 +247,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSDeliveryNoteItem;
-        
+
         /// <summary>
         /// XpoDSSupplier control.
         /// </summary>
@@ -236,7 +256,7 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSSupplier;
-        
+
         /// <summary>
         /// XpoDSLocation control.
         /// </summary>
@@ -245,15 +265,17 @@ namespace ETT_Web.DeliveryNotes {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSLocation;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new ETT_Web.MasterPages.Main Master {
-            get {
+        public new ETT_Web.MasterPages.Main Master
+        {
+            get
+            {
                 return ((ETT_Web.MasterPages.Main)(base.Master));
             }
         }
