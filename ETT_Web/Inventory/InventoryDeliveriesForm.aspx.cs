@@ -97,8 +97,9 @@ namespace ETT_Web.Inventory
             txtUIDPackaging.Text = model.PackagesUIDs;
             MemoNotes.Text = model.Notes;
 
-            txtPackaging.Text = model.DeliveryNoteItemID.CountOfTradeUnits.ToString();
+            txtDeliveryNoteNumber.Text = model.DeliveryNoteItemID.DeliveryNoteID.DeliveryNoteNumber;
             DateEditDeliveryNoteDate.Date = model.DeliveryNoteItemID.DeliveryNoteID.DeliveryNoteDate;
+            DateEditDeliveryRecivedMaterialDate.Date = model.DeliveryNoteItemID.DeliveryNoteID.RecivedMaterialDate;
             GridLookupLocation.Value = model.DeliveryNoteItemID.DeliveryNoteID.LocationID.LocationID;
 
             MemoNotes.Text = model.Notes;

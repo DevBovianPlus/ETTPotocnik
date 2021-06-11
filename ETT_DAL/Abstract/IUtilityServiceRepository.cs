@@ -1,4 +1,5 @@
-﻿using ETT_DAL.ETTPotocnik;
+﻿using DevExpress.Xpo;
+using ETT_DAL.ETTPotocnik;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ETT_DAL.Abstract
 {
     public interface IUtilityServiceRepository
     {
-        void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null);
-        void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos);
+        void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null, UnitOfWork uow = null);
+        void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos, UnitOfWork uow);
     }
 }

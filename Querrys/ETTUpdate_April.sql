@@ -1,0 +1,1 @@
+alter table DeliveryNote add SalePermission varchar(4000);

@@ -20,6 +20,7 @@ namespace ETT_Web.Admin
     {
         Session session;
         IUtilityServiceRepository utilityServiceRepo;
+        IMobileTransactionRepository mobileTransactionRepo;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -30,6 +31,7 @@ namespace ETT_Web.Admin
             session = XpoHelper.GetNewSession();
 
             utilityServiceRepo = new UtilityServiceRepository(session);
+            mobileTransactionRepo = new MobileTransactionRepository(session);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -40,6 +42,13 @@ namespace ETT_Web.Admin
         protected void btnMatchMobileTransactions_Click(object sender, EventArgs e)
         {
             utilityServiceRepo.MatchMobileTransWithInventoryDeliveries();
+            Master.NavigationBarMain.DataBind();
+        }
+
+
+        protected void btnDeleteTransactions_Click(object sender, EventArgs e)
+        {
+            mobileTransactionRepo.DeleteDuplicateMobileTransaction();
             Master.NavigationBarMain.DataBind();
         }
     }

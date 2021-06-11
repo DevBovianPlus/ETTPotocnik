@@ -89,8 +89,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return fAdditionalInfo; }
             set { SetPropertyValue<string>(nameof(AdditionalInfo), ref fAdditionalInfo, value); }
         }
-        [Association(@"DeliveryNoteReferencesLocation")]
-        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
         [Association(@"InventoryStockReferencesLocation")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
         [Association(@"InventoryDeliveriesReferencesLocation")]
@@ -99,6 +97,8 @@ namespace ETT_DAL.ETTPotocnik
         public XPCollection<InventoryDeliveriesLocation> InventoryDeliveriesLocations { get { return GetCollection<InventoryDeliveriesLocation>(nameof(InventoryDeliveriesLocations)); } }
         [Association(@"InventoryDeliveriesLocationReferencesLocation1")]
         public XPCollection<InventoryDeliveriesLocation> InventoryDeliveriesLocations1 { get { return GetCollection<InventoryDeliveriesLocation>(nameof(InventoryDeliveriesLocations1)); } }
+        [Association(@"DeliveryNoteReferencesLocation")]
+        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
     }
 
 }

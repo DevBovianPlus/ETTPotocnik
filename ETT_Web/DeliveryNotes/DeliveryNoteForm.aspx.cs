@@ -122,10 +122,12 @@ namespace ETT_Web.DeliveryNotes
         private void FillForm()
         {
             DateEditDeliveryNoteDate.Date = model.DeliveryNoteDate;
+            dtPrejetjeMateriala.Date = model.RecivedMaterialDate;
             txtDeliveryNoteNumber.Text = model.DeliveryNoteNumber;
             GridLookupSupplier.Value = model.SupplierID != null ? model.SupplierID.ClientID : 0;
             GridLookupLocation.Value = model.LocationID != null ? model.LocationID.LocationID : 0;
             MemoNotes.Text = model.Notes;
+            memDovoljenje.Text = model.SalePermission;
             memError.Text = model.ProcessError;
 
             // if(!String.IsNullOrEmpty(model.Picture))
@@ -154,7 +156,7 @@ namespace ETT_Web.DeliveryNotes
 
             model.DeliveryNoteDate = DateEditDeliveryNoteDate.Date;
             model.DeliveryNoteNumber = txtDeliveryNoteNumber.Text;
-            model.RecivedMaterialDate = DateEditDeliveryNoteDate.Date;
+            model.RecivedMaterialDate = dtPrejetjeMateriala.Date;
 
             int supplierID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupSupplier));
             if (model.SupplierID != null)
@@ -169,6 +171,7 @@ namespace ETT_Web.DeliveryNotes
                 model.LocationID = locationRepo.GetLocationByID(locationID);
 
             model.Notes = MemoNotes.Text;
+            model.SalePermission = memDovoljenje.Text;
 
             /*if (!String.IsNullOrEmpty(model.Picture))
             {
@@ -463,11 +466,15 @@ namespace ETT_Web.DeliveryNotes
                 GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.In_Process);
                 AddOrEditEntityObject((userAction == (int)Enums.UserAction.Add ? true : false));
                 int userId = PrincipalHelper.GetUserID();
-                Task.Run(() =>
-                {
-                    ParseXML(physicalPath, userId);
-                    //TODO obvestiti uproabnika o daljšem obdobju parsanja...glej status.
-                });
+                
+                ParseXML(physicalPath, userId);
+
+
+                //Task.Run(() =>
+                //{
+                //    ParseXML(physicalPath, userId);
+                //    //TODO obvestiti uproabnika o daljšem obdobju parsanja...glej status.
+                //});
 
             }
             this.Master.NavigationBarMain.DataBind();
@@ -547,7 +554,7 @@ namespace ETT_Web.DeliveryNotes
             int unitsCount = 0;
             List<SummaryItemModel> topLevelItems = new List<SummaryItemModel>();
 
-            
+
             if (!isDeloveryNoteRepacking)
             {
                 foreach (var item in summaryItems)
@@ -626,7 +633,7 @@ namespace ETT_Web.DeliveryNotes
                     {
                         var newTopLevelItem = new SummaryItemModel();
                         newTopLevelItem.CountOfTradeUnits = item.Count();
-                        newTopLevelItem.PSN = item.Select(i=>i.PSN).First();
+                        newTopLevelItem.PSN = item.Select(i => i.PSN).First();
                         newTopLevelItem.SID = item.Select(i => i.SID).First();
                         newTopLevelItem.ItemQuantity = 0;
                         newTopLevelItem.Notes = String.Format("Repacking dobavnica z različnimi izdelki - ({0}/{1})", productCount, distinctProducts.Count);

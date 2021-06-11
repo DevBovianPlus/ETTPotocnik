@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ETT_Web.Admin {
-    
-    
-    public partial class Admin {
-        
+namespace ETT_Web.Admin
+{
+
+
+    public partial class Admin
+    {
+
         /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ETT_Web.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel5;
-        
+
         /// <summary>
         /// btnMatchMobileTransactions control.
         /// </summary>
@@ -29,15 +31,35 @@ namespace ETT_Web.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnMatchMobileTransactions;
-        
+
+        /// <summary>
+        /// ASPxLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
+
+        /// <summary>
+        /// ASPxButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton ASPxButton1;
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new ETT_Web.MasterPages.Main Master {
-            get {
+        public new ETT_Web.MasterPages.Main Master
+        {
+            get
+            {
                 return ((ETT_Web.MasterPages.Main)(base.Master));
             }
         }

@@ -2,6 +2,7 @@
 using DevExpress.Xpo;
 using ETT_DAL.Abstract;
 using ETT_DAL.Concrete;
+using ETT_DAL.ETTPotocnik;
 using ETT_DAL.Helpers;
 using ETT_Utilities.Common;
 using ETT_Web.Infrastructure;
@@ -19,6 +20,7 @@ namespace ETT_Web.MobileTransactions
     {
         Session session;
         IIssueDocumentRepository issueDocumentRepo;
+        IMobileTransactionRepository mobileTransactionRepo;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -29,11 +31,12 @@ namespace ETT_Web.MobileTransactions
 
             ASPxGridViewMobileTransaction.Settings.GridLines = GridLines.Both;
             issueDocumentRepo = new IssueDocumentRepository(session);
+            mobileTransactionRepo = new MobileTransactionRepository(session);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ASPxGridViewMobileTransaction.DataBind();
         }
 
         protected void CallbackPanelMobileTransaction_Callback(object sender, CallbackEventArgsBase e)
@@ -105,6 +108,35 @@ namespace ETT_Web.MobileTransactions
                 e.Visible = true;
             else
                 e.Visible = false;
+        }
+
+
+        protected void ASPxGridViewMobileTransaction_DataBinding(object sender, EventArgs e)
+        {
+            DateTime dtFrom = DateTime.Now;
+            DateTime dtTo = DateTime.MinValue;
+
+            if (chkShowTransactionVse.Checked)
+            {
+                dtFrom = DateTime.Now.AddYears(-10);
+                dtTo = DateTime.Now;
+            }
+            else
+            {
+                dtFrom = DateTime.Now.AddMonths(-3);
+                dtTo = DateTime.Now;
+            }
+
+            List<MobileTransaction> list = mobileTransactionRepo.GetMobileTransactionByDates(dtFrom, dtTo, session);
+
+            (sender as ASPxGridView).DataSource = list;
+            (sender as ASPxGridView).Settings.GridLines = GridLines.Both;
+        }
+        
+        protected void btnIzberiVse_Click(object sender, EventArgs e)
+        {
+            ASPxGridViewMobileTransaction.DataBind();
+            Master.NavigationBarMain.DataBind();
         }
     }
 }

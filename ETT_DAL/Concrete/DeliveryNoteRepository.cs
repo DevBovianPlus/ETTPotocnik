@@ -322,12 +322,16 @@ namespace ETT_DAL.Concrete
         {
             try
             {
+                Int64 iCnt = 0;
+
                 using (UnitOfWork uow = XpoHelper.GetNewUnitOfWork())
                 {
                     List<DeliveryNoteItem> deliveryNoteItems = GetDeliveryNoteItemsByDeliveryNoteID(deliveryNoteID, uow);
 
                     foreach (var obj in model)
                     {
+                        iCnt++;
+
                         //v InventoryDeliveries shranimo vsaki atom v svoj zapis, skupaj z hierarhijo in ostalimi podatki
                         InventoryDeliveries item = new InventoryDeliveries(uow);
                         item.InventoryDeliveriesID = 0;
@@ -335,7 +339,7 @@ namespace ETT_DAL.Concrete
                         string topLevelPackageSID = GetTopLevelSID(obj, isRepacking);
                         var deliveryNoteItem = deliveryNoteItems.Where(dni => !String.IsNullOrEmpty(topLevelPackageSID) && dni.SID == topLevelPackageSID).FirstOrDefault();
                         item.DeliveryNoteItemID = deliveryNoteItem;
-
+                        if (deliveryNoteItem == null) continue;
                         item.SupplierProductCode = deliveryNoteItem.SupplierProductCode;
                         item.AtomeUID250 = obj.UID;
                         item.PackagesUIDs = obj.PackagesUIDs;

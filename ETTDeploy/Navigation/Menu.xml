@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MainMenu>
+  <SuperAdmin>
+    <Group Text="NADZOR" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <!--<Link NavigateUrl="~/Home.aspx" Text="Domov" ImageUrl="~/Images/home.png" />-->
+      <Link NavigateUrl="~/Home.aspx" Text="Nadzorna plošča" ImageUrl="~/Images/dashboard3.png" />
+      <Link NavigateUrl="~/Admin/TrackUserLogin.aspx" Text="Prijavljeni uporabniki" ImageUrl="~/Images/trackUser.png" />
+      <Link NavigateUrl="~/Admin/Admin.aspx" Text="Administacija" ImageUrl="~/Images/trackUser.png" />
+    </Group>
+    <Group Text="ZAPOSLENI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Employees/EmployeeTable.aspx" Text="Minerji" ImageUrl="~/Images/employee.png" />
+      <Link NavigateUrl="~/Employees/UsersTable.aspx" Text="Uporabniki" ImageUrl="~/Images/user.png" />
+    </Group>
+    <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+    </Group>
+    <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
+    </Group>
+    <Group Text="IZDAJNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/IssueDocuments/IssueDocumentTable.aspx" Text="Izdaja materiala" ImageUrl="~/Images/issueDocument.png" />
+    </Group>
+    <Group Text="ARTIKLI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Inventory/InventoryStockTable.aspx" Text="Zaloga" ImageUrl="~/Images/inventoryStock.png" />
+      <Link NavigateUrl="~/Inventory/InventoryDeliveriesTable.aspx" Text="Iskanje po UID" ImageUrl="~/Images/inventoryDeliveries.png" />
+    </Group>
+    <Group Text="ŠIFRANTI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/CodeList/ProductTable.aspx" Text="Artikli" ImageUrl="~/Images/product.png" />
+      <Link NavigateUrl="~/CodeList/CategorieTable.aspx" Text="Kategorije" ImageUrl="~/Images/category.png" />
+      <Link NavigateUrl="~/CodeList/LocationTable.aspx" Text="Lokacije" ImageUrl="~/Images/location.png" />
+      <Link NavigateUrl="~/CodeList/SupplierTable.aspx" Text="Partnerji" ImageUrl="~/Images/partners.png" />
+      <Link NavigateUrl="~/CodeList/MeasuringUnitTable.aspx" Text="Merske enote" ImageUrl="~/Images/measureUnit.png" />
+    </Group>
+  </SuperAdmin>
+
+  <Admin>
+    <Group Text="NADZOR" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <!--<Link NavigateUrl="~/Home.aspx" Text="Domov" ImageUrl="~/Images/home.png" />-->
+      <Link NavigateUrl="~/Home.aspx" Text="Nadzorna plošča" ImageUrl="~/Images/dashboard3.png" />
+      <Link NavigateUrl="~/Admin/TrackUserLogin.aspx" Text="Prijavljeni uporabniki" ImageUrl="~/Images/trackUser.png" />
+      <Link NavigateUrl="~/Admin/Admin.aspx" Text="Administacija" ImageUrl="~/Images/trackUser.png" />
+    </Group>
+    <Group Text="ZAPOSLENI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Employees/EmployeeTable.aspx" Text="Minerji" ImageUrl="~/Images/employee.png" />
+      <Link NavigateUrl="~/Employees/UsersTable.aspx" Text="Uporabniki" ImageUrl="~/Images/user.png" />
+    </Group>
+    <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+    </Group>
+    <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
+    </Group>
+    <Group Text="IZDAJNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/IssueDocuments/IssueDocumentTable.aspx" Text="Izdaja materiala" ImageUrl="~/Images/issueDocument.png" />
+    </Group>
+    <Group Text="ARTIKLI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Inventory/InventoryStockTable.aspx" Text="Zaloga" ImageUrl="~/Images/inventoryStock.png" />
+      <Link NavigateUrl="~/Inventory/InventoryDeliveriesTable.aspx" Text="Iskanje po UID" ImageUrl="~/Images/inventoryDeliveries.png" />
+    </Group>
+    <Group Text="ŠIFRANTI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/CodeList/ProductTable.aspx" Text="Artikli" ImageUrl="~/Images/product.png" />
+      <Link NavigateUrl="~/CodeList/CategorieTable.aspx" Text="Kategorije" ImageUrl="~/Images/category.png" />
+      <Link NavigateUrl="~/CodeList/LocationTable.aspx" Text="Lokacije" ImageUrl="~/Images/location.png" />
+      <Link NavigateUrl="~/CodeList/SupplierTable.aspx" Text="Partnerji" ImageUrl="~/Images/partners.png" />
+      <Link NavigateUrl="~/CodeList/MeasuringUnitTable.aspx" Text="Merske enote" ImageUrl="~/Images/measureUnit.png" />
+    </Group>
+  </Admin>
+
+  <Miner>
+    <Group Text="NADZOR" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <!--<Link NavigateUrl="~/Home.aspx" Text="Domov" ImageUrl="~/Images/home.png" />-->
+      <Link NavigateUrl="~/Home.aspx" Text="Nadzorna plošča" ImageUrl="~/Images/dashboard3.png" />
+    </Group>
+    <Group Text="ZAPOSLENI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Employees/EmployeeTable.aspx" Text="Minerji" ImageUrl="~/Images/employee.png" />
+    </Group>
+    <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+    </Group>
+    <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
+    </Group>
+    <Group Text="IZDAJNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/IssueDocuments/IssueDocumentTable.aspx" Text="Izdaja materiala" ImageUrl="~/Images/issueDocument.png" />
+    </Group>
+    <Group Text="ARTIKLI" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/Inventory/InventoryStockTable.aspx" Text="Zaloga" ImageUrl="~/Images/inventoryStock.png" />
+      <Link NavigateUrl="~/Inventory/InventoryDeliveriesTable.aspx" Text="Iskanje po UID" ImageUrl="~/Images/inventoryDeliveries.png" />
+    </Group>
+  </Miner>
+  <Editor>
+    <Group Text="NADZOR" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <!--<Link NavigateUrl="~/Home.aspx" Text="Domov" ImageUrl="~/Images/home.png" />-->
+      <Link NavigateUrl="~/Home.aspx" Text="Nadzorna plošča" ImageUrl="~/Images/dashboard3.png" />
+    </Group>
+    <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+    </Group>
+    <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
+    </Group>
+    <Group Text="IZDAJNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/IssueDocuments/IssueDocumentTable.aspx" Text="Izdaja materiala" ImageUrl="~/Images/issueDocument.png" />
+    </Group>
+  </Editor>
+  <User>
+    <Group Text="NADZOR" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <!--<Link NavigateUrl="~/Home.aspx" Text="Domov" ImageUrl="~/Images/home.png" />-->
+      <Link NavigateUrl="~/Home.aspx" Text="Nadzorna plošča" ImageUrl="~/Images/dashboard3.png" />
+    </Group>
+    <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+    </Group>
+    <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
+    </Group>
+    <Group Text="IZDAJNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
+      <Link NavigateUrl="~/IssueDocuments/IssueDocumentTable.aspx" Text="Izdaja materiala" ImageUrl="~/Images/issueDocument.png" />
+    </Group>
+  </User>
+</MainMenu>

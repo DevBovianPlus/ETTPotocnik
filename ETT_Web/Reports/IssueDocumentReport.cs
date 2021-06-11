@@ -60,6 +60,8 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel20;
     private XRLabel lblCurrentDate;
     private XRLabel xrLabel24;
+    private XRLabel xrLabel26;
+    private XRLabel xrLabel25;
 
 
     /// <summary>
@@ -106,6 +108,11 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblCurrentDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -142,15 +149,12 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLine4 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEmployeeName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLine4 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblCurrentDate = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.IssueDocumentDataSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -179,6 +183,8 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel26,
+            this.xrLabel25,
             this.lblCurrentDate,
             this.xrLabel24,
             this.xrLabel20,
@@ -199,6 +205,75 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrLine1});
             this.Detail.HeightF = 200F;
             this.Detail.Name = "Detail";
+            // 
+            // xrLabel26
+            // 
+            this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PermissionDoc]")});
+            this.xrLabel26.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(169.1667F, 152F);
+            this.xrLabel26.Multiline = true;
+            this.xrLabel26.Name = "xrLabel26";
+            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel26.SizeF = new System.Drawing.SizeF(480.8333F, 23F);
+            this.xrLabel26.StylePriority.UseFont = false;
+            this.xrLabel26.StylePriority.UseTextAlignment = false;
+            this.xrLabel26.Text = "lblPermision";
+            this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel25
+            // 
+            this.xrLabel25.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(0F, 152F);
+            this.xrLabel25.Multiline = true;
+            this.xrLabel25.Name = "xrLabel25";
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(169.1667F, 23F);
+            this.xrLabel25.StylePriority.UseFont = false;
+            this.xrLabel25.StylePriority.UseTextAlignment = false;
+            this.xrLabel25.Text = "Dovoljenje za prodajo:";
+            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lblCurrentDate
+            // 
+            this.lblCurrentDate.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
+            this.lblCurrentDate.LocationFloat = new DevExpress.Utils.PointFloat(522.5F, 125.5F);
+            this.lblCurrentDate.Multiline = true;
+            this.lblCurrentDate.Name = "lblCurrentDate";
+            this.lblCurrentDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblCurrentDate.SizeF = new System.Drawing.SizeF(129.5F, 23F);
+            this.lblCurrentDate.StylePriority.UseFont = false;
+            this.lblCurrentDate.StylePriority.UseTextAlignment = false;
+            this.lblCurrentDate.Text = "lblCurrentDate";
+            this.lblCurrentDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // xrLabel24
+            // 
+            this.xrLabel24.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(399.1666F, 125.5F);
+            this.xrLabel24.Multiline = true;
+            this.xrLabel24.Name = "xrLabel24";
+            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel24.SizeF = new System.Drawing.SizeF(123.3334F, 23F);
+            this.xrLabel24.StylePriority.UseFont = false;
+            this.xrLabel24.StylePriority.UseTextAlignment = false;
+            this.xrLabel24.Text = "Datum dokumenta : ";
+            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel20
+            // 
+            this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BuyerID].[Name]")});
+            this.xrLabel20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
+            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(0F, 33.50001F);
+            this.xrLabel20.Multiline = true;
+            this.xrLabel20.Name = "xrLabel20";
+            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel20.SizeF = new System.Drawing.SizeF(210.8333F, 23F);
+            this.xrLabel20.StylePriority.UseFont = false;
+            this.xrLabel20.StylePriority.UseTextAlignment = false;
+            this.xrLabel20.Text = "xrLabel20";
+            this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrTable1
             // 
@@ -282,7 +357,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "Količina";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell4.Weight = 1.487160859857031D;
+            this.xrTableCell4.Weight = 0.90758379192239536D;
             // 
             // xrTableCell6
             // 
@@ -297,7 +372,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.Text = "EM";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell6.Weight = 0.35850489234041905D;
+            this.xrTableCell6.Weight = 0.93808196027505464D;
             // 
             // xrLabel15
             // 
@@ -525,15 +600,15 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             // xrLabel21
             // 
             this.xrLabel21.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(619.1667F, 0F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(571.072F, 0F);
             this.xrLabel21.Multiline = true;
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(30.83331F, 22.99999F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(78.92804F, 22.99999F);
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
             this.xrLabel21.Text = "KOS";
-            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel19
             // 
@@ -544,7 +619,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(121.8683F, 23F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(79.23865F, 23F);
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
             this.xrLabel19.Text = "xrLabel19";
@@ -675,6 +750,14 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.ReportFooter.HeightF = 193.8241F;
             this.ReportFooter.Name = "ReportFooter";
             // 
+            // xrLine4
+            // 
+            this.xrLine4.BorderWidth = 2F;
+            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLine4.Name = "xrLine4";
+            this.xrLine4.SizeF = new System.Drawing.SizeF(650F, 23F);
+            this.xrLine4.StylePriority.UseBorderWidth = false;
+            // 
             // xrLine3
             // 
             this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(486.4649F, 132.5586F);
@@ -725,55 +808,6 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel22.Text = "Dokument izdal :";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrLine4
-            // 
-            this.xrLine4.BorderWidth = 2F;
-            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLine4.Name = "xrLine4";
-            this.xrLine4.SizeF = new System.Drawing.SizeF(650F, 23F);
-            this.xrLine4.StylePriority.UseBorderWidth = false;
-            // 
-            // xrLabel20
-            // 
-            this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BuyerID].[Name]")});
-            this.xrLabel20.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(0F, 33.50001F);
-            this.xrLabel20.Multiline = true;
-            this.xrLabel20.Name = "xrLabel20";
-            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel20.SizeF = new System.Drawing.SizeF(210.8333F, 23F);
-            this.xrLabel20.StylePriority.UseFont = false;
-            this.xrLabel20.StylePriority.UseTextAlignment = false;
-            this.xrLabel20.Text = "xrLabel20";
-            this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel24
-            // 
-            this.xrLabel24.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(399.1666F, 125.5F);
-            this.xrLabel24.Multiline = true;
-            this.xrLabel24.Name = "xrLabel24";
-            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel24.SizeF = new System.Drawing.SizeF(123.3334F, 23F);
-            this.xrLabel24.StylePriority.UseFont = false;
-            this.xrLabel24.StylePriority.UseTextAlignment = false;
-            this.xrLabel24.Text = "Datum dokumenta : ";
-            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblCurrentDate
-            // 
-            this.lblCurrentDate.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
-            this.lblCurrentDate.LocationFloat = new DevExpress.Utils.PointFloat(522.5F, 125.5F);
-            this.lblCurrentDate.Multiline = true;
-            this.lblCurrentDate.Name = "lblCurrentDate";
-            this.lblCurrentDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lblCurrentDate.SizeF = new System.Drawing.SizeF(129.5F, 23F);
-            this.lblCurrentDate.StylePriority.UseFont = false;
-            this.lblCurrentDate.StylePriority.UseTextAlignment = false;
-            this.lblCurrentDate.Text = "lblCurrentDate";
-            this.lblCurrentDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
             // IssueDocumentReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -794,7 +828,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.Margins = new System.Drawing.Printing.Margins(98, 100, 0, 0);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.IssueDocumentID_param});
-            this.Version = "19.1";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.IssueDocumentDataSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

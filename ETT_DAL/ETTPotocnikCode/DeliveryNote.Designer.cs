@@ -110,6 +110,13 @@ namespace ETT_DAL.ETTPotocnik
             get { return fRecivedMaterialDate; }
             set { SetPropertyValue<DateTime>(nameof(RecivedMaterialDate), ref fRecivedMaterialDate, value); }
         }
+        string fSalePermission;
+        [Size(4000)]
+        public string SalePermission
+        {
+            get { return fSalePermission; }
+            set { SetPropertyValue<string>(nameof(SalePermission), ref fSalePermission, value); }
+        }
         [Association(@"DeliveryNoteItemReferencesDeliveryNote")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
     }

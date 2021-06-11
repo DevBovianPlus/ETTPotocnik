@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpo;
+using ETT_DAL.Concrete;
 using ETT_DAL.ETTPotocnik;
 using ETT_DAL.Models.MobileTransaction;
 using System;
@@ -16,5 +17,9 @@ namespace ETT_DAL.Abstract
         bool DeleteMobileTransaction(int mtId);
         bool DeleteMobileTransaction(MobileTransaction model);
         int SaveMobileTransaction(MobileTransactionAPIModel model);
+
+        bool DeleteDuplicateMobileTransaction(Session currentSession = null);
+
+        List<MobileTransaction> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
     }
 }

@@ -1,0 +1,51 @@
+﻿.dxnbLite_iOS .dxnb-header {
+    color: #A3ADC3;
+}
+
+.dxnbLite_iOS .dxnb-itemSelected {
+    background-color: #4F5F79 !important;
+    border-left: 3px solid #209FE8 !important;
+}
+    .dxnbLite_iOS .dxnb-itemSelected a {
+        background-color:inherit !important;
+    }
+        .dxnbLite_iOS .dxnb-itemSelected a span {
+            color: #fff !important;
+        }
+
+.dxnbLite_iOS .dxnb-item.dxnb-link, .dxnbLite_iOS .dxnb-last .dxnb-content {
+    border-bottom: none !important;
+}
+
+.dxnbLite_iOS .dxnb-img {
+    margin-top:0;
+}
+
+.dxnbLite_iOS .dxnb-item.dxnb-link a{
+    display:flex;
+}
+.dxnbLite_iOS .dxnb-item.dxnb-link a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dxnbLite_iOS .dxnb-item.dxnb-link a:hover {
+    text-decoration:none;
+}
+
+.dxnbLite_iOS .dxnb-content {
+    border-top:none !important;
+}
+
+/***********dashed border around buttons**************/
+.dxbButtonSys.dxbTSys div {
+    border: none !important;
+}
+
+.dxWeb_edtCheckBoxChecked_Moderno {
+    background-color: #2BAE66FF !important;
+}
+.dxToggle.dxICheckBox_Moderno[class*='Checked'] .dxSwitcher {
+    background-color: #FCF6F5FF;
+}

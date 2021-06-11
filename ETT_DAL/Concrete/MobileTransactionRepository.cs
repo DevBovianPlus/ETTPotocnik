@@ -12,6 +12,25 @@ using System.Web;
 
 namespace ETT_DAL.Concrete
 {
+    public class MobileTransactionModel
+    {
+        public int RowCnt { get; set; }
+        public int MobileTransactionID { get; set; }
+        public int InventoryDeliveriesLocationID { get; set; }
+        public int ProductID { get; set; }
+        public int SupplierID { get; set; }
+        public int tsInsertUserID { get; set; }
+        public int UnitOfMeasureID { get; set; }
+        public int tsUpdateUserID { get; set; }
+        public string UIDCode { get; set; }
+        public string ScannedProductCode { get; set; }
+        public decimal Quantity { get; set; }
+        public DateTime tsUpdate { get; set; }
+        public DateTime tsInsert { get; set; }
+        public string Notes { get; set; }
+        
+    }
+
     public class MobileTransactionRepository : IMobileTransactionRepository
     {
         Session session;
@@ -45,6 +64,56 @@ namespace ETT_DAL.Concrete
                     mTransaction = session.Query<MobileTransaction>();
 
                 return mTransaction.Where(mt => mt.MobileTransactionID == mtId).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_31, error, CommonMethods.GetCurrentMethodName()));
+            }
+        }
+
+        public List<MobileTransaction> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null)
+        {
+            try
+            {
+                XPQuery<MobileTransaction> mTransaction = null;
+
+                if (currentSession != null)
+                    mTransaction = currentSession.Query<MobileTransaction>();
+                else
+                    mTransaction = session.Query<MobileTransaction>();
+
+
+                //var query = from x in mTransaction
+                //            select new MobileTransactionModel
+                //            {
+                //                MobileTransactionID = x.MobileTransactionID,
+                //                InventoryDeliveriesLocationID = x.InventoryDeliveriesLocationID.InventoryDeliveriesLocationID,
+                //                ScannedProductCode = x.ScannedProductCode,
+                //                Notes = x.Notes,
+                //                tsInsert = x.tsInsert,
+                //                tsInsertUserID = x.tsInsertUserID,
+                //                tsUpdate = x.tsUpdate,
+                //                tsUpdateUserID = x.tsUpdateUserID,
+                //                UIDCode = x.UIDCode,
+                //                SupplierID = x.SupplierID.ClientID,
+                //                ProductID = x.ProductID.ProductID,
+                //                Quantity = x.Quantity
+                //            };
+
+                //var lMobileTrans = query.ToList();
+
+                int iCnt = 1;
+               var mTransactionList = mTransaction.Where(mt => mt.tsInsert >= dtFrom && mt.tsInsert <= dtTo).OrderByDescending(mt => mt.tsInsert).ToList();
+
+                foreach (var itm in mTransactionList)
+                {
+                    itm.RowCnt = iCnt++;
+                }
+
+
+                return mTransactionList;
             }
             catch (Exception ex)
             {
@@ -114,6 +183,14 @@ namespace ETT_DAL.Concrete
         {
             try
             {
+                XPQuery<MobileTransaction> mTransaction = null;
+
+                string sCode = GetUIDCode(model.code);
+                mTransaction = session.Query<MobileTransaction>();
+
+                int iCnt = mTransaction.Where(t => t.UIDCode == sCode && t.tsInsert == model.created_at && t.tsInsertUserID == model.user_id).Count();
+                if (iCnt != 0) return 0;
+
                 XPQuery<InventoryDeliveries> invDeliveries = session.Query<InventoryDeliveries>();
 
                 MobileTransaction mobile = new MobileTransaction(session);
@@ -184,6 +261,61 @@ namespace ETT_DAL.Concrete
                 return uid.Substring(uidStartCode.Length);
             }
             return "";
+        }
+
+        public bool DeleteDuplicateMobileTransaction(Session currentSession = null)
+        {
+            try
+            {
+                XPQuery<MobileTransaction> mTransaction = null;
+
+                if (currentSession != null)
+                    mTransaction = currentSession.Query<MobileTransaction>();
+                else
+                    mTransaction = session.Query<MobileTransaction>();
+
+                
+                //find duplicates rows
+                var duplicateValues = (from row in mTransaction
+                                       let UIDCode = row.UIDCode
+                                       let tsInsert = row.tsInsert
+                                       let tsInsertUserID = row.tsInsertUserID
+                                       group row by new { UIDCode, tsInsert, tsInsertUserID } into grp
+                                       where grp.Count() > 1
+                                       select new
+                                       {
+                                           DupID = grp.Key.UIDCode,
+                                           DupInsertTS = grp.Key.tsInsert,
+                                           DupInsertUserID = grp.Key.tsInsertUserID,
+                                           cnt = grp.Count()
+                                       }).ToList();
+
+                foreach (var item in duplicateValues)
+                {
+                    var ByUIDCodeValues = mTransaction.Where(d => d.UIDCode == item.DupID).OrderBy(s => s.MobileTransactionID).ToList();
+                    var firstID = ByUIDCodeValues.FirstOrDefault();
+
+                    if (firstID != null)
+                    {
+                        var removeTrans = ByUIDCodeValues.Where(f => f.MobileTransactionID != firstID.MobileTransactionID).ToList();
+
+                        foreach (var remT in removeTrans)
+                        {
+                            remT.Delete();
+                        }
+                        
+                    }
+
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_31, error, CommonMethods.GetCurrentMethodName()));
+            }
         }
     }
 }

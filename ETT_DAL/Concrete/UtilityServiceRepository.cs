@@ -64,13 +64,15 @@ namespace ETT_DAL.Concrete
         /// <param name="issueDocumentTransactions">Seznam InventoryDeliveriesLocation zapisov, ki smo jih potegnali iz MobileTransaction objektov. 
         /// Ti objekti so bili prenešeni na izdajnico in je potrebno razknjižiti njihovo količino.
         /// </param>
-        public void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null)
+        public void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null, UnitOfWork uow = null)
         {
             int iCnt = 0;
 
             try
             {
-                UnitOfWork uow = XpoHelper.GetNewUnitOfWork();
+                if(uow == null)
+                    uow = XpoHelper.GetNewUnitOfWork();
+        
                 XPQuery<InventoryDeliveries> id = uow.Query<InventoryDeliveries>();
 
                 var transactionForMatching = issueDocumentTransactions ?? GetInventoryDeliveryLocationsThatNeedsMatching(uow);
@@ -242,7 +244,7 @@ namespace ETT_DAL.Concrete
             //}
         }
 
-        public void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos)
+        public void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos, UnitOfWork uow)
         {
             if (pos != null)
             {
@@ -250,7 +252,7 @@ namespace ETT_DAL.Concrete
                 var result = pos.Where(p => p.MobileTransactionID.InventoryDeliveriesLocationID.NeedsMatching).Select(idl => idl.MobileTransactionID.InventoryDeliveriesLocationID).ToList();
 
                 if (result != null && result.Count > 0)
-                    MatchMobileTransWithInventoryDeliveries(result);
+                    MatchMobileTransWithInventoryDeliveries(result, uow);
             }
         }
     }

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ETT_Web.Inventory {
-    
-    
-    public partial class InventoryDeliveriesForm {
-        
+namespace ETT_Web.Inventory
+{
+
+
+    public partial class InventoryDeliveriesForm
+    {
+
         /// <summary>
         /// ASPxLabel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
-        
+
         /// <summary>
         /// GridLookupProduct control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupProduct;
-        
+
         /// <summary>
         /// ASPxLabel2 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
-        
+
         /// <summary>
         /// txtSupplierProductCode control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtSupplierProductCode;
-        
+
         /// <summary>
         /// ASPxLabel3 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel3;
-        
+
         /// <summary>
         /// txtUIDAtomeCode control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtUIDAtomeCode;
-        
+
         /// <summary>
         /// ASPxLabel4 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel4;
-        
+
         /// <summary>
         /// txtUIDPackaging control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtUIDPackaging;
-        
+
         /// <summary>
         /// ASPxLabel17 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel17;
-        
+
         /// <summary>
         /// MemoNotes control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo MemoNotes;
-        
+
         /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
@@ -110,16 +112,16 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel5;
-        
+
         /// <summary>
-        /// txtPackaging control.
+        /// txtDeliveryNoteNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtPackaging;
-        
+        protected global::DevExpress.Web.ASPxTextBox txtDeliveryNoteNumber;
+
         /// <summary>
         /// ASPxLabel6 control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel6;
-        
+
         /// <summary>
         /// DateEditDeliveryNoteDate control.
         /// </summary>
@@ -137,7 +139,25 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxDateEdit DateEditDeliveryNoteDate;
-        
+
+        /// <summary>
+        /// ASPxLabel8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel8;
+
+        /// <summary>
+        /// DateEditDeliveryRecivedMaterialDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxDateEdit DateEditDeliveryRecivedMaterialDate;
+
         /// <summary>
         /// ASPxLabel7 control.
         /// </summary>
@@ -146,7 +166,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel7;
-        
+
         /// <summary>
         /// GridLookupLocation control.
         /// </summary>
@@ -155,7 +175,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupLocation;
-        
+
         /// <summary>
         /// ASPxGridViewInventoryDeliveriesLocation control.
         /// </summary>
@@ -164,7 +184,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView ASPxGridViewInventoryDeliveriesLocation;
-        
+
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -173,7 +193,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSave;
-        
+
         /// <summary>
         /// btnSaveChanges control.
         /// </summary>
@@ -182,7 +202,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSaveChanges;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -191,7 +211,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancel;
-        
+
         /// <summary>
         /// XpoDSSupplier control.
         /// </summary>
@@ -200,7 +220,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSSupplier;
-        
+
         /// <summary>
         /// XpoDSLocation control.
         /// </summary>
@@ -209,7 +229,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSLocation;
-        
+
         /// <summary>
         /// XpoDSProduct control.
         /// </summary>
@@ -218,7 +238,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSProduct;
-        
+
         /// <summary>
         /// XpoDSInventoryDeliveriesLocation control.
         /// </summary>
@@ -227,15 +247,17 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSInventoryDeliveriesLocation;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new ETT_Web.MasterPages.Main Master {
-            get {
+        public new ETT_Web.MasterPages.Main Master
+        {
+            get
+            {
                 return ((ETT_Web.MasterPages.Main)(base.Master));
             }
         }

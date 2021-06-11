@@ -23,7 +23,7 @@ namespace ETT_Web.IssueDocuments
 {
     public partial class IssueDocumentForm : ServerMasterPage
     {
-        Session session;
+        UnitOfWork session;
         int userAction;
         int issueDocumentID;
         IssueDocument model;
@@ -42,7 +42,7 @@ namespace ETT_Web.IssueDocuments
                 issueDocumentID = CommonMethods.ParseInt(Request.QueryString[Enums.QueryStringName.recordId.ToString()].ToString());
             }
 
-            session = XpoHelper.GetNewSession();
+            session = XpoHelper.GetNewUnitOfWork();
 
             XpoDSBuyer.Session = session;
             XpoDSLocation.Session = session;
@@ -63,7 +63,7 @@ namespace ETT_Web.IssueDocuments
             {
                 if (userAction != (int)Enums.UserAction.Add)
                 {
-                    model = issueDocumentRepo.GetIssueDocumentByID(issueDocumentID);
+                    model = issueDocumentRepo.GetIssueDocumentByID(issueDocumentID, session);
 
                     if (model != null)
                     {
@@ -119,6 +119,7 @@ namespace ETT_Web.IssueDocuments
             txtInvoiceNumber.Text = model.InvoiceNumber;
             MemoNotes.Text = model.Notes;
             txtIssueStatus.Text = model.IssueStatus.Name;
+            txtPermissonDoc.Text = model.PermissionDoc;
 
             if (model.IssueStatus.Code == Enums.IssueDocumentStatus.ZAKLJUCENO.ToString())
                 EnableButtons();
@@ -161,7 +162,7 @@ namespace ETT_Web.IssueDocuments
             if (completeIssueDocument)
             {
                 model.IssueStatus = issueDocumentRepo.GetIssueDocumentStatusByCode(Enums.IssueDocumentStatus.ZAKLJUCENO, model.Session);
-                utilityRepo.ClearStockByIssueDocumentID(model.IssueDocumentPositions.ToList());
+                utilityRepo.ClearStockByIssueDocumentID(model.IssueDocumentPositions.ToList(), (UnitOfWork)model.Session);
             }
 
             issueDocumentID = issueDocumentRepo.SaveIssueDocument(model, PrincipalHelper.GetUserID());

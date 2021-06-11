@@ -141,6 +141,24 @@ namespace ETT_Web.DeliveryNotes
         protected global::DevExpress.Web.ASPxDateEdit dtPrejetjeMateriala;
 
         /// <summary>
+        /// ASPxLabel7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel7;
+
+        /// <summary>
+        /// memDovoljenje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxMemo memDovoljenje;
+
+        /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
         /// <remarks>
