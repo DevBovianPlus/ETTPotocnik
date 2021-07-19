@@ -447,6 +447,8 @@ namespace ETT_Web.DeliveryNotes
 
         protected void btnProcessXMLFile_Click(object sender, EventArgs e)
         {
+            CommonMethods.LogThis("Start Procesing !!!");
+
             if (model == null) model = GetDeliveryNoteProvider().GetDeliveryNoteModel();
 
             if (model != null && GetDeliveryNoteProvider().GetDeliveryNoteStatus() == Enums.DeliveryNoteStatus.Not_Processed)
@@ -466,18 +468,19 @@ namespace ETT_Web.DeliveryNotes
                 GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.In_Process);
                 AddOrEditEntityObject((userAction == (int)Enums.UserAction.Add ? true : false));
                 int userId = PrincipalHelper.GetUserID();
-                
-                ParseXML(physicalPath, userId);
+
+                //ParseXML(physicalPath, userId);
 
 
-                //Task.Run(() =>
-                //{
-                //    ParseXML(physicalPath, userId);
-                //    //TODO obvestiti uproabnika o daljšem obdobju parsanja...glej status.
-                //});
+                Task.Run(() =>
+                {
+                    ParseXML(physicalPath, userId);
+                    //TODO obvestiti uproabnika o daljšem obdobju parsanja...glej status.
+                });
 
             }
             this.Master.NavigationBarMain.DataBind();
+            CommonMethods.LogThis("End Procesing !!!");
             ClearSessionsAndRedirect(false, true, true);
         }
 
@@ -485,6 +488,8 @@ namespace ETT_Web.DeliveryNotes
         {
             try
             {
+                CommonMethods.LogThis("Start Parse XML!!!");
+
                 XDocument doc = XDocument.Load(new StreamReader(xmlPath, Encoding.UTF8));
                 int locationID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupLocation));
                 int supplierID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupSupplier));
@@ -509,12 +514,15 @@ namespace ETT_Web.DeliveryNotes
                     topLevelList = FindTopLevelSummaryItems(list, doc.Root.Element(Enums.XMLTagName.Units.ToString()), isRepacking);
                     atomes = SetHierarchyOfAtomes(doc.Root.Element(Enums.XMLTagName.Units.ToString()), list);
                 }
-
+                CommonMethods.LogThis("Start SaveDelivery XML!!!");
                 deliveryNoteRepo.SaveSummaryToDeliveryNoteItem(topLevelList, deliveryNoteID, locationID, supplierID, atomes, userID);
 
                 deliveryNoteRepo.SaveInventoryDeliveries(atomes, deliveryNoteID, locationID, userID, isRepacking);
+                CommonMethods.LogThis("End SaveDelivery XML!!!");
                 //GetDeliveryNoteProvider().SetDeliveryNoteStatus(Enums.DeliveryNoteStatus.Completed);
                 ASPxGridViewDeliveryNoteItem.DataBind();
+
+                CommonMethods.LogThis("End Parse XML!!!");
             }
             catch (Exception ex)
             {

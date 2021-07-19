@@ -265,8 +265,7 @@ namespace ETT_DAL.Concrete
                 document.IssueDate = DateTime.Now;
                 document.Name = $"Izdaja materiala za kupca: {buyer.Name}";
                 document.Notes = "Prenos iz mobilnih transkacij";
-                document.InternalDocument = "000000";
-                document.InvoiceNumber = DateTime.Now.Year.ToString() + "/000000";
+                document.InternalDocument = "";                
                 document.tsInsert = DateTime.Now;
                 document.tsInsertUserID = userID;
                 document.tsUpdate = DateTime.Now;
@@ -294,6 +293,9 @@ namespace ETT_DAL.Concrete
                     pos.tsUpdate = DateTime.Now;
                     pos.tsUpdateUserID = userID;
                     pos.ProductID = productRepo.GetProductByID(item.ProductID.ProductID, uow);
+                    decimal dFact = (pos.ProductID.Factor == 0 ? 0 : pos.ProductID.Factor);
+                    pos.QuantityKG = dFact > 0 ? pos.Quantity * dFact : 0;
+
                     pos.MobileTransactionID = item;
                 }
 

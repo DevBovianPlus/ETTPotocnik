@@ -54,6 +54,7 @@ namespace ETT_Web.CodeList
                 {
                     model = productRepo.GetProductByID(productID);
 
+
                     if (model != null)
                     {
                         GetProductProvider().SetProductModel(model);
@@ -61,6 +62,8 @@ namespace ETT_Web.CodeList
                     }
                 }
 
+                decimal dFact = (model.Factor == 0 ? 1 : model.Factor);
+                txtFaktor.Text = dFact.ToString();
                 UserActionConfirmBtnUpdate(btnConfirmPopup, userAction, true);
             }
             else
@@ -103,6 +106,7 @@ namespace ETT_Web.CodeList
 
             model.SupplierCode = txtSupplierCode.Text;
             model.PSN = txtPSN.Text;
+            model.Factor = CommonMethods.ParseDecimal(txtFaktor.Text);
 
             int categoryID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupCategory));
             if (model.CategoryID != null)

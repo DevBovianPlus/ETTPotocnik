@@ -26,21 +26,18 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<int>(nameof(ProductID), ref fProductID, value); }
         }
         Client fSupplierID;
-        [Association(@"ProductReferencesClient")]
         public Client SupplierID
         {
             get { return fSupplierID; }
             set { SetPropertyValue<Client>(nameof(SupplierID), ref fSupplierID, value); }
         }
         Categorie fCategoryID;
-        [Association(@"ProductReferencesCategorie")]
         public Categorie CategoryID
         {
             get { return fCategoryID; }
             set { SetPropertyValue<Categorie>(nameof(CategoryID), ref fCategoryID, value); }
         }
         MeasuringUnit fMeasuringUnitID;
-        [Association(@"ProductReferencesMeasuringUnit")]
         public MeasuringUnit MeasuringUnitID
         {
             get { return fMeasuringUnitID; }
@@ -98,12 +95,16 @@ namespace ETT_DAL.ETTPotocnik
             get { return fPSN; }
             set { SetPropertyValue<string>(nameof(PSN), ref fPSN, value); }
         }
+        decimal fFactor;
+        public decimal Factor
+        {
+            get { return fFactor; }
+            set { SetPropertyValue<decimal>(nameof(Factor), ref fFactor, value); }
+        }
         [Association(@"DeliveryNoteItemReferencesProduct")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }
         [Association(@"InventoryStockReferencesProduct")]
         public XPCollection<InventoryStock> InventoryStocks { get { return GetCollection<InventoryStock>(nameof(InventoryStocks)); } }
-        [Association(@"IssueDocumentPositionReferencesProduct")]
-        public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
         [Association(@"MobileTransactionReferencesProduct")]
         public XPCollection<MobileTransaction> MobileTransactions { get { return GetCollection<MobileTransaction>(nameof(MobileTransactions)); } }
     }

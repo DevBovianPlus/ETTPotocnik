@@ -227,5 +227,14 @@ namespace ETT_Web.Inventory
             else
                 e.DisplayText = "NE";
         }
+      
+
+        protected void ASPxGridViewInventoryDeliveriesLocation_CustomColumnDisplayText(object sender, ASPxGridViewColumnDisplayTextEventArgs e)
+        {
+            if (e.Column.FieldName == "NeedsMatching")
+            {
+                e.DisplayText = CommonMethods.ParseBool(e.Value) == true ? "NE" : "DA";
+            }
+        }
     }
 }

@@ -47,7 +47,7 @@
 
         <Columns>
             <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="15%">
-                <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
+                <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy hh:mm:ss" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="InventoryStockID.ProductID.Name" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="30%">
                 <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
@@ -64,8 +64,8 @@
             <dx:GridViewDataTextColumn Caption="Zadnja lokacija" FieldName="LastLocationID.Name" AdaptivePriority="2" MinWidth="200" MaxWidth="250" Width="20%" >
                 <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataDateColumn Caption="Datum zadnje porabe" FieldName="tsUpdate" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="15%">
-                <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
+            <dx:GridViewDataDateColumn Caption="Datum zadnje spremembe" FieldName="tsUpdate" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="15%">
+                <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy  hh:mm:ss" />
             </dx:GridViewDataDateColumn>
         </Columns>
     </dx:ASPxGridView>

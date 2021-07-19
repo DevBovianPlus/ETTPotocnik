@@ -15,11 +15,13 @@ namespace ETT_DAL.Abstract
         MobileTransaction GetMobileTransactionByID(int mtId, Session currentSession = null);
         int SaveMobileTransaction(MobileTransaction model, int userID = 0);
         bool DeleteMobileTransaction(int mtId);
+
         bool DeleteMobileTransaction(MobileTransaction model);
         int SaveMobileTransaction(MobileTransactionAPIModel model);
 
         bool DeleteDuplicateMobileTransaction(Session currentSession = null);
 
-        List<MobileTransaction> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
+        List<MobileTransactionModel> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
+        List<MobileTransactionModel> GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
     }
 }

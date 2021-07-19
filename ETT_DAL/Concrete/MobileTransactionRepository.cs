@@ -25,10 +25,23 @@ namespace ETT_DAL.Concrete
         public string UIDCode { get; set; }
         public string ScannedProductCode { get; set; }
         public decimal Quantity { get; set; }
+        public decimal QuantitySum { get; set; }
+        public decimal QuantitySumKg { get; set; }
         public DateTime tsUpdate { get; set; }
         public DateTime tsInsert { get; set; }
         public string Notes { get; set; }
-        
+        public string Uporabnik { get; set; }
+        public string IzLokacije { get; set; }
+        public string NaLokacijo { get; set; }
+        public string Dobavitelj { get; set; }
+        public string Produkt { get; set; }
+        public bool IsBuyer { get; set; }
+        public bool NeedMatching { get; set; }
+        public int LocationToClientID { get; set; }
+
+        public decimal Faktor { get; set; }
+
+        public string DateSum { get; set; }
     }
 
     public class MobileTransactionRepository : IMobileTransactionRepository
@@ -73,7 +86,7 @@ namespace ETT_DAL.Concrete
             }
         }
 
-        public List<MobileTransaction> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null)
+        public List<MobileTransactionModel> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null)
         {
             try
             {
@@ -85,35 +98,159 @@ namespace ETT_DAL.Concrete
                     mTransaction = session.Query<MobileTransaction>();
 
 
-                //var query = from x in mTransaction
-                //            select new MobileTransactionModel
-                //            {
-                //                MobileTransactionID = x.MobileTransactionID,
-                //                InventoryDeliveriesLocationID = x.InventoryDeliveriesLocationID.InventoryDeliveriesLocationID,
-                //                ScannedProductCode = x.ScannedProductCode,
-                //                Notes = x.Notes,
-                //                tsInsert = x.tsInsert,
-                //                tsInsertUserID = x.tsInsertUserID,
-                //                tsUpdate = x.tsUpdate,
-                //                tsUpdateUserID = x.tsUpdateUserID,
-                //                UIDCode = x.UIDCode,
-                //                SupplierID = x.SupplierID.ClientID,
-                //                ProductID = x.ProductID.ProductID,
-                //                Quantity = x.Quantity
-                //            };
+                var query = from x in mTransaction
+                            select new MobileTransactionModel
+                            {
+                                RowCnt = x.RowCnt,
+                                MobileTransactionID = x.MobileTransactionID,
+                                InventoryDeliveriesLocationID = x.InventoryDeliveriesLocationID.InventoryDeliveriesLocationID,
+                                Uporabnik = x.InventoryDeliveriesLocationID.UserID.EmployeeID.Firstname + ' ' + x.InventoryDeliveriesLocationID.UserID.EmployeeID.Lastname,
+                                ScannedProductCode = x.ScannedProductCode,
+                                Notes = x.Notes,
+                                tsInsert = x.tsInsert,
+                                tsInsertUserID = x.tsInsertUserID,
+                                tsUpdate = x.tsUpdate,
+                                tsUpdateUserID = x.tsUpdateUserID,
+                                UIDCode = x.UIDCode,
+                                SupplierID = x.SupplierID.ClientID,
+                                ProductID = x.ProductID.ProductID,
+                                Quantity = x.Quantity,
+                                IzLokacije = x.InventoryDeliveriesLocationID.LocationFromID.Name,
+                                NaLokacijo = x.InventoryDeliveriesLocationID.LocationToID.Name,
+                                Dobavitelj = x.SupplierID.Name,
+                                Produkt = x.ProductID.Name, 
+                                IsBuyer = x.InventoryDeliveriesLocationID.LocationToID.IsBuyer,
+                                NeedMatching = x.InventoryDeliveriesLocationID.NeedsMatching,
+                                LocationToClientID = x.InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID
 
-                //var lMobileTrans = query.ToList();
+                            };
+
+                var lMobileTrans = query.ToList();
 
                 int iCnt = 1;
-               var mTransactionList = mTransaction.Where(mt => mt.tsInsert >= dtFrom && mt.tsInsert <= dtTo).OrderByDescending(mt => mt.tsInsert).ToList();
+               var lMobileTransOrder = lMobileTrans.Where(mt => mt.tsInsert >= dtFrom && mt.tsInsert <= dtTo).OrderByDescending(mt => mt.tsInsert).ToList();
 
-                foreach (var itm in mTransactionList)
+                foreach (var itm in lMobileTransOrder)
                 {
                     itm.RowCnt = iCnt++;
                 }
 
 
-                return mTransactionList;
+                return lMobileTransOrder;
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_31, error, CommonMethods.GetCurrentMethodName()));
+            }
+        }
+
+        public List<MobileTransactionModel> GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null)
+        {
+            try
+            {
+                XPQuery<InventoryDeliveries> invDeliveries = currentSession.Query<InventoryDeliveries>();
+
+                List<MobileTransactionModel> lstReturn = new List<MobileTransactionModel>();
+
+                XPQuery<MobileTransaction> mTransaction = null;
+
+                if (currentSession != null)
+                    mTransaction = currentSession.Query<MobileTransaction>();
+                else
+                    mTransaction = session.Query<MobileTransaction>();
+
+
+                var query = from x in mTransaction
+                            select new MobileTransactionModel
+                            {
+                                RowCnt = x.RowCnt,
+                                MobileTransactionID = x.MobileTransactionID,
+                                InventoryDeliveriesLocationID = x.InventoryDeliveriesLocationID.InventoryDeliveriesLocationID,
+                                Uporabnik = x.InventoryDeliveriesLocationID.UserID.EmployeeID.Firstname + ' ' + x.InventoryDeliveriesLocationID.UserID.EmployeeID.Lastname,
+                                ScannedProductCode = x.ScannedProductCode,
+                                Notes = x.Notes,
+                                tsInsert = x.tsInsert,
+                                tsInsertUserID = x.tsInsertUserID,
+                                tsUpdate = x.tsUpdate,
+                                tsUpdateUserID = x.tsUpdateUserID,
+                                UIDCode = x.UIDCode,
+                                SupplierID = x.SupplierID.ClientID,
+                                ProductID = x.ProductID.ProductID,
+                                Quantity = x.Quantity,
+                                IzLokacije = x.InventoryDeliveriesLocationID.LocationFromID.Name,
+                                NaLokacijo = x.InventoryDeliveriesLocationID.LocationToID.Name,
+                                Dobavitelj = x.SupplierID.Name,
+                                Produkt = x.ProductID.Name,
+                                Faktor = x.ProductID.Factor
+                            };
+
+                var lMobileTrans = query.ToList();
+
+                int iCnt = 1;
+                DateTime dFromFilter = new DateTime(dtFrom.Year, dtFrom.Month, dtFrom.Day, 0, 0, 0);
+                DateTime dToFilter = new DateTime(dtFrom.Year, dtFrom.Month, dtFrom.Day, 23, 59, 59);
+                var lMobileTransOrder = lMobileTrans.Where(mt => mt.tsInsert >= dFromFilter && mt.tsInsert <= dToFilter).OrderByDescending(mt => mt.tsInsert).OrderByDescending(mt => mt.Produkt).OrderByDescending(mt => mt.IzLokacije).OrderByDescending(mt => mt.NaLokacijo).ToList();
+                string sDateShort = "", sProduct = "", sIzLokacije = "", sNaLokacijo = "";
+                decimal dCurrentQnt = 0;
+                decimal dSummaryQnt = 0;
+                MobileTransactionModel nTmodel = null;
+
+
+                foreach (var itm in lMobileTransOrder)
+                {
+                    if (sDateShort != itm.tsInsert.ToShortDateString() || sProduct != itm.Produkt || sIzLokacije != itm.IzLokacije || sNaLokacijo != itm.NaLokacijo)
+                    {
+                        nTmodel = new MobileTransactionModel();
+                        dSummaryQnt = 0;
+                        nTmodel.DateSum = itm.tsInsert.ToShortDateString();
+                        nTmodel.ProductID = itm.ProductID;
+                        nTmodel.Produkt = itm.Produkt;
+                        dCurrentQnt = itm.Quantity <= 0 ? invDeliveries.Count(inv => inv.PackagesUIDs.Contains(itm.UIDCode)) : itm.Quantity;// če se še ni shranila količina na mobilnih transkacijah jo poiščemo v invnetoryDeliveries
+                        dSummaryQnt += dCurrentQnt;
+
+                        nTmodel.NaLokacijo = itm.NaLokacijo;
+                        nTmodel.IzLokacije = itm.IzLokacije;
+
+                        lstReturn.Add(nTmodel);
+                    }
+                    else
+                    {
+                        dCurrentQnt = itm.Quantity <= 0 ? invDeliveries.Count(inv => inv.PackagesUIDs.Contains(itm.UIDCode)) : itm.Quantity;// če se še ni shranila količina na mobilnih transkacijah jo poiščemo v invnetoryDeliveries
+                        dSummaryQnt += dCurrentQnt;
+                        
+                    }
+
+                    nTmodel.QuantitySum = dSummaryQnt;
+
+
+
+
+                    sDateShort = itm.tsInsert.ToShortDateString();
+                    
+                    sProduct = itm.Produkt;
+                    sIzLokacije = itm.IzLokacije;
+                    sNaLokacijo = itm.NaLokacijo;
+
+
+                    
+
+                    itm.RowCnt = iCnt++;
+
+
+                }
+                iCnt = 1;
+                foreach (var itm in lstReturn)
+                {
+                    itm.RowCnt = iCnt++;
+                    Product pr = productRepo.GetProductByID(itm.ProductID);
+                    decimal dFact = (pr == null ? 1 : pr.Factor);
+                    itm.QuantitySumKg = dFact > 0 ? itm.QuantitySum * dFact : 0;
+                }
+
+
+                return lstReturn;
             }
             catch (Exception ex)
             {
@@ -267,6 +404,8 @@ namespace ETT_DAL.Concrete
         {
             try
             {
+                int iCnt = 0;
+
                 XPQuery<MobileTransaction> mTransaction = null;
 
                 if (currentSession != null)
@@ -289,9 +428,11 @@ namespace ETT_DAL.Concrete
                                            DupInsertUserID = grp.Key.tsInsertUserID,
                                            cnt = grp.Count()
                                        }).ToList();
-
+                CommonMethods.LogThis("Število podvojenih zapisov: " + duplicateValues.Count.ToString());
                 foreach (var item in duplicateValues)
                 {
+                    iCnt++;
+
                     var ByUIDCodeValues = mTransaction.Where(d => d.UIDCode == item.DupID).OrderBy(s => s.MobileTransactionID).ToList();
                     var firstID = ByUIDCodeValues.FirstOrDefault();
 
@@ -304,6 +445,11 @@ namespace ETT_DAL.Concrete
                             remT.Delete();
                         }
                         
+                    }
+
+                    if (iCnt % 1000 == 0)
+                    {
+                        CommonMethods.LogThis("Zapis: " + iCnt + "/ " + duplicateValues.Count());
                     }
 
                 }

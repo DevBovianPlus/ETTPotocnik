@@ -66,8 +66,8 @@
 
         function ValidateInputFields() {
             var process = false;
-            var inputItems = [txtName, txtInvoiceNumber, clienttxtPermissonDoc];
-            var dateEditItems = [DateEditIssueDocumentDate];
+            var inputItems = [txtName, txtInternalDocument, clienttxtPermissonDoc];
+            var dateEditItems = [DateEditIssueDocumentDate, DateEditServiceDate];
             var lookupItmes = [lookUpBuyer];
             process = InputFieldsValidation(lookupItmes, inputItems, dateEditItems, null, null, null);
 
@@ -132,7 +132,7 @@
                 <div class="collapse show" id="collapseBasicData">
                     <div class="card-body" style="background-color: #eef2f5d6;">
 
-                        <div class="row m-0 pb-3">
+                        <div class="row lg-12 m-0 pb-3">
                             <div class="col-lg-2">
                                 <div class="row m-0 align-items-center">
                                     <div class="col-0 p-0 mr-3">
@@ -148,7 +148,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-7">
+                            <div class="col-lg-3">
                                 <div class="row m-0 align-items-center justify-content-center">
                                     <div class="col-0 p-0 mr-3">
                                         <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="STATUS : " Font-Bold="true"></dx:ASPxLabel>
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 mb-2 mb-lg-0">
+                            <div class="col-lg-2 mb-2 mb-lg-0">
                                 <div class="row m-0 align-items-center justify-content-end">
                                     <div class="col-0 p-0 mr-3">
                                         <dx:ASPxLabel ID="ASPxLabel1" runat="server" Font-Size="12px" Text="DATUM IZDAJE : *" Font-Bold="true"></dx:ASPxLabel>
@@ -180,7 +180,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-2 mb-2 mb-lg-0">
+                                <div class="row m-0 align-items-center justify-content-end">
+                                    <div class="col-0 p-0 mr-3">
+                                        <dx:ASPxLabel ID="ASPxLabel9" runat="server" Font-Size="12px" Text="DATUM STORITVE : *" Font-Bold="true"></dx:ASPxLabel>
+                                    </div>
+                                    <div class="col p-0">
+                                        <dx:ASPxDateEdit ID="DateEditServiceDate" runat="server" EditFormat="Date" Width="100%"
+                                            CssClass="text-box-input date-edit-padding" Font-Size="13px"
+                                            ClientInstanceName="DateEditServiceDate">
+                                            <FocusedStyle CssClass="focus-text-box-input" />
+                                            <CalendarProperties TodayButtonText="Danes" ClearButtonText="Izbriši" />
+                                            <DropDownButton Visible="true"></DropDownButton>
+                                            <ClientSideEvents Init="SetFocus" />
+                                        </dx:ASPxDateEdit>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+
+
+
 
                         <div class="row m-0 pb-3">
                             <div class="col">
@@ -337,9 +358,10 @@
                                                 <SettingsText EmptyDataRow="Trenutno ni podatka o artiklih na izdajnici. Dodaj novega." />
 
                                                 <Columns>
-                                                    <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="400" Width="30%" />
-                                                    <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="30%" />
-                                                    <dx:GridViewDataTextColumn Caption="UID" FieldName="UID250" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
+                                                    <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" AllowTextTruncationInAdaptiveMode="true" MinWidth="230" MaxWidth="250" Width="20%" />
+                                                    <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Name" AdaptivePriority="2" MinWidth="100" MaxWidth="350" Width="30%" />
+                                                    <dx:GridViewDataTextColumn Caption="UID" FieldName="UID250" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />                                                    
+                                                    <dx:GridViewDataTextColumn Caption="Količina v kg" FieldName="QuantityKG" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
                                                     <dx:GridViewDataTextColumn Caption="Količina" FieldName="Quantity" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="20%" />
                                                 </Columns>
 

@@ -114,6 +114,7 @@ namespace ETT_Web.IssueDocuments
             txtIssueDocumentNumber.Text = model.IssueNumber;
             txtName.Text = model.Name;
             DateEditIssueDocumentDate.Date = model.IssueDate;
+            DateEditServiceDate.Date = model.ServiceDate;
             GridLookupBuyer.Value = model.BuyerID != null ? model.BuyerID.ClientID : 0;
             txtInternalDocument.Text = model.InternalDocument;
             txtInvoiceNumber.Text = model.InvoiceNumber;
@@ -146,6 +147,7 @@ namespace ETT_Web.IssueDocuments
             model.IssueNumber = txtIssueDocumentNumber.Text;
             model.Name = txtName.Text;
             model.IssueDate = DateEditIssueDocumentDate.Date;
+            model.ServiceDate = DateEditServiceDate.Date;
 
             int buyerID = CommonMethods.ParseInt(GetGridLookupValue(GridLookupBuyer));
             if (model.BuyerID != null)

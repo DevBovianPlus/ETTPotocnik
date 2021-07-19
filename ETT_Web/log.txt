@@ -18713,3 +18713,1822 @@ ASP._global_asax
 http://localhost:53299/Home.aspx
 
 
+14/06/2021 15:09:32 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 15:09:30 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488 -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=52
+
+
+14/06/2021 15:10:05 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 15:10:04 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488 -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5. ---> System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Xml.XmlException: The 'SummaryItems' start tag on line 34 position 3 does not match the end tag of 'SummaryItem'. Line 62, position 5.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   at System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   at System.Xml.XmlTextReaderImpl.ParseEndElement()
+   at System.Xml.XmlTextReaderImpl.ParseElementContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r)
+   at System.Xml.Linq.XContainer.ReadContentFrom(XmlReader r, LoadOptions o)
+   at System.Xml.Linq.XDocument.Load(XmlReader reader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader, LoadOptions options)
+   at System.Xml.Linq.XDocument.Load(TextReader textReader)
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 488
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=52
+
+
+14/06/2021 15:19:38 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 15:19:37 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510 -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=53
+
+
+14/06/2021 15:22:10 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 15:22:09 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510 -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=54
+
+
+14/06/2021 15:24:28 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 15:24:27 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510 -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_fllnqylh.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: Object reference not set to an instance of an object. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+   --- End of inner exception stack trace ---
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 524
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.SetHierarchyOfAtomes(XElement rootUnits, List`1 summaryItems) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 694
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 510
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=55
+
+
+14/06/2021 16:12:51 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 16:12:49 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_x1aujshz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_x1aujshz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/Admin/Admin.aspx
+
+
+14/06/2021 16:17:06 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 14 June 2021 ob 16:17:05 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_x1aujshz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.admin_admin_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_x1aujshz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: UtilityServiceRepositoryError - GET method in method : MatchMobileTransWithInventoryDeliveries Error : 1 -  -------- System.NullReferenceException: Object reference not set to an instance of an object.
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 84
+   at ETT_DAL.Concrete.UtilityServiceRepository.MatchMobileTransWithInventoryDeliveries(List`1 issueDocumentTransactions, UnitOfWork uow) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\UtilityServiceRepository.cs:line 110
+   at ETT_Web.Admin.Admin.btnMatchMobileTransactions_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Admin\Admin.aspx.cs:line 44
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/Admin/Admin.aspx
+
+
+17/06/2021 12:33:24 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:33:21 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: DeliveryNoteRepositoryError - SAVE method  in method : SaveDeliveryNote Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'update "dbo"."DeliveryNote" set "DeliveryNoteNumber"=@p0,"SupplierID"=@p1,"LocationID"=@p2,"XMLFilePath"=@p3,"DeliveryNoteDate"=@p4,"Notes"=@p5,"tsInsert"=@p6,"tsInsertUserID"=@p7,"tsUpdate"=@p8,"tsUpdateUserID"=@p9,"DeliveryNoteStatusID"=@p10,"ProcessError"=@p11,"RecivedMaterialDate"=@p12,"SalePermission"=@p13 where ("DeliveryNoteID" = @p14) IF @@ROWCOUNT <> 1 begin set @r=0 RETURN end  set @r=1' with parameters '{DA4485},{6},{90},{../UploadControl/UploadDocuments/1lfwkboh.XML;DA4485-24-05-2021....},{17/06/2021 00:00:00},{},{17/06/2021 12:32:40},{1},{17/06/2021 12:33:17},{1},{3},{DeliveryNoteRepositoryError - SAVE method  in method : SaveInven...},{09/06/2021 00:00:00},{},{58},{0}' exception 'System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16' ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 76 -------- System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 86
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.AddOrEditEntityObject(Boolean add) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 186
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 523
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_dgbruaek.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: DeliveryNoteRepositoryError - SAVE method  in method : SaveDeliveryNote Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'update "dbo"."DeliveryNote" set "DeliveryNoteNumber"=@p0,"SupplierID"=@p1,"LocationID"=@p2,"XMLFilePath"=@p3,"DeliveryNoteDate"=@p4,"Notes"=@p5,"tsInsert"=@p6,"tsInsertUserID"=@p7,"tsUpdate"=@p8,"tsUpdateUserID"=@p9,"DeliveryNoteStatusID"=@p10,"ProcessError"=@p11,"RecivedMaterialDate"=@p12,"SalePermission"=@p13 where ("DeliveryNoteID" = @p14) IF @@ROWCOUNT <> 1 begin set @r=0 RETURN end  set @r=1' with parameters '{DA4485},{6},{90},{../UploadControl/UploadDocuments/1lfwkboh.XML;DA4485-24-05-2021....},{17/06/2021 00:00:00},{},{17/06/2021 12:32:40},{1},{17/06/2021 12:33:17},{1},{3},{DeliveryNoteRepositoryError - SAVE method  in method : SaveInven...},{09/06/2021 00:00:00},{},{58},{0}' exception 'System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16' ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 76 -------- System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 86
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.AddOrEditEntityObject(Boolean add) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 186
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 523
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: DeliveryNoteRepositoryError - SAVE method  in method : SaveDeliveryNote Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'update "dbo"."DeliveryNote" set "DeliveryNoteNumber"=@p0,"SupplierID"=@p1,"LocationID"=@p2,"XMLFilePath"=@p3,"DeliveryNoteDate"=@p4,"Notes"=@p5,"tsInsert"=@p6,"tsInsertUserID"=@p7,"tsUpdate"=@p8,"tsUpdateUserID"=@p9,"DeliveryNoteStatusID"=@p10,"ProcessError"=@p11,"RecivedMaterialDate"=@p12,"SalePermission"=@p13 where ("DeliveryNoteID" = @p14) IF @@ROWCOUNT <> 1 begin set @r=0 RETURN end  set @r=1' with parameters '{DA4485},{6},{90},{../UploadControl/UploadDocuments/1lfwkboh.XML;DA4485-24-05-2021....},{17/06/2021 00:00:00},{},{17/06/2021 12:32:40},{1},{17/06/2021 12:33:17},{1},{3},{DeliveryNoteRepositoryError - SAVE method  in method : SaveInven...},{09/06/2021 00:00:00},{},{58},{0}' exception 'System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16' ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 76 -------- System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 86
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.AddOrEditEntityObject(Boolean add) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 186
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 523
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_dgbruaek.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: DeliveryNoteRepositoryError - SAVE method  in method : SaveDeliveryNote Error :  -------- DevExpress.Xpo.DB.Exceptions.SqlExecutionErrorException: Executing Sql 'update "dbo"."DeliveryNote" set "DeliveryNoteNumber"=@p0,"SupplierID"=@p1,"LocationID"=@p2,"XMLFilePath"=@p3,"DeliveryNoteDate"=@p4,"Notes"=@p5,"tsInsert"=@p6,"tsInsertUserID"=@p7,"tsUpdate"=@p8,"tsUpdateUserID"=@p9,"DeliveryNoteStatusID"=@p10,"ProcessError"=@p11,"RecivedMaterialDate"=@p12,"SalePermission"=@p13 where ("DeliveryNoteID" = @p14) IF @@ROWCOUNT <> 1 begin set @r=0 RETURN end  set @r=1' with parameters '{DA4485},{6},{90},{../UploadControl/UploadDocuments/1lfwkboh.XML;DA4485-24-05-2021....},{17/06/2021 00:00:00},{},{17/06/2021 12:32:40},{1},{17/06/2021 12:33:17},{1},{3},{DeliveryNoteRepositoryError - SAVE method  in method : SaveInven...},{09/06/2021 00:00:00},{},{58},{0}' exception 'System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16' ---> System.Data.SqlClient.SqlException: String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   --- End of inner exception stack trace ---
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.ProcessModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreSerializedBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.DB.DataStoreForkBase.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.ThreadSafeDataLayer.ModifyData(ModificationStatement[] dmlStatements)
+   at DevExpress.Xpo.SimpleObjectLayer.CommitChanges(Session session, ICollection fullListForDelete, ICollection completeListForSave)
+   at DevExpress.Xpo.Session.FlushChangesInsideTransaction()
+   at DevExpress.Xpo.Session.FlushChanges()
+   at DevExpress.Xpo.Session.ProcessingProcess(ObjectSet markedObjectsHolder, Object theObject)
+   at DevExpress.Xpo.Session.Save(Object theObject)
+   at DevExpress.Xpo.XPBaseObject.Save()
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 76 -------- System.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.<>c__DisplayClass71_0.<Exec>b__0()
+   at DevExpress.Xpo.Logger.LogManager.Log(String category, LogHandlerVoid handler, MessageHandler`1 createMessageHandler, ExceptionHandler exceptionHandler)
+   at DevExpress.Xpo.DB.MSSqlConnectionProvider.Exec(IDbCommand command, IDictionary parameters)
+ClientConnectionId:3315adef-246e-4c73-85f5-99bc9640b219
+Error Number:8152,State:10,Class:16
+   at ETT_DAL.Concrete.DeliveryNoteRepository.SaveDeliveryNote(DeliveryNote model, Int32 userID) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\DeliveryNoteRepository.cs:line 86
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.AddOrEditEntityObject(Boolean add) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 186
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.ParseXML(String xmlPath, Int32 userID) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 523
+   at ETT_Web.DeliveryNotes.DeliveryNoteForm.btnProcessXMLFile_Click(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\DeliveryNotes\DeliveryNoteForm.aspx.cs:line 470
+   at DevExpress.Web.ASPxButton.OnClick(EventArgs e)
+   at DevExpress.Web.ASPxButton.RaisePostBackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:35:22 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:35:20 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:37:32 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:37:31 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:38:28 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:38:27 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:43:01 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:43:00 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:45:34 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:45:33 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:47:14 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:47:12 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:50:02 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:50:01 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 12:55:08 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 12:55:07 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_oxrvbbzz.1.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 13:35:49 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 13:35:47 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_iv5bmktt.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_iv5bmktt.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+17/06/2021 13:41:16 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Thursday, 17 June 2021 ob 13:41:15 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_vawqzh4d.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpRequestValidationException (0x80004005): A potentially dangerous Request.Form value was detected from the client (ctl00$ContentPlaceHolderMain$memError="...Class71_0.<Exec>b__0()
+   at ...").
+   at System.Web.HttpRequest.ValidateString(String value, String collectionKey, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.ValidateHttpValueCollection(HttpValueCollection collection, RequestValidationSource requestCollection)
+   at System.Web.HttpRequest.get_Form()
+   at System.Web.HttpRequest.get_HasForm()
+   at System.Web.UI.Page.GetCollectionBasedOnMethod(Boolean dontReturnNull)
+   at System.Web.UI.Page.DeterminePostBackMode()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.deliverynotes_deliverynoteform_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_vawqzh4d.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/DeliveryNotes/DeliveryNoteForm.aspx?action=2&recordId=58
+
+
+13/07/2021 15:35:04 Število podvojenih zapisov: 10164
+14/07/2021 14:48:11 Zapis: 10/ 7680
+14/07/2021 15:24:29 Start Procesing !!!
+14/07/2021 15:24:44 Start Parse XML!!!
+14/07/2021 15:24:44 End Procesing !!!
+14/07/2021 15:24:46 Start SaveDelivery XML!!!
+14/07/2021 15:25:13 End SaveDelivery XML!!!
+14/07/2021 15:25:14 End Parse XML!!!
+14/07/2021 15:26:03 Start Procesing !!!
+14/07/2021 15:26:05 Start Parse XML!!!
+14/07/2021 15:26:05 End Procesing !!!
+14/07/2021 15:26:07 Start SaveDelivery XML!!!
+16/07/2021 09:27:52 Start Procesing !!!
+16/07/2021 09:27:54 Start Parse XML!!!
+16/07/2021 09:27:54 End Procesing !!!
+16/07/2021 09:27:57 Start SaveDelivery XML!!!
+16/07/2021 09:28:07 Start SaveInventoryDeliveries!!!
+16/07/2021 09:48:37 Start Procesing !!!
+16/07/2021 09:48:40 Start Parse XML!!!
+16/07/2021 09:48:40 End Procesing !!!
+16/07/2021 09:48:45 Start SaveDelivery XML!!!
+16/07/2021 09:48:51 Start SaveInventoryDeliveries!!!
+16/07/2021 09:56:41 Zapis: 1000/ 7680
+16/07/2021 10:09:44 Zapis: 2000/ 7680
+16/07/2021 10:20:47 Zapis: 3000/ 7680
+16/07/2021 11:21:32 Start Procesing !!!
+16/07/2021 11:21:36 Start Parse XML!!!
+16/07/2021 11:21:36 End Procesing !!!
+16/07/2021 11:21:52 Start SaveDelivery XML!!!
+16/07/2021 11:22:05 Start SaveInventoryDeliveries!!!
+16/07/2021 11:23:50 End SaveInventoryDeliveries!!!
+16/07/2021 11:26:55 End SaveDelivery XML!!!
+16/07/2021 11:26:55 End Parse XML!!!
+16/07/2021 11:31:47 Start Procesing !!!
+16/07/2021 11:32:03 End Procesing !!!
+16/07/2021 11:32:49 Start Procesing !!!
+16/07/2021 11:32:51 Start Parse XML!!!
+16/07/2021 11:32:51 End Procesing !!!
+16/07/2021 11:32:52 Start SaveDelivery XML!!!
+16/07/2021 11:32:58 Start SaveInventoryDeliveries!!!
+16/07/2021 11:33:40 End SaveInventoryDeliveries!!!
+16/07/2021 11:34:04 End SaveDelivery XML!!!
+16/07/2021 11:34:04 End Parse XML!!!
+16/07/2021 14:26:48 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Friday, 16 July 2021 ob 14:26:46 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpCompileException (0x80004005): c:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx(143): error CS1061: 'ASP.mobiletransactions_daytransactionsummarytable_aspx' does not contain a definition for 'PopupControlSumarryTransaction_WindowCallback' and no extension method 'PopupControlSumarryTransaction_WindowCallback' accepting a first argument of type 'ASP.mobiletransactions_daytransactionsummarytable_aspx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpCompileException (0x80004005): c:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx(143): error CS1061: 'ASP.mobiletransactions_daytransactionsummarytable_aspx' does not contain a definition for 'PopupControlSumarryTransaction_WindowCallback' and no extension method 'PopupControlSumarryTransaction_WindowCallback' accepting a first argument of type 'ASP.mobiletransactions_daytransactionsummarytable_aspx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx
+
+
+16/07/2021 14:27:29 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Friday, 16 July 2021 ob 14:27:28 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpCompileException (0x80004005): c:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx(33): error CS1061: 'ASP.mobiletransactions_daytransactionsummarytable_aspx' does not contain a definition for 'CallbackPanelSumarryTransaction_Callback' and no extension method 'CallbackPanelSumarryTransaction_Callback' accepting a first argument of type 'ASP.mobiletransactions_daytransactionsummarytable_aspx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpCompileException (0x80004005): c:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx(33): error CS1061: 'ASP.mobiletransactions_daytransactionsummarytable_aspx' does not contain a definition for 'CallbackPanelSumarryTransaction_Callback' and no extension method 'CallbackPanelSumarryTransaction_Callback' accepting a first argument of type 'ASP.mobiletransactions_daytransactionsummarytable_aspx' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx?
+
+
+19/07/2021 08:24:26 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 19 July 2021 ob 08:24:24 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_jtfcqrbn.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_jtfcqrbn.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx
+
+
+19/07/2021 08:25:26 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 19 July 2021 ob 08:25:25 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_jtfcqrbn.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_jtfcqrbn.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 64
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/Home.aspx?
+
+
+19/07/2021 08:28:16 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 19 July 2021 ob 08:28:15 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 65
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_yn12opag.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 65
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 65
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_yn12opag.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Exception: MobileTransactionRepositoryError - GET method in method : GetDaySummaryMobileTransaction Error :  -------- System.ArgumentOutOfRangeException: Hour, Minute, and Second parameters describe an un-representable DateTime.
+   at System.DateTime.TimeToTicks(Int32 hour, Int32 minute, Int32 second)
+   at System.DateTime..ctor(Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second)
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 193
+   at ETT_DAL.Concrete.MobileTransactionRepository.GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession) in C:\Work\ETTPotocnik\ETT_DAL\Concrete\MobileTransactionRepository.cs:line 251
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.ASPxGridViewSumarryTransaction_DataBinding(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 65
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at DevExpress.Web.Internal.DataHelper.PerformSelect()
+   at DevExpress.Web.Internal.GridDataHelper.PerformSelect()
+   at DevExpress.Web.Internal.DataContainer.PerformSelect()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindCore()
+   at DevExpress.Web.ASPxDataWebControlBase.DataBindInternal()
+   at DevExpress.Web.ASPxWebControl.DataBind()
+   at ETT_Web.MobileTransactions.DayTransactionSummaryTable.Page_Load(Object sender, EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\MobileTransactions\DayTransactionSummaryTable.aspx.cs:line 40
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at ETT_Web.Infrastructure.ServerMasterPage.OnLoad(EventArgs e) in C:\Work\ETTPotocnik\ETT_Web\Infrastructure\ServerMasterPage.cs:line 27
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+ASP._global_asax
+http://localhost:53299/MobileTransactions/DayTransactionSummaryTable.aspx
+
+
+19/07/2021 11:05:10 Pozdravljeni! 
+ Uporabnik Martin Polegek je dne Monday, 19 July 2021 ob 11:05:07 naletel na napako! 
+ Podrobnosti napake so navedene spodaj: 
+ 
+ -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Web.UI.WebControls.XmlHierarchyData' does not contain a property with the name 'Text'.
+   at DevExpress.Web.ASPxGridBase.DataBindNoControls()
+   at DevExpress.Web.ASPxGridBase.LoadDataIfNotBinded(Boolean bindIfNotCached)
+   at DevExpress.Web.ASPxGridBase.LoadGridControlStateCore(TypedBinaryReader reader, Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridView.LoadGridControlStateCore(TypedBinaryReader reader, Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridBase.LoadGridControlState(Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridBase.LoadPostData(NameValueCollection postCollection)
+   at DevExpress.Web.ASPxWebControl.LoadPostDataInternal(NameValueCollection postCollection, Boolean raisePostDataEvent)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_uyrdg14d.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) -------- System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): DataBinding: 'System.Web.UI.WebControls.XmlHierarchyData' does not contain a property with the name 'Text'.
+   at DevExpress.Web.ASPxGridBase.DataBindNoControls()
+   at DevExpress.Web.ASPxGridBase.LoadDataIfNotBinded(Boolean bindIfNotCached)
+   at DevExpress.Web.ASPxGridBase.LoadGridControlStateCore(TypedBinaryReader reader, Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridView.LoadGridControlStateCore(TypedBinaryReader reader, Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridBase.LoadGridControlState(Dictionary`2 clientState)
+   at DevExpress.Web.ASPxGridBase.LoadPostData(NameValueCollection postCollection)
+   at DevExpress.Web.ASPxWebControl.LoadPostDataInternal(NameValueCollection postCollection, Boolean raisePostDataEvent)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.mobiletransactions_daytransactionsummarytable_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\6752400f\e12ff161\App_Web_uyrdg14d.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 
+ASP._global_asax
+http://localhost:53299/MobileTransactions/DayTransactionSummaryTable.aspx
+
+

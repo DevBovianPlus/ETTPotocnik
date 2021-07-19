@@ -70,8 +70,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return ftsUpdateUserID; }
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
-        [Association(@"ProductReferencesCategorie")]
-        public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
     }
 
 }

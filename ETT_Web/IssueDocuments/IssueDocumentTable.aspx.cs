@@ -5,6 +5,7 @@ using ETT_Utilities.Common;
 using ETT_Web.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -74,6 +75,19 @@ namespace ETT_Web.IssueDocuments
             {
                 ASPxWebControl.RedirectOnCallback(ConcatenateURLForPrint(split[1], "IssueDocument", true));
             }
+        }
+
+        protected void ASPxGridViewIssueDocument_HtmlRowPrepared(object sender, ASPxGridViewTableRowEventArgs e)
+        {
+            if (e.RowType != GridViewRowType.Data) return;
+
+            ColorConverter c = new ColorConverter();
+
+            string code = e.GetValue("IssueStatus.Code").ToString();
+            if (code == Enums.DeliveryNoteStatus.Zakljuceno.ToString().ToUpper())
+                e.Row.BackColor = (Color)c.ConvertFromString("#46e289");
+            else if (code == Enums.DeliveryNoteStatus.Error.ToString())
+                e.Row.BackColor = Color.Tomato;           
         }
     }
 }

@@ -13,6 +13,7 @@
     </Group>
     <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+	  <Link NavigateUrl="~/MobileTransactions/DayTransactionSummaryTable.aspx" Text="Pregled transakcij - Skupno" ImageUrl="~/Images/mobileTransaction.png" />
     </Group>
     <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
@@ -46,6 +47,7 @@
     </Group>
     <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+	  <Link NavigateUrl="~/MobileTransactions/DayTransactionSummaryTable.aspx" Text="Pregled transakcij - Skupno" ImageUrl="~/Images/mobileTransaction.png" />
     </Group>
     <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
@@ -76,6 +78,7 @@
     </Group>
     <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+	  <Link NavigateUrl="~/MobileTransactions/DayTransactionSummaryTable.aspx" Text="Pregled transakcij - Skupno" ImageUrl="~/Images/mobileTransaction.png" />
     </Group>
     <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
@@ -95,6 +98,7 @@
     </Group>
     <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+	  <Link NavigateUrl="~/MobileTransactions/DayTransactionSummaryTable.aspx" Text="Pregled transakcij - Skupno" ImageUrl="~/Images/mobileTransaction.png" />
     </Group>
     <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />
@@ -110,6 +114,7 @@
     </Group>
     <Group Text="TRANSAKCIJE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/MobileTransactions/MobileTransactionTable.aspx" Text="Pregled transakcij" ImageUrl="~/Images/mobileTransaction.png" />
+	  <Link NavigateUrl="~/MobileTransactions/DayTransactionSummaryTable.aspx" Text="Pregled transakcij - Skupno" ImageUrl="~/Images/mobileTransaction.png" />
     </Group>
     <Group Text="DOBAVNICE" font="bold" align="center" ImageUrl="~/Images/Arrow-right.png">
       <Link NavigateUrl="~/DeliveryNotes/DeliveryNoteTable.aspx" Text="Elektronske dobavnice" ImageUrl="~/Images/deliveryNotes.png" />

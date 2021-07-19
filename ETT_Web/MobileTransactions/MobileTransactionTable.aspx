@@ -143,37 +143,41 @@
 
                         <dx:GridViewCommandColumn ShowSelectCheckbox="true" Caption="Izberi" Width="45px" SelectAllCheckboxMode="AllPages" />
 
-                        <dx:GridViewDataTextColumn Caption="Prenešeno" FieldName="InventoryDeliveriesLocationID.NeedsMatching" MinWidth="70" MaxWidth="100" Width="1%">
+                        <dx:GridViewDataTextColumn Caption="Prenešeno" FieldName="NeedMatching" MinWidth="70" MaxWidth="100" Width="1%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                         <dx:GridViewDataTextColumn FieldName="RowCnt" Visible="true"  Width="80px" Caption="#">
+                        <dx:GridViewDataTextColumn FieldName="RowCnt" Visible="true" Width="70px" Caption="#" CellStyle-HorizontalAlign="Center">
                         </dx:GridViewDataTextColumn>
                         <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AllowTextTruncationInAdaptiveMode="true" MinWidth="80" MaxWidth="200" Width="5%">
                             <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy HH:mm:ss" />
                         </dx:GridViewDataDateColumn>
-                        <dx:GridViewDataTextColumn Caption="Uporabnik" MinWidth="100" MaxWidth="200" Width="5%"
-                            FieldName="UserFirstnameAndLastname" UnboundType="String" UnboundExpression="[InventoryDeliveriesLocationID.UserID.EmployeeID.Firstname] + ' ' + [InventoryDeliveriesLocationID.UserID.EmployeeID.Lastname]">
+                        <dx:GridViewDataTextColumn Caption="Uporabnik" FieldName="Uporabnik" MinWidth="150" MaxWidth="150" Width="5%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Iz lokacije" FieldName="InventoryDeliveriesLocationID.LocationFromID.Name" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Iz lokacije" FieldName="IzLokacije" MinWidth="200" MaxWidth="250" Width="4%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="InventoryDeliveriesLocationID.LocationToID.Name" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="NaLokacijo" MinWidth="200" MaxWidth="250" Width="4%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="SupplierID.Name" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Dobavitelj" FieldName="Dobavitelj" MinWidth="200" MaxWidth="250" Width="5%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="ProductID.Name" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Produkt" MinWidth="200" MaxWidth="250" Width="6%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Koda artikla" FieldName="UIDCode" MinWidth="150" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn Caption="Koda artikla" FieldName="UIDCode" MinWidth="150" MaxWidth="200" Width="3%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID.LocationToID.IsBuyer" Visible="false" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn FieldName="IsBuyer" Visible="false" MinWidth="200" MaxWidth="250" Width="5%">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID" Visible="false" MinWidth="200" MaxWidth="250" Width="5%">
+                        <dx:GridViewDataTextColumn FieldName="LocationToClientID" Visible="false" MinWidth="200" MaxWidth="250" Width="5%">
                         </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataTextColumn FieldName="InventoryDeliveriesLocationID" Visible="false" MinWidth="200" MaxWidth="250" Width="5%">
+                        </dx:GridViewDataTextColumn>
+                        <dx:GridViewDataDateColumn Caption="Datum zadnje spremembe" FieldName="tsUpdate" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="5%">
+                            <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy  hh:mm:ss" />
+                        </dx:GridViewDataDateColumn>
                     </Columns>
                 </dx:ASPxGridView>
 

@@ -168,18 +168,10 @@ namespace ETT_DAL.ETTPotocnik
         }
         [Association(@"ContactPersonReferencesClient")]
         public XPCollection<ContactPerson> ContactPersons { get { return GetCollection<ContactPerson>(nameof(ContactPersons)); } }
-        [Association(@"ProductReferencesClient")]
-        public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
-        [Association(@"IssueDocumentReferencesClient")]
-        public XPCollection<IssueDocument> IssueDocuments { get { return GetCollection<IssueDocument>(nameof(IssueDocuments)); } }
-        [Association(@"IssueDocumentPositionReferencesClient")]
-        public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }
         [Association(@"MobileTransactionReferencesClient")]
         public XPCollection<MobileTransaction> MobileTransactions { get { return GetCollection<MobileTransaction>(nameof(MobileTransactions)); } }
         [Association(@"LocationReferencesClient")]
         public XPCollection<Location> Locations { get { return GetCollection<Location>(nameof(Locations)); } }
-        [Association(@"DeliveryNoteReferencesClient")]
-        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
     }
 
 }

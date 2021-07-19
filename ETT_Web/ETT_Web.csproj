@@ -185,6 +185,7 @@
     <Content Include="Images\xml_document.png" />
     <Content Include="Images\xml_parse.png" />
     <Content Include="Images\xml_parse_hover.png" />
+    <Content Include="Images\ZigPodpis.gif" />
     <Content Include="Inventory\InventoryDeliveriesForm.aspx" />
     <Content Include="Inventory\InventoryDeliveriesTable.aspx" />
     <Content Include="Inventory\InventoryStockTable.aspx" />
@@ -193,6 +194,7 @@
     <Content Include="IssueDocuments\IssueDocumentTable.aspx" />
     <Content Include="IssueDocuments\SearchByUID_popup.aspx" />
     <Content Include="IssueDocuments\IssueDocument_popup.aspx" />
+    <Content Include="MobileTransactions\DayTransactionSummaryTable.aspx" />
     <Content Include="MobileTransactions\MobileTransactionTable.aspx" />
     <Content Include="MobileTransactions\MobileTransaction_popup.aspx" />
     <Content Include="Reports\ReportPreview.aspx" />
@@ -495,6 +497,13 @@
     <Compile Include="MasterPages\Welcome.Master.designer.cs">
       <DependentUpon>Welcome.Master</DependentUpon>
     </Compile>
+    <Compile Include="MobileTransactions\DayTransactionSummaryTable.aspx.cs">
+      <DependentUpon>DayTransactionSummaryTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileTransactions\DayTransactionSummaryTable.aspx.designer.cs">
+      <DependentUpon>DayTransactionSummaryTable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MobileTransactions\MobileTransactionTable.aspx.cs">
       <DependentUpon>MobileTransactionTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -516,6 +525,11 @@
     </Compile>
     <Compile Include="MasterPages\Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Reports\IssueDocumentReport.cs">
       <SubType>Component</SubType>
@@ -553,6 +567,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\IssueDocumentReport.resx">
       <DependentUpon>IssueDocumentReport.cs</DependentUpon>
     </EmbeddedResource>

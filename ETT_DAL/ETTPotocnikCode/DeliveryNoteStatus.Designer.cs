@@ -58,8 +58,6 @@ namespace ETT_DAL.ETTPotocnik
             get { return ftsInsertUserID; }
             set { SetPropertyValue<int>(nameof(tsInsertUserID), ref ftsInsertUserID, value); }
         }
-        [Association(@"DeliveryNoteReferencesDeliveryNoteStatus")]
-        public XPCollection<DeliveryNote> DeliveryNotes { get { return GetCollection<DeliveryNote>(nameof(DeliveryNotes)); } }
     }
 
 }

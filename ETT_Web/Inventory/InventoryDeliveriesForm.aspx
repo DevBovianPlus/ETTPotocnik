@@ -317,13 +317,13 @@
                                     <h5 class="font-italic"><i class='fas fa-table'></i> Podatki o premikih</h5>
                                     <hr class="mb-4 w-100">
                                     <dx:ASPxGridView ID="ASPxGridViewInventoryDeliveriesLocation" Width="100%" runat="server" KeyFieldName="InventoryDeliveriesLocationID" DataSourceID="XpoDSInventoryDeliveriesLocation"
-                                        CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridInventoryDeliveriesLocation">
+                                        CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridInventoryDeliveriesLocation" OnCustomColumnDisplayText="ASPxGridViewInventoryDeliveriesLocation_CustomColumnDisplayText">
                                         <ClientSideEvents RowDblClick="HandleUserAction" />
                                         <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
                                             AllowHideDataCellsByColumnMinWidth="true">
                                         </SettingsAdaptivity>
                                         <Settings ShowVerticalScrollBar="True"
-                                            ShowFilterBar="Auto" ShowFilterRow="false" VerticalScrollableHeight="100"
+                                            ShowFilterBar="Auto" ShowFilterRow="false" VerticalScrollableHeight="300"
                                             ShowFilterRowMenu="false" VerticalScrollBarStyle="Standard" VerticalScrollBarMode="Auto" />
                                         <SettingsBehavior AllowEllipsisInText="true" />
                                         <Paddings Padding="0" />
@@ -339,12 +339,12 @@
                                         <SettingsText EmptyDataRow="Trenutno ni podatka o premikih artikla." />
 
                                         <Columns>
+                                            <dx:GridViewDataTextColumn Caption="KNJIŽENO" FieldName="NeedsMatching" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="10%" />
                                             <dx:GridViewDataTextColumn Caption="UID" FieldName="InventoryDeliveriesID.AtomeUID250" AllowTextTruncationInAdaptiveMode="true" MinWidth="150" MaxWidth="200" Width="13%" />
-                                            <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="13%" PropertiesDateEdit-DisplayFormatString="dd. MMMM yyyy" />
+                                            <dx:GridViewDataDateColumn Caption="Datum" FieldName="tsInsert" AdaptivePriority="1" MinWidth="150" MaxWidth="250" Width="13%" PropertiesDateEdit-DisplayFormatString="dd. MMMM yyyy hh:mm:ss" />
                                             <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="InventoryDeliveriesID.InventoryStockID.ProductID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="30%" />
                                             <dx:GridViewDataTextColumn Caption="Iz lokacije" FieldName="LocationFromID.Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="20%" />
-                                            <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="LocationToID.Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="20%" />
-
+                                            <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="LocationToID.Name" AdaptivePriority="2" MinWidth="100" MaxWidth="150" Width="20%" />                                            
                                             <dx:GridViewBandColumn Caption="Uporabnik">
                                                 <Columns>
                                                     <dx:GridViewDataColumn FieldName="UserID.EmployeeID.Firstname" Caption="Ime" Width="120px" ExportWidth="90"
@@ -409,7 +409,7 @@
         </dx:XpoDataSource>
 
         <dx:XpoDataSource ID="XpoDSInventoryDeliveriesLocation" runat="server" ServerMode="true"
-            DefaultSorting="InventoryDeliveriesLocationID DESC" TypeName="ETT_DAL.ETTPotocnik.InventoryDeliveriesLocation" Criteria="[InventoryDeliveriesID] = ?">
+            DefaultSorting="tsInsert DESC" TypeName="ETT_DAL.ETTPotocnik.InventoryDeliveriesLocation" Criteria="[InventoryDeliveriesID] = ?">
             <CriteriaParameters>
                 <asp:QueryStringParameter Name="RecordID" QueryStringField="recordId" DefaultValue="-1" />
             </CriteriaParameters>

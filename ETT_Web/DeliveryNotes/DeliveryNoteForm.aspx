@@ -283,7 +283,7 @@
                                                 <dx:ASPxLabel ID="ASPxLabel5" runat="server" Font-Size="12px" Text="NAPAKA : " Font-Bold="true"></dx:ASPxLabel>
                                             </div>
                                             <div class="col p-0" style="margin-right: 41px; margin-top: 20px">
-                                                <dx:ASPxMemo ID="memError" runat="server" Width="100%" Rows="2" MaxLength="500" CssClass="text-box-input" AutoCompleteType="Disabled">
+                                                <dx:ASPxMemo ID="memError" runat="server" Width="100%" Rows="6" MaxLength="5000" CssClass="text-box-input" AutoCompleteType="Disabled">
                                                     <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                                                 </dx:ASPxMemo>
                                             </div>

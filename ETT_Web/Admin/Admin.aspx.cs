@@ -48,8 +48,16 @@ namespace ETT_Web.Admin
 
         protected void btnDeleteTransactions_Click(object sender, EventArgs e)
         {
-            mobileTransactionRepo.DeleteDuplicateMobileTransaction();
-            Master.NavigationBarMain.DataBind();
+            try
+            {
+                mobileTransactionRepo.DeleteDuplicateMobileTransaction();
+                Master.NavigationBarMain.DataBind();
+            }
+            catch (Exception ex)
+            {
+                CommonMethods.LogThis("Err: " + ex.Message.ToString());                
+            }
+           
         }
     }
 }

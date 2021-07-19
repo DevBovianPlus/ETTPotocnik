@@ -80,7 +80,9 @@ namespace ETT_DAL.Concrete
             catch (Exception ex)
             {
                 string error = "";
+                
                 CommonMethods.getError(ex, ref error);
+                model.ProcessError = error;                
                 throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_26, error, CommonMethods.GetCurrentMethodName()));
             }
         }
@@ -323,7 +325,10 @@ namespace ETT_DAL.Concrete
             try
             {
                 Int64 iCnt = 0;
-
+                CommonMethods.LogThis("Start SaveInventoryDeliveries!!!");
+                
+                var dn = GetDeliveryNoteByID(deliveryNoteID, session);
+                
                 using (UnitOfWork uow = XpoHelper.GetNewUnitOfWork())
                 {
                     List<DeliveryNoteItem> deliveryNoteItems = GetDeliveryNoteItemsByDeliveryNoteID(deliveryNoteID, uow);
@@ -416,17 +421,33 @@ namespace ETT_DAL.Concrete
                             invDelLoc.LocationToID = locationRepo.GetLocationByID(item.InventoryStockID.LocationID.LocationID, uow);
                             invDelLoc.LocationFromID = null;
                             invDelLoc.UserID = userRepo.GetUserByID(userID, uow);
-                            invDelLoc.tsInsert = DateTime.Now;
+                            invDelLoc.tsInsert = dn.RecivedMaterialDate.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute).AddSeconds(DateTime.Now.Second);
                             invDelLoc.tsInsertUserID = 0;
-                            invDelLoc.tsUpdate = DateTime.Now;
+                            invDelLoc.tsUpdate = invDelLoc.tsInsert;
                             invDelLoc.tsUpdateUserID = 0;
+                            //invDelLoc.Save(); // zakomentiraj
                         }
-                    }
 
+
+                        if (iCnt % 1000 == 0)
+                        {
+                            CommonMethods.LogThis("Zapis: " + iCnt + " / " + model.Count());
+                        }
+
+                        if (iCnt % 100 == 0)
+                        {
+                            dn.ProgresNo = CommonMethods.ParseInt(iCnt);
+                            dn.ProgresStatus = iCnt + " / " + model.Count().ToString();
+                            dn.Save();
+                        }
+
+                    }
+                    CommonMethods.LogThis("End SaveInventoryDeliveries!!!");
                     uow.CommitChanges();
                 }
 
-                var dn = GetDeliveryNoteByID(deliveryNoteID, session);
+                //var dn = GetDeliveryNoteByID(deliveryNoteID, session);
+                dn.ProgresStatus = model.Count().ToString() + " / " + model.Count().ToString();
                 dn.DeliveryNoteStatusID = GetDeliveryNoteStatusByCode(Enums.DeliveryNoteStatus.Completed, session);
                 dn.Save();
             }
@@ -434,6 +455,10 @@ namespace ETT_DAL.Concrete
             {
                 string error = "";
                 CommonMethods.getError(ex, ref error);
+                var dn = GetDeliveryNoteByID(deliveryNoteID, session);
+                dn.ProcessError = error.Substring(0, 4998);
+                dn.DeliveryNoteStatusID = GetDeliveryNoteStatusByCode(Enums.DeliveryNoteStatus.Error, session);
+                dn.Save();
                 throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_26, error, CommonMethods.GetCurrentMethodName()));
             }
         }
@@ -441,7 +466,7 @@ namespace ETT_DAL.Concrete
         private string GetTopLevelSID(Item item, bool isRepacking)
         {
             //če ima dobavnica summaryItem z nazivom Repacking potem moremo izbrati naslednji toplelvel item ki je za tem repacking-om
-            int index = isRepacking ? 1 : 0;
+            int index = isRepacking ? 0 : 0;
 
             //Ob sestavljanju stringa packagesIDs smo top level package postavili na prvo mesto stringa - glej DeliveryNoteForm, metoda ConstructAtomeHierarchySID
             return String.IsNullOrEmpty(item.PackagesSIDs) ? "" : item.PackagesSIDs.Split(CommonMethods.PackageDelimiter)[index].Trim();

@@ -73,6 +73,7 @@
             </dx:GridViewDataHyperLinkColumn>
             <dx:GridViewDataTextColumn Caption="Status" FieldName="DeliveryNoteStatusID.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="15%" />
             <dx:GridViewDataTextColumn Caption="Status" FieldName="DeliveryNoteStatusID.Code" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="15%" Visible="false" />
+            <dx:GridViewDataTextColumn Caption="Napredek" FieldName="ProgresStatus" AdaptivePriority="1" MinWidth="150" MaxWidth="150" Width="5%" />
         </Columns>
     </dx:ASPxGridView>
 

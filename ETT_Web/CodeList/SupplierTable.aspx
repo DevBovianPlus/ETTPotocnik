@@ -83,6 +83,6 @@
         </div>
     </div>
     <dx:XpoDataSource ID="XpoDSSupplier" runat="server" ServerMode="true"
-        DefaultSorting="ClientID DESC" TypeName="ETT_DAL.ETTPotocnik.Client" Criteria="[ClientTypeID] = 1">
+        DefaultSorting="ClientID DESC" TypeName="ETT_DAL.ETTPotocnik.Client">
     </dx:XpoDataSource>
 </asp:Content>

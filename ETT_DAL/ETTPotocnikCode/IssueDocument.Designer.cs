@@ -33,7 +33,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<string>(nameof(IssueNumber), ref fIssueNumber, value); }
         }
         Client fBuyerID;
-        [Association(@"IssueDocumentReferencesClient")]
         public Client BuyerID
         {
             get { return fBuyerID; }
@@ -110,6 +109,12 @@ namespace ETT_DAL.ETTPotocnik
         {
             get { return fPermissionDoc; }
             set { SetPropertyValue<string>(nameof(PermissionDoc), ref fPermissionDoc, value); }
+        }
+        DateTime fServiceDate;
+        public DateTime ServiceDate
+        {
+            get { return fServiceDate; }
+            set { SetPropertyValue<DateTime>(nameof(ServiceDate), ref fServiceDate, value); }
         }
         [Association(@"IssueDocumentPositionReferencesIssueDocument")]
         public XPCollection<IssueDocumentPosition> IssueDocumentPositions { get { return GetCollection<IssueDocumentPosition>(nameof(IssueDocumentPositions)); } }

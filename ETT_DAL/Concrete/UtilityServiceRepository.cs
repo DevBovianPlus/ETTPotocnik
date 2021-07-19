@@ -48,7 +48,7 @@ namespace ETT_DAL.Concrete
                 else
                     idl = session.Query<InventoryDeliveriesLocation>();
 
-                return idl.Where(i => i.NeedsMatching && !i.LocationToID.IsBuyer).ToList();
+                return idl.Where(i => i.NeedsMatching && !i.LocationToID.IsBuyer).OrderByDescending(o => o.tsInsert).ToList();
             }
             catch (Exception ex)
             {
@@ -78,7 +78,7 @@ namespace ETT_DAL.Concrete
                 var transactionForMatching = issueDocumentTransactions ?? GetInventoryDeliveryLocationsThatNeedsMatching(uow);
                 foreach (var item in transactionForMatching)
                 {
-                    if (item.MobileTransactions != null)
+                    if (item.MobileTransactions != null && item.MobileTransactions.Count > 0)
                     {
                         iCnt++;
                         var uid = item.MobileTransactions.FirstOrDefault().UIDCode;
@@ -88,6 +88,7 @@ namespace ETT_DAL.Concrete
                         {
                             MatchDeliveriesAndTransactions(item, deliveries, uow);
                             item.NeedsMatching = false;
+                            item.tsUpdate = DateTime.Now;                            
                         }
 
                         if (iCnt % 1000 == 0)
@@ -124,8 +125,8 @@ namespace ETT_DAL.Concrete
             clonedInventoryDeliveriesLocation.LocationToID = itemToClone.LocationToID;
             clonedInventoryDeliveriesLocation.Notes = itemToClone.Notes;
             clonedInventoryDeliveriesLocation.UserID = itemToClone.UserID;
-            clonedInventoryDeliveriesLocation.tsInsert = DateTime.Now;
-            clonedInventoryDeliveriesLocation.tsUpdate = DateTime.Now;
+            clonedInventoryDeliveriesLocation.tsInsert = itemToClone.tsInsert;
+            clonedInventoryDeliveriesLocation.tsUpdate = itemToClone.tsUpdate;
             clonedInventoryDeliveriesLocation.IsMobileTransaction = itemToClone.IsMobileTransaction;
             //clonedInventoryDeliveriesLocation.MobileTransactions = new XPCollection<MobileTransaction>(unitOfWork, itemToClone.MobileTransactions);
 

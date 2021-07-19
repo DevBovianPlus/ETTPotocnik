@@ -86,7 +86,7 @@
 
                 <dx:ASPxPopupControl ID="PopupControlProduct" runat="server" ContentUrl="Product_popup.aspx"
                     ClientInstanceName="popupControProduct" Modal="True" HeaderText="ARTIKEL"
-                    CloseAction="CloseButton" Width="720px" Height="450px" PopupHorizontalAlign="WindowCenter"
+                    CloseAction="CloseButton" Width="720px" Height="490px" PopupHorizontalAlign="WindowCenter"
                     PopupVerticalAlign="WindowCenter" PopupAnimationType="Fade" AllowDragging="true" ShowSizeGrip="true"
                     AllowResize="true" ShowShadow="true"
                     OnWindowCallback="PopupControlProduct_WindowCallback">

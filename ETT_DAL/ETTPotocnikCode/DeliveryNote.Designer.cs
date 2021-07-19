@@ -33,14 +33,12 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<string>(nameof(DeliveryNoteNumber), ref fDeliveryNoteNumber, value); }
         }
         Client fSupplierID;
-        [Association(@"DeliveryNoteReferencesClient")]
         public Client SupplierID
         {
             get { return fSupplierID; }
             set { SetPropertyValue<Client>(nameof(SupplierID), ref fSupplierID, value); }
         }
         Location fLocationID;
-        [Association(@"DeliveryNoteReferencesLocation")]
         public Location LocationID
         {
             get { return fLocationID; }
@@ -91,7 +89,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<int>(nameof(tsUpdateUserID), ref ftsUpdateUserID, value); }
         }
         DeliveryNoteStatus fDeliveryNoteStatusID;
-        [Association(@"DeliveryNoteReferencesDeliveryNoteStatus")]
         public DeliveryNoteStatus DeliveryNoteStatusID
         {
             get { return fDeliveryNoteStatusID; }
@@ -116,6 +113,19 @@ namespace ETT_DAL.ETTPotocnik
         {
             get { return fSalePermission; }
             set { SetPropertyValue<string>(nameof(SalePermission), ref fSalePermission, value); }
+        }
+        int fProgresNo;
+        public int ProgresNo
+        {
+            get { return fProgresNo; }
+            set { SetPropertyValue<int>(nameof(ProgresNo), ref fProgresNo, value); }
+        }
+        string fProgresStatus;
+        [Size(50)]
+        public string ProgresStatus
+        {
+            get { return fProgresStatus; }
+            set { SetPropertyValue<string>(nameof(ProgresStatus), ref fProgresStatus, value); }
         }
         [Association(@"DeliveryNoteItemReferencesDeliveryNote")]
         public XPCollection<DeliveryNoteItem> DeliveryNoteItems { get { return GetCollection<DeliveryNoteItem>(nameof(DeliveryNoteItems)); } }

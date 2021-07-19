@@ -197,7 +197,8 @@ namespace ETT_Utilities.Common
         public enum MobileTransactionSession
         {
             MobileTransactionID,
-            MobileTransactionModel
+            MobileTransactionModel,
+            DayilySummaryModel
         }
         public enum InventoryDeliveriesSession
         {
@@ -218,7 +219,8 @@ namespace ETT_Utilities.Common
         {
             DELOVNA,
             ZAKLJUCENO,
-            PRENOS
+            PRENOS, 
+            NAPAKA
         }
 
       
@@ -235,7 +237,8 @@ namespace ETT_Utilities.Common
             In_Process,
             Completed,
             Error,
-            Not_Processed
+            Not_Processed,
+            Zakljuceno
         }
     }
 }

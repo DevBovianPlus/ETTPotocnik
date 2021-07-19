@@ -1,4 +1,5 @@
 ﻿using DevExpress.Web;
+using DevExpress.Web.Data;
 using DevExpress.Xpo;
 using ETT_DAL.Abstract;
 using ETT_DAL.Concrete;
@@ -39,6 +40,8 @@ namespace ETT_Web.MobileTransactions
             ASPxGridViewMobileTransaction.DataBind();
         }
 
+
+
         protected void CallbackPanelMobileTransaction_Callback(object sender, CallbackEventArgsBase e)
         {
             if (e.Parameter == "RefreshGrid")
@@ -46,9 +49,10 @@ namespace ETT_Web.MobileTransactions
                 ASPxGridViewMobileTransaction.DataBind();
             }
             else if (e.Parameter == "TransferToIssueDocument")
-            {
+            {                
+
                 //pridobimo seznam izbranih lokacij
-                List<int> selectedItems = ASPxGridViewMobileTransaction.GetSelectedFieldValues("InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID").OfType<int>().ToList();
+                List<int> selectedItems = ASPxGridViewMobileTransaction.GetSelectedFieldValues("LocationToClientID").OfType<int>().ToList();
 
                 //preverimi če imajo vse izbrane transkacije enakega kupca
                 int count = selectedItems.Count(si => si == selectedItems[0]);
@@ -90,7 +94,7 @@ namespace ETT_Web.MobileTransactions
 
         protected void ASPxGridViewMobileTransaction_CustomColumnDisplayText(object sender, ASPxGridViewColumnDisplayTextEventArgs e)
         {
-            if (e.Column.FieldName == "InventoryDeliveriesLocationID.NeedsMatching")
+            if (e.Column.FieldName == "NeedMatching")
             {
                 if (Convert.ToBoolean(e.Value))
                     e.DisplayText = "NE";
@@ -101,8 +105,8 @@ namespace ETT_Web.MobileTransactions
 
         protected void ASPxGridViewMobileTransaction_CommandButtonInitialize(object sender, ASPxGridViewCommandButtonEventArgs e)
         {
-            object isBuyer = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.LocationToID.IsBuyer");
-            object needsMatching = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "InventoryDeliveriesLocationID.NeedsMatching");
+            object isBuyer = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "IsBuyer");
+            object needsMatching = ASPxGridViewMobileTransaction.GetRowValues(e.VisibleIndex, "NeedMatching");
 
             if (CommonMethods.ParseBool(isBuyer) && CommonMethods.ParseBool(needsMatching))
                 e.Visible = true;
@@ -127,7 +131,7 @@ namespace ETT_Web.MobileTransactions
                 dtTo = DateTime.Now;
             }
 
-            List<MobileTransaction> list = mobileTransactionRepo.GetMobileTransactionByDates(dtFrom, dtTo, session);
+            List<MobileTransactionModel> list = mobileTransactionRepo.GetMobileTransactionByDates(dtFrom, dtTo, session);
 
             (sender as ASPxGridView).DataSource = list;
             (sender as ASPxGridView).Settings.GridLines = GridLines.Both;

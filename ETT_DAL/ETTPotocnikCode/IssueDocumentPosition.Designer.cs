@@ -33,7 +33,6 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<IssueDocument>(nameof(IssueDocumentID), ref fIssueDocumentID, value); }
         }
         Client fSupplierID;
-        [Association(@"IssueDocumentPositionReferencesClient")]
         public Client SupplierID
         {
             get { return fSupplierID; }
@@ -91,18 +90,22 @@ namespace ETT_DAL.ETTPotocnik
             set { SetPropertyValue<string>(nameof(Notes), ref fNotes, value); }
         }
         Product fProductID;
-        [Association(@"IssueDocumentPositionReferencesProduct")]
         public Product ProductID
         {
             get { return fProductID; }
             set { SetPropertyValue<Product>(nameof(ProductID), ref fProductID, value); }
         }
         MobileTransaction fMobileTransactionID;
-        [Association(@"IssueDocumentPositionReferencesMobileTransaction")]
         public MobileTransaction MobileTransactionID
         {
             get { return fMobileTransactionID; }
             set { SetPropertyValue<MobileTransaction>(nameof(MobileTransactionID), ref fMobileTransactionID, value); }
+        }
+        decimal fQuantityKG;
+        public decimal QuantityKG
+        {
+            get { return fQuantityKG; }
+            set { SetPropertyValue<decimal>(nameof(QuantityKG), ref fQuantityKG, value); }
         }
     }
 

@@ -8,22 +8,21 @@
     <script type="text/javascript">
 
         function RowDoubleClick(s, e) {
-             gridIssueDocument.GetRowValues(gridIssueDocument.GetFocusedRowIndex(), 'IssueDocumentID', OnGetRowValues);
-            
+            gridIssueDocument.GetRowValues(gridIssueDocument.GetFocusedRowIndex(), 'IssueDocumentID', OnGetRowValues);
+
         }
 
         function OnGetRowValues(value) {
             gridIssueDocument.PerformCallback("DoubleClick;" + value);
         }
 
-        function btnPrintSelected_Click(s, e)
-        {
+        function btnPrintSelected_Click(s, e) {
             gridIssueDocument.GetRowValues(gridIssueDocument.GetFocusedRowIndex(), 'IssueDocumentID;IssueStatus.Code', OnGetPrintRowValues);
         }
 
         function OnGetPrintRowValues(value) {
             var status = '<%= ETT_Utilities.Common.Enums.IssueDocumentStatus.ZAKLJUCENO.ToString() %>';
-            if(value[1] === status)
+            if (value[1] === status)
                 gridIssueDocument.PerformCallback("PrintDocument;" + value[0]);
         }
     </script>
@@ -31,7 +30,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     <dx:ASPxGridView ID="ASPxGridViewIssueDocument" Width="100%" runat="server" KeyFieldName="IssueDocumentID" DataSourceID="XpoDSIssueDocument"
         CssClass="gridview-no-header-padding" EnableRowsCache="false" AutoGenerateColumns="False" ClientInstanceName="gridIssueDocument"
-        OnDataBound="ASPxGridViewIssueDocument_DataBound" OnCustomCallback="ASPxGridViewIssueDocument_CustomCallback">
+        OnDataBound="ASPxGridViewIssueDocument_DataBound" OnCustomCallback="ASPxGridViewIssueDocument_CustomCallback" OnHtmlRowPrepared="ASPxGridViewIssueDocument_HtmlRowPrepared">
         <ClientSideEvents RowDblClick="RowDoubleClick" />
         <SettingsAdaptivity AdaptivityMode="HideDataCells" AllowOnlyOneAdaptiveDetailExpanded="true"
             AllowHideDataCellsByColumnMinWidth="true">
@@ -55,16 +54,18 @@
         <SettingsText EmptyDataRow="Trenutno ni podatka o izdajnicah. Dodaj novo." />
 
         <Columns>
+            <dx:GridViewDataDateColumn Caption="Datum storitve" FieldName="ServiceDate" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="10%">
+                <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
+            </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn Caption="Datum izdajnice" FieldName="IssueDate" AllowTextTruncationInAdaptiveMode="true" MinWidth="100" MaxWidth="200" Width="10%">
                 <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
             </dx:GridViewDataDateColumn>
-            <dx:GridViewDataTextColumn Caption="Štev. izdajnice" FieldName="IssueNumber" AdaptivePriority="1" MinWidth="100" MaxWidth="200" Width="10%" />
+            <dx:GridViewDataTextColumn Caption="Štev. izdajnice" FieldName="IssueNumber" AdaptivePriority="1" MinWidth="100" MaxWidth="100" Width="5%" />
             <dx:GridViewDataTextColumn Caption="Status" FieldName="IssueStatus.Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
             <dx:GridViewDataTextColumn Caption="Status" FieldName="IssueStatus.Code" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" Visible="false" />
             <dx:GridViewDataTextColumn Caption="Kupec" FieldName="BuyerID.Name" AdaptivePriority="2" MinWidth="200" MaxWidth="250" Width="20%" />
-            <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="20%" />
+            <dx:GridViewDataTextColumn Caption="Naziv" FieldName="Name" AdaptivePriority="2" MinWidth="150" MaxWidth="350" Width="25%" />
             <dx:GridViewDataTextColumn Caption="Interni dokument" FieldName="InternalDocument" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
-            <dx:GridViewDataTextColumn Caption="Štev. računa" FieldName="InvoiceNumber" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
             <dx:GridViewDataTextColumn Caption="Dovoljenje za prodajo" FieldName="PermissionDoc" AdaptivePriority="2" MinWidth="150" MaxWidth="250" Width="10%" />
         </Columns>
     </dx:ASPxGridView>

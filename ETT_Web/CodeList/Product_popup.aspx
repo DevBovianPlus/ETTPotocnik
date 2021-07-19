@@ -93,6 +93,20 @@
                         </dx:ASPxTextBox>
                     </div>
                 </div>
+
+                <div class="row m-0 d-flex align-items-center pb-2">
+                    <div class="col-0 pr-0" style="margin-right: 61px;">
+                        <dx:ASPxLabel ID="ASPxLabel8" runat="server" Font-Size="12px" Text="FAKTOR: *" Font-Bold="true"></dx:ASPxLabel>
+                    </div>
+                    <div class="col no-padding-left">
+                        <dx:ASPxTextBox runat="server" ID="txtFaktor" ClientInstanceName="clientTxtFaktor"
+                            CssClass="text-box-input" Font-Size="13px" Width="100%" MaxLength="150" AutoCompleteType="Disabled">
+                            <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+                            <ClientSideEvents Init="SetFocus" />
+                        </dx:ASPxTextBox>
+                    </div>
+                </div>
+
                 <div class="row m-0 d-flex align-items-center pb-2">
                     <div class="col-0 pr-0" style="margin-right: 28px;">
                         <dx:ASPxLabel ID="ASPxLabel1" runat="server" Font-Size="12px" Text="DOBAVITELJ : *" Font-Bold="true"></dx:ASPxLabel>
