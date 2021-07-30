@@ -103,10 +103,11 @@ namespace ETT_UtilityService
                 if (session == null)
                     session = XpoHelper.GetNewSession();
 
+                CommonMethods.LogThis("1");
                 utilityRepo = new UtilityServiceRepository(session);
-
+                CommonMethods.LogThis("2");
                 utilityRepo.MatchMobileTransWithInventoryDeliveries();
-
+                CommonMethods.LogThis("3");
                 CommonMethods.LogThis("END");
             }
             catch (Exception ex)

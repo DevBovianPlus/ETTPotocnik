@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -50,6 +51,13 @@ namespace ETT_Web.MasterPages {
                 Session.Abandon();
                 Session.RemoveAll();
             }
+
+            lblYear.Text = DateTime.Now.Year.ToString();
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            var buildDate = new DateTime(2000, 1, 1).AddDays(version.Build).AddSeconds(version.Revision * 2);
+            var displayableVersion = $"{version} ({buildDate})";
+            Console.WriteLine("Current version (inc. build date) = " + displayableVersion);
+            lblVerzija.Text = "Ver.: " + displayableVersion;
         }
 
         protected void btnSignOut_Click(object sender, EventArgs e)

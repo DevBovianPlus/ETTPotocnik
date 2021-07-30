@@ -116,7 +116,17 @@
         </div>
         <div class="col no-padding-left">
             <dx:ASPxTextBox runat="server" ID="txtQuantity" ClientInstanceName="clientTxtQuantity"
-                CssClass="text-box-input" Font-Size="13px" Width="30%" MaxLength="10" AutoCompleteType="Disabled">
+                CssClass="text-box-input" Font-Size="13px" Width="40%" MaxLength="10" AutoCompleteType="Disabled">
+                <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
+                <ClientSideEvents KeyPress="isNumberKey_decimal" />
+            </dx:ASPxTextBox>
+        </div>
+        <div class="col-0 pr-0" style="margin-right: 13px;">
+            <dx:ASPxLabel ID="ASPxLabel4" runat="server" Font-Size="12px" Text="KOLIČINA (KOS) : *" Font-Bold="true"></dx:ASPxLabel>
+        </div>
+        <div class="col no-padding-left">
+            <dx:ASPxTextBox runat="server" ID="txtQuantityPcs" ClientInstanceName="clientTxtQuantityPcs"
+                CssClass="text-box-input" Font-Size="13px" Width="40%" MaxLength="10" AutoCompleteType="Disabled">
                 <FocusedStyle CssClass="focus-text-box-input"></FocusedStyle>
                 <ClientSideEvents KeyPress="isNumberKey_decimal" />
             </dx:ASPxTextBox>

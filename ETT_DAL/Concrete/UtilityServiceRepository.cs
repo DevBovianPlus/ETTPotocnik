@@ -72,6 +72,8 @@ namespace ETT_DAL.Concrete
 
             try
             {
+                CommonMethods.LogThis("MatchMobileTransWithInventoryDeliveries START ");
+
                 if (uow == null)
                     uow = XpoHelper.GetNewUnitOfWork();
 
@@ -95,7 +97,7 @@ namespace ETT_DAL.Concrete
 
                         if (iCnt % 1000 == 0)
                         {
-                            CommonMethods.LogThis("Zapis: " + iCnt + "/ " + transactionForMatching.Count());
+                            CommonMethods.LogThis("MatchMobileTransWithInventoryDeliveries Zapis: " + iCnt + "/ " + transactionForMatching.Count());
                         }
                     }
                     uow.CommitChanges();
@@ -104,6 +106,8 @@ namespace ETT_DAL.Concrete
 
 
                 uow.CommitChanges();
+
+                CommonMethods.LogThis("MatchMobileTransWithInventoryDeliveries END ");
             }
             catch (Exception ex)
             {
