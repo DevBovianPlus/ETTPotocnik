@@ -59,7 +59,7 @@ namespace ETT_Web.MobileTransactions
 
         protected void ASPxGridViewSumarryTransaction_DataBinding(object sender, EventArgs e)
         {
-            List<MobileTransactionModel> obj = (List<MobileTransactionModel>)GetValueFromSession(Enums.MobileTransactionSession.DayilySummaryModel);
+            List<DayTransaction> obj = (List<DayTransaction>)GetValueFromSession(Enums.MobileTransactionSession.DayilySummaryModel);
 
             if (obj != null)
             {                
@@ -74,7 +74,7 @@ namespace ETT_Web.MobileTransactions
 
         protected void btnPotrdi_Click(object sender, EventArgs e)
         {
-           
+            Master.NavigationBarMain.DataBind();
         }
 
         protected void CallbackPanelSumarryTransaction_Callback(object sender, CallbackEventArgsBase e)
@@ -86,7 +86,7 @@ namespace ETT_Web.MobileTransactions
 
                 if (dtFrom > DateTime.MinValue)
                 {
-                    List<MobileTransactionModel> list = mobileTransactionRepo.GetDaySummaryMobileTransaction(dtFrom, dtTo, session);
+                    List<DayTransaction> list = mobileTransactionRepo.GetDaySummaryTransaction(dtFrom, dtTo, session);
                     AddValueToSession(Enums.MobileTransactionSession.DayilySummaryModel, list);
 
                     ASPxGridViewSumarryTransaction.DataBind();

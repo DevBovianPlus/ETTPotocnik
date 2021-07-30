@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ETT_Web.Inventory {
-    
-    
-    public partial class InventoryStock_popup {
-        
+namespace ETT_Web.Inventory
+{
+
+
+    public partial class InventoryStock_popup
+    {
+
         /// <summary>
         /// ASPxLabel5 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel5;
-        
+
         /// <summary>
         /// GridLookupProduct control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupProduct;
-        
+
         /// <summary>
         /// ASPxLabel3 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel3;
-        
+
         /// <summary>
         /// GridLookupLocation control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridLookup GridLookupLocation;
-        
+
         /// <summary>
         /// ASPxLabel1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel1;
-        
+
         /// <summary>
         /// txtQuantity control.
         /// </summary>
@@ -65,7 +67,25 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtQuantity;
-        
+
+        /// <summary>
+        /// ASPxLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel ASPxLabel4;
+
+        /// <summary>
+        /// txtQuantityPcs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtQuantityPcs;
+
         /// <summary>
         /// ASPxLabel2 control.
         /// </summary>
@@ -74,7 +94,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel ASPxLabel2;
-        
+
         /// <summary>
         /// MemoNotes control.
         /// </summary>
@@ -83,7 +103,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo MemoNotes;
-        
+
         /// <summary>
         /// btnConfirmPopup control.
         /// </summary>
@@ -92,7 +112,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnConfirmPopup;
-        
+
         /// <summary>
         /// btnCancelPopup control.
         /// </summary>
@@ -101,7 +121,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelPopup;
-        
+
         /// <summary>
         /// XpoDSProduct control.
         /// </summary>
@@ -110,7 +130,7 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSProduct;
-        
+
         /// <summary>
         /// XpoDSLocation control.
         /// </summary>
@@ -119,15 +139,17 @@ namespace ETT_Web.Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Xpo.XpoDataSource XpoDSLocation;
-        
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new ETT_Web.MasterPages.Popup Master {
-            get {
+        public new ETT_Web.MasterPages.Popup Master
+        {
+            get
+            {
                 return ((ETT_Web.MasterPages.Popup)(base.Master));
             }
         }

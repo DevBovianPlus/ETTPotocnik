@@ -42,6 +42,7 @@ namespace ETT_DAL.Concrete
         public decimal Faktor { get; set; }
 
         public string DateSum { get; set; }
+        public DateTime DateSumDate { get; set; }
     }
 
     public class MobileTransactionRepository : IMobileTransactionRepository
@@ -118,7 +119,7 @@ namespace ETT_DAL.Concrete
                                 IzLokacije = x.InventoryDeliveriesLocationID.LocationFromID.Name,
                                 NaLokacijo = x.InventoryDeliveriesLocationID.LocationToID.Name,
                                 Dobavitelj = x.SupplierID.Name,
-                                Produkt = x.ProductID.Name, 
+                                Produkt = x.ProductID.Name,
                                 IsBuyer = x.InventoryDeliveriesLocationID.LocationToID.IsBuyer,
                                 NeedMatching = x.InventoryDeliveriesLocationID.NeedsMatching,
                                 LocationToClientID = x.InventoryDeliveriesLocationID.LocationToID.BuyerID.ClientID
@@ -128,7 +129,7 @@ namespace ETT_DAL.Concrete
                 var lMobileTrans = query.ToList();
 
                 int iCnt = 1;
-               var lMobileTransOrder = lMobileTrans.Where(mt => mt.tsInsert >= dtFrom && mt.tsInsert <= dtTo).OrderByDescending(mt => mt.tsInsert).ToList();
+                var lMobileTransOrder = lMobileTrans.Where(mt => mt.tsInsert >= dtFrom && mt.tsInsert <= dtTo).OrderByDescending(mt => mt.tsInsert).ToList();
 
                 foreach (var itm in lMobileTransOrder)
                 {
@@ -219,7 +220,7 @@ namespace ETT_DAL.Concrete
                     {
                         dCurrentQnt = itm.Quantity <= 0 ? invDeliveries.Count(inv => inv.PackagesUIDs.Contains(itm.UIDCode)) : itm.Quantity;// če se še ni shranila količina na mobilnih transkacijah jo poiščemo v invnetoryDeliveries
                         dSummaryQnt += dCurrentQnt;
-                        
+
                     }
 
                     nTmodel.QuantitySum = dSummaryQnt;
@@ -228,13 +229,13 @@ namespace ETT_DAL.Concrete
 
 
                     sDateShort = itm.tsInsert.ToShortDateString();
-                    
+
                     sProduct = itm.Produkt;
                     sIzLokacije = itm.IzLokacije;
                     sNaLokacijo = itm.NaLokacijo;
 
 
-                    
+
 
                     itm.RowCnt = iCnt++;
 
@@ -251,6 +252,47 @@ namespace ETT_DAL.Concrete
 
 
                 return lstReturn;
+            }
+            catch (Exception ex)
+            {
+                string error = "";
+                CommonMethods.getError(ex, ref error);
+                throw new Exception(CommonMethods.ConcatenateErrorIN_DB(DB_Exception.res_31, error, CommonMethods.GetCurrentMethodName()));
+            }
+        }
+
+        public List<DayTransaction> GetDaySummaryTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null)
+        {
+            try
+            {
+                List<DayTransaction> lDayTransOrder = new List<DayTransaction>();
+                XPQuery<DayTransaction> dayTrans = currentSession.Query<DayTransaction>();
+
+                if (dayTrans.Count() > 0)
+                {
+
+                    DateTime dFromFilter = new DateTime(dtFrom.Year, dtFrom.Month, dtFrom.Day, 0, 0, 0);
+                    DateTime dToFilter = new DateTime(dtTo.Year, dtTo.Month, dtTo.Day, 23, 59, 59);
+                    lDayTransOrder = dayTrans.Where(mt => mt.CurrentDay >= dFromFilter && mt.CurrentDay <= dToFilter).ToList();
+
+
+
+                    lDayTransOrder = lDayTransOrder.OrderByDescending(mt => mt.CurrentDay).ThenBy(mt => mt.NaLokacijo).ToList();
+
+                    int iCnt = 1;
+                    foreach (var itm in lDayTransOrder)
+                    {
+                        itm.RowCnt = iCnt++;
+                        Product pr = productRepo.GetProductByID(itm.ProductID);
+                        decimal dFact = (pr == null ? 1 : pr.Factor);
+                        itm.QuantityKG = dFact > 0 ? itm.Quantity * dFact : 0;
+                        itm.QuantityKG = Math.Round(itm.QuantityKG, 0);
+                        itm.Save();
+                    }
+
+                }
+
+                return lDayTransOrder;
             }
             catch (Exception ex)
             {
@@ -413,7 +455,7 @@ namespace ETT_DAL.Concrete
                 else
                     mTransaction = session.Query<MobileTransaction>();
 
-                
+
                 //find duplicates rows
                 var duplicateValues = (from row in mTransaction
                                        let UIDCode = row.UIDCode
@@ -444,7 +486,7 @@ namespace ETT_DAL.Concrete
                         {
                             remT.Delete();
                         }
-                        
+
                     }
 
                     if (iCnt % 1000 == 0)

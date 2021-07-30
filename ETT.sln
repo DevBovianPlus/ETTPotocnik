@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_Web", "ETT_Web\ETT_Web.csproj", "{96B10693-1F5A-4240-8524-AC0240C1C125}"
 EndProject
@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_WebAPI", "ETT_WebAPI\ET
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_UtilityService", "ETT_UtilityService\ETT_UtilityService.csproj", "{17B4241E-9C8C-417F-A719-CF756B3C7EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_SchedularLibrary", "ETT_SchedularLibrary\ETT_SchedularLibrary.csproj", "{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETT_SchedularLibrary", "ETT_SchedularLibrary\ETT_SchedularLibrary.csproj", "{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETT_UtilityServiceDay", "ETT_UtilityServiceDay\ETT_UtilityServiceDay.csproj", "{55D7BB74-AF83-426B-9F8E-5D8E50781A42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45803FF7-59BE-43A3-AA16-2F3FC269C3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D7BB74-AF83-426B-9F8E-5D8E50781A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D7BB74-AF83-426B-9F8E-5D8E50781A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D7BB74-AF83-426B-9F8E-5D8E50781A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D7BB74-AF83-426B-9F8E-5D8E50781A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

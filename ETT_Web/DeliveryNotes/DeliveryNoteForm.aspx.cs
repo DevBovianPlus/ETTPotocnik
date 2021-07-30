@@ -555,6 +555,51 @@ namespace ETT_Web.DeliveryNotes
             return list;
         }
 
+        private int GetSIDLastNumberFromSIDString(string sSID)
+        {
+            string[] splitUID = sSID.Split('-');
+            int iUID = CommonMethods.ParseInt(splitUID[1]);
+            return iUID;
+        }
+
+        private List<SummaryItemModel> GetSummeryForCurrentRepacking(string sSplitRepackingSIDNo, SummaryItemModel repackingItm, List<SummaryItemModel> allSummeryItem, SummaryItemModel itmLastMaxSidNo)
+        {
+            string[] splitSIDNo = sSplitRepackingSIDNo.Split('-');
+            int iCurrentRepackingSIDNo = GetSIDLastNumberFromSIDString(repackingItm.SID);       //dobimo SID številko, za trenutni repacking     
+            int iToSIDNo = 0;
+            int iLastMaxSidNo  = GetSIDLastNumberFromSIDString(itmLastMaxSidNo.SID);  //dobimo SID številko, za zadnji item v maxlevelu 
+            // pridobimo naslednjo SIDMax za repacking
+            foreach (var s in splitSIDNo)
+            {
+                int iSidNo = CommonMethods.ParseInt(s);
+                if (iSidNo > iCurrentRepackingSIDNo)
+                {
+                    iToSIDNo = iSidNo;
+                    break;
+                }
+                else
+                {
+                    iToSIDNo = iLastMaxSidNo;
+                }
+
+            }
+                        
+
+            List<SummaryItemModel> nReturnLst = new List<SummaryItemModel>();
+
+            foreach (var itemSum in allSummeryItem)
+            {
+                int iCurrentSIDNo2 = GetSIDLastNumberFromSIDString(itemSum.SID);
+
+                if (iCurrentSIDNo2 > iCurrentRepackingSIDNo && iCurrentSIDNo2 <= iToSIDNo)
+                {
+                    nReturnLst.Add(itemSum);
+                }
+            }
+
+            return nReturnLst;
+        }
+
         private List<SummaryItemModel> FindTopLevelSummaryItems(List<SummaryItemModel> summaryItems, XElement rootUnits, bool isDeloveryNoteRepacking)
         {
             string unitsNode = Enums.XMLTagName.Units.ToString();
@@ -595,70 +640,213 @@ namespace ETT_Web.DeliveryNotes
             }
             else
             {
-                var repacking = summaryItems.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
-                int maxNum = 0;
-                string maxPackagingLevel = "00";
-                //želimo pridobiti drugi največu packaging level, da bomo lahko zračunali količine in preverili če je v vsem repackingu isti izdelek
-                foreach (var item in summaryItems)
+                var repackingLst = summaryItems.Where(si => si.ProducerProductName == "Repacking").ToList();
+
+                repackingLst = repackingLst.OrderBy(p => p.SID).ToList();
+
+                string sSplitSIDNo = "";
+
+                foreach (var rpck1 in repackingLst)
                 {
-                    //izpustimo repacking summaryItem
-                    if (item.SID != repacking.SID)
+                    sSplitSIDNo += GetSIDLastNumberFromSIDString(rpck1.SID) + "-";
+                }
+                sSplitSIDNo = sSplitSIDNo.Substring(0, sSplitSIDNo.Length - 1);
+
+                foreach (var rpck in repackingLst)
+                {
+                    int iCnt = 0;
+                    int maxNum = 0;
+                    string maxPackagingLevel = "00";
+                    string repackingLevel = "00";
+                    int repackingSidNo = 0;
+                    //želimo pridobiti drugi največu packaging level, da bomo lahko zračunali količine in preverili če je v vsem repackingu isti izdelek
+                    foreach (var item in summaryItems)
                     {
-                        var level = CommonMethods.ParseInt(item.PackagingLevel);
-                        if (level > maxNum)
+                        iCnt++;
+                        if (iCnt == 1)
                         {
-                            maxNum = level;
-                            maxPackagingLevel = item.PackagingLevel;
+                            repackingLevel = item.PackagingLevel;
+                            repackingSidNo = GetSIDLastNumberFromSIDString(item.SID);
+                        }
+                        //izpustimo repacking summaryItem
+                        if (item.SID != rpck.SID)
+                        {
+                            if (CommonMethods.ParseInt(item.PackagingLevel) != CommonMethods.ParseInt(repackingLevel))
+                            {
+                                var level = CommonMethods.ParseInt(item.PackagingLevel);
+                                if (level > maxNum)
+                                {
+                                    maxNum = level;
+                                    maxPackagingLevel = item.PackagingLevel;
+                                }
+                            }
+                        }
+                    }
+
+                    //pridobimo vse summaryItems ki imajo drugi največji packaging level in so del packinga, katerih je lahko več
+                    var packagingLevelSummaryItems = summaryItems.Where(si => si.PackagingLevel == maxPackagingLevel).ToList();
+                    packagingLevelSummaryItems = packagingLevelSummaryItems.OrderBy(p => p.SID).ToList();
+                    // pridobimo zadnji item v maxLevelu
+                    SummaryItemModel itmLastMaxLevel = packagingLevelSummaryItems[packagingLevelSummaryItems.Count - 1];
+
+                    // pridobimo vse maxLevel iteme za izbrani repacking
+                    List<SummaryItemModel> lstSumeryForPacking = GetSummeryForCurrentRepacking(sSplitSIDNo, rpck, packagingLevelSummaryItems, itmLastMaxLevel);
+
+                    //pridobimo ime izdelka (vzamemo naziv do prvega presledka)
+                    string productName = lstSumeryForPacking.First().ProducerProductName.Substring(0, lstSumeryForPacking.First().ProducerProductName.IndexOf(" "));
+                    //pridobimo število summary itemsov ki vsebujejo to ime izdelka
+                    int summaryItemsCount = lstSumeryForPacking.Where(si => si.ProducerProductName.Contains(productName)).Count();
+
+                    //če je summaryItemsCount enako število objektov v packagingLevelSummaryItems potem vemo da je v Paketu Repacking samo en izdelek
+                    if (summaryItemsCount == lstSumeryForPacking.Count)
+                    {
+                        //TODO: izračunamo količino (ItemQuantity * število paketov - packagingLevelSummaryItems.Count)
+                        //V deliveryNoteItem shranimo samo en zapis ki je Repacking
+                        rpck.ProducerProductName = lstSumeryForPacking.First().ProducerProductName;
+                        rpck.ProductItemCount = lstSumeryForPacking.Sum(pis => pis.ItemQuantity);
+                        rpck.Notes = "Repacking dobavnica z enakim izdelkom";
+                        topLevelItems.Add(rpck);
+                    }
+                    else
+                    {
+                        //Obstaja več izdelkov v istem paketu (Repacking)
+                        //V deliveryNoteItem shranimo toliko zapisev kot je različnih izdelkov. UID bodo vseboavli enako, razlikovalo se bo samo naziv izdelka, količina,...
+                        //pridobimo seznam različnih izdelkov
+                        var distinctProducts = packagingLevelSummaryItems.GroupBy(p => p.ProducerProductName.Substring(0, p.ProducerProductName.IndexOf(" "))).ToList();
+                        int productCount = 1;
+                        foreach (var item in distinctProducts)
+                        {
+                            var newTopLevelItem = new SummaryItemModel();
+                            newTopLevelItem.CountOfTradeUnits = item.Count();
+                            newTopLevelItem.PSN = item.Select(i => i.PSN).First();
+                            newTopLevelItem.SID = item.Select(i => i.SID).First();
+                            newTopLevelItem.ItemQuantity = 0;
+                            newTopLevelItem.Notes = String.Format("Repacking dobavnica z različnimi izdelki - ({0}/{1})", productCount, distinctProducts.Count);
+                            newTopLevelItem.PackagingLevel = rpck.PackagingLevel;
+                            newTopLevelItem.ProducerProductCode = rpck.ProducerProductCode;
+                            newTopLevelItem.ProducerProductName = item.Key;
+                            newTopLevelItem.UnitOfMeasure = rpck.UnitOfMeasure;
+                            newTopLevelItem.ProductItemCount = item.Sum(i => i.ItemQuantity);
+                            productCount++;
+
+                            topLevelItems.Add(newTopLevelItem);
                         }
                     }
                 }
 
-                //pridobimo vse summaryItems ki imajo drugi največji packaging level
-                var packagingLevelSummaryItems = summaryItems.Where(si => si.PackagingLevel == maxPackagingLevel).ToList();
-                //pridobimo ime izdelka (vzamemo naziv do prvega presledka)
-                string productName = packagingLevelSummaryItems.First().ProducerProductName.Substring(0, packagingLevelSummaryItems.First().ProducerProductName.IndexOf(" "));
-                //pridobimo število summary itemsov ki vsebujejo to ime izdelka
-                int summaryItemsCount = packagingLevelSummaryItems.Where(si => si.ProducerProductName.Contains(productName)).Count();
 
-                //če je summaryItemsCount enako število objektov v packagingLevelSummaryItems potem vemo da je v Paketu Repacking samo en izdelek
-                if (summaryItemsCount == packagingLevelSummaryItems.Count)
-                {
-                    //TODO: izračunamo količino (ItemQuantity * število paketov - packagingLevelSummaryItems.Count)
-                    //V deliveryNoteItem shranimo samo en zapis ki je Repacking
-                    repacking.ProducerProductName = packagingLevelSummaryItems.First().ProducerProductName;
-                    repacking.ProductItemCount = packagingLevelSummaryItems.Sum(pis => pis.ItemQuantity);
-                    repacking.Notes = "Repacking dobavnica z enakim izdelkom";
-                    topLevelItems.Add(repacking);
-                }
-                else
-                {
-                    //Obstaja več izdelkov v istem paketu (Repacking)
-                    //V deliveryNoteItem shranimo toliko zapisev kot je različnih izdelkov. UID bodo vseboavli enako, razlikovalo se bo samo naziv izdelka, količina,...
-                    //pridobimo seznam različnih izdelkov
-                    var distinctProducts = packagingLevelSummaryItems.GroupBy(p => p.ProducerProductName.Substring(0, p.ProducerProductName.IndexOf(" "))).ToList();
-                    int productCount = 1;
-                    foreach (var item in distinctProducts)
-                    {
-                        var newTopLevelItem = new SummaryItemModel();
-                        newTopLevelItem.CountOfTradeUnits = item.Count();
-                        newTopLevelItem.PSN = item.Select(i => i.PSN).First();
-                        newTopLevelItem.SID = item.Select(i => i.SID).First();
-                        newTopLevelItem.ItemQuantity = 0;
-                        newTopLevelItem.Notes = String.Format("Repacking dobavnica z različnimi izdelki - ({0}/{1})", productCount, distinctProducts.Count);
-                        newTopLevelItem.PackagingLevel = repacking.PackagingLevel;
-                        newTopLevelItem.ProducerProductCode = repacking.ProducerProductCode;
-                        newTopLevelItem.ProducerProductName = item.Key;
-                        newTopLevelItem.UnitOfMeasure = repacking.UnitOfMeasure;
-                        newTopLevelItem.ProductItemCount = item.Sum(i => i.ItemQuantity);
-                        productCount++;
-
-                        topLevelItems.Add(newTopLevelItem);
-                    }
-                }
             }
 
             return topLevelItems;
         }
+
+
+        // VELIKI POPRAVEK ZARADI REPACKING
+        //private List<SummaryItemModel> FindTopLevelSummaryItems(List<SummaryItemModel> summaryItems, XElement rootUnits, bool isDeloveryNoteRepacking)
+        //{
+        //    string unitsNode = Enums.XMLTagName.Units.ToString();
+        //    string rootNode = Enums.XMLTagName.Shipment.ToString();
+        //    int unitsCount = 0;
+        //    List<SummaryItemModel> topLevelItems = new List<SummaryItemModel>();
+
+
+        //    if (!isDeloveryNoteRepacking)
+        //    {
+        //        foreach (var item in summaryItems)
+        //        {
+        //            XElement element = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).FirstOrDefault();
+        //            XElement searchElement = element;
+        //            if (searchElement != null)
+        //            {
+        //                while (true)
+        //                {
+        //                    if (searchElement.Name == unitsNode)
+        //                        unitsCount++;
+
+        //                    if (searchElement.Name == rootNode)
+        //                        break;
+
+        //                    searchElement = searchElement.Parent;
+        //                }
+
+        //                if (unitsCount == 1)
+        //                {
+        //                    int elementCount = rootUnits.Descendants().Where(x => item.PackagingLevel != "00" && (x.Attribute(Enums.XMLTagAttributeName.SID.ToString()) != null ? x.Attribute(Enums.XMLTagAttributeName.SID.ToString()).Value == item.SID : false)).Count();
+        //                    item.ProductItemCount = item.ItemQuantity * elementCount;
+        //                    topLevelItems.Add(item);
+        //                }
+
+        //                unitsCount = 0;
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        var repacking = summaryItems.Where(si => si.ProducerProductName == "Repacking").FirstOrDefault();
+        //        int maxNum = 0;
+        //        string maxPackagingLevel = "00";
+        //        //želimo pridobiti drugi največu packaging level, da bomo lahko zračunali količine in preverili če je v vsem repackingu isti izdelek
+        //        foreach (var item in summaryItems)
+        //        {
+        //            //izpustimo repacking summaryItem
+        //            if (item.SID != repacking.SID)
+        //            {
+        //                var level = CommonMethods.ParseInt(item.PackagingLevel);
+        //                if (level > maxNum)
+        //                {
+        //                    maxNum = level;
+        //                    maxPackagingLevel = item.PackagingLevel;
+        //                }
+        //            }
+        //        }
+
+        //        //pridobimo vse summaryItems ki imajo drugi največji packaging level
+        //        var packagingLevelSummaryItems = summaryItems.Where(si => si.PackagingLevel == maxPackagingLevel).ToList();
+        //        //pridobimo ime izdelka (vzamemo naziv do prvega presledka)
+        //        string productName = packagingLevelSummaryItems.First().ProducerProductName.Substring(0, packagingLevelSummaryItems.First().ProducerProductName.IndexOf(" "));
+        //        //pridobimo število summary itemsov ki vsebujejo to ime izdelka
+        //        int summaryItemsCount = packagingLevelSummaryItems.Where(si => si.ProducerProductName.Contains(productName)).Count();
+
+        //        //če je summaryItemsCount enako število objektov v packagingLevelSummaryItems potem vemo da je v Paketu Repacking samo en izdelek
+        //        if (summaryItemsCount == packagingLevelSummaryItems.Count)
+        //        {
+        //            //TODO: izračunamo količino (ItemQuantity * število paketov - packagingLevelSummaryItems.Count)
+        //            //V deliveryNoteItem shranimo samo en zapis ki je Repacking
+        //            repacking.ProducerProductName = packagingLevelSummaryItems.First().ProducerProductName;
+        //            repacking.ProductItemCount = packagingLevelSummaryItems.Sum(pis => pis.ItemQuantity);
+        //            repacking.Notes = "Repacking dobavnica z enakim izdelkom";
+        //            topLevelItems.Add(repacking);
+        //        }
+        //        else
+        //        {
+        //            //Obstaja več izdelkov v istem paketu (Repacking)
+        //            //V deliveryNoteItem shranimo toliko zapisev kot je različnih izdelkov. UID bodo vseboavli enako, razlikovalo se bo samo naziv izdelka, količina,...
+        //            //pridobimo seznam različnih izdelkov
+        //            var distinctProducts = packagingLevelSummaryItems.GroupBy(p => p.ProducerProductName.Substring(0, p.ProducerProductName.IndexOf(" "))).ToList();
+        //            int productCount = 1;
+        //            foreach (var item in distinctProducts)
+        //            {
+        //                var newTopLevelItem = new SummaryItemModel();
+        //                newTopLevelItem.CountOfTradeUnits = item.Count();
+        //                newTopLevelItem.PSN = item.Select(i => i.PSN).First();
+        //                newTopLevelItem.SID = item.Select(i => i.SID).First();
+        //                newTopLevelItem.ItemQuantity = 0;
+        //                newTopLevelItem.Notes = String.Format("Repacking dobavnica z različnimi izdelki - ({0}/{1})", productCount, distinctProducts.Count);
+        //                newTopLevelItem.PackagingLevel = repacking.PackagingLevel;
+        //                newTopLevelItem.ProducerProductCode = repacking.ProducerProductCode;
+        //                newTopLevelItem.ProducerProductName = item.Key;
+        //                newTopLevelItem.UnitOfMeasure = repacking.UnitOfMeasure;
+        //                newTopLevelItem.ProductItemCount = item.Sum(i => i.ItemQuantity);
+        //                productCount++;
+
+        //                topLevelItems.Add(newTopLevelItem);
+        //            }
+        //        }
+        //    }
+
+        //    return topLevelItems;
+        //}
+
 
         private List<Item> SetHierarchyOfAtomes(XElement rootUnits, List<SummaryItemModel> summaryItems)
         {

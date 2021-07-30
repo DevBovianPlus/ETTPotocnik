@@ -23,5 +23,6 @@ namespace ETT_DAL.Abstract
 
         List<MobileTransactionModel> GetMobileTransactionByDates(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
         List<MobileTransactionModel> GetDaySummaryMobileTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
+        List<DayTransaction> GetDaySummaryTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
     }
 }

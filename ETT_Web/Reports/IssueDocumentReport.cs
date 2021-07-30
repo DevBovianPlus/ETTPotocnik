@@ -98,6 +98,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
     {
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.DataSourceParameterBase dataSourceParameterBase1 = new DevExpress.DataAccess.DataSourceParameterBase();
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueDocumentReport));
             this.IssueDocumentDataSource = new DevExpress.Xpo.XPObjectSource(this.components);
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -623,7 +624,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             // xrLabel16
             // 
             this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IssueDocumentPositionID]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumRecordNumber()")});
             this.xrLabel16.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F);
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel16.Multiline = true;
@@ -632,6 +633,8 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel16.SizeF = new System.Drawing.SizeF(42.64331F, 23F);
             this.xrLabel16.StylePriority.UseFont = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Page;
+            this.xrLabel16.Summary = xrSummary1;
             this.xrLabel16.Text = "xrLabel16";
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -654,7 +657,7 @@ public class IssueDocumentReport : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "Ivan Potočnik s.p.\r\nZavrh pri Galiciji 7c\r\n3310 Žalec\r\nSlovenija\r\nTelefon: 03 700" +
-    "0830\r\nE-mail: potocnik.minaranje@siol.net\r\nDavčna številka SI: 46247602\r\n";
+    "0830\r\nE-mail: potocnik.miniranje@siol.net\r\nDavčna številka SI: 46247602\r\n";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrPictureBox1

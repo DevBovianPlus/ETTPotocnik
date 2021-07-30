@@ -41,7 +41,8 @@ namespace ETT_DAL.ETTPotocnik
             typeof(Settings),
             typeof(IssueDocumentStatus),
             typeof(InventoryDeliveriesLocation),
-            typeof(DeliveryNoteStatus)
+            typeof(DeliveryNoteStatus),
+            typeof(DayTransaction)
         };
         public static Type[] GetPersistentTypes()
         {

@@ -89,5 +89,17 @@
                 </div>
             </div>
         </div>
+
+         <div class="col-4">
+            <div class="row m-0 align-items-center">
+                <div class="col-12 pr-0 mr-3 pb-2">
+                    <dx:ASPxLabel ID="ASPxLabel2" runat="server" Font-Size="12px" Text="Izvedi dnevne transakcije transakcije" Font-Bold="true"></dx:ASPxLabel>
+                </div>
+                <div class="col-12 pl-0">
+                    <dx:ASPxButton ID="btnDnevneTransakcije" runat="server" Text="Dnevne transkacije" OnClick= "btnDnevneTransakcije_Click"
+                        AutoPostBack="false" UseSubmitBehavior="false"></dx:ASPxButton>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

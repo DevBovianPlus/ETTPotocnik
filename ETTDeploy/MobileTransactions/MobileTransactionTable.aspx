@@ -126,8 +126,8 @@
                     <Settings ShowVerticalScrollBar="True"
                         ShowFilterBar="Auto" ShowFilterRow="True" VerticalScrollableHeight="600"
                         ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" VerticalScrollBarMode="Auto" />
-                    <SettingsPager PageSize="50" ShowNumericButtons="true">
-                        <PageSizeItemSettings Visible="true" Items="50,80,100" Caption="Zapisi na stran : " AllItemText="Vsi">
+                    <SettingsPager PageSize="100" ShowNumericButtons="true">
+                        <PageSizeItemSettings Visible="true" Items="100,200,500" Caption="Zapisi na stran : " AllItemText="Vsi">
                         </PageSizeItemSettings>
                         <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
                     </SettingsPager>

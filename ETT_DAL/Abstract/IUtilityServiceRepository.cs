@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpo;
+using ETT_DAL.Concrete;
 using ETT_DAL.ETTPotocnik;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,8 @@ namespace ETT_DAL.Abstract
     {
         void MatchMobileTransWithInventoryDeliveries(List<InventoryDeliveriesLocation> issueDocumentTransactions = null, UnitOfWork uow = null);
         void ClearStockByIssueDocumentID(List<IssueDocumentPosition> pos, UnitOfWork uow);
+
+        List<MobileTransactionModel> SetDaySummaryTransaction(DateTime dtFrom, DateTime dtTo, Session currentSession = null);
     }
+        
 }

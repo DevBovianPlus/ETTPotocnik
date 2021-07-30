@@ -6,6 +6,8 @@ select * from InventoryDeliveriesLocation where NeedsMatching = 1 order by 1 des
 select * from InventoryDeliveries where PackagesUIDs like '%4500210317006821%'
 select * from InventoryDeliveries where PackagesUIDs like '%0100201013000689%'
 
+select * from DeliveryNote order by tsInsert desc
+
 select * from DeliveryNote where  DeliveryNoteNumber ='wwwww'
 update DeliveryNote set DeliveryNoteStatusID=4 where DeliveryNoteNumber ='wwwww'
 
@@ -42,6 +44,7 @@ select * from InventoryDeliveriesPackages  order by tsInsert desc
 select count(*) from InventoryDeliveriesLocation where NeedsMatching = 1
 select * from InventoryDeliveriesLocation where ParentID = 394921
 select * from InventoryDeliveriesLocation  order by tsUpdate desc
+select * from InventoryDeliveriesLocation  order by 1 desc
 select * from InventoryDeliveriesLocation where InventoryDeliveriesID is not null and NeedsMatching = 1
 select * from InventoryDeliveriesLocation where InventoryDeliveriesLocationID = 391929
 select * from InventoryDeliveriesLocation where InventoryDeliveriesID = 171798 order by tsInsert desc
@@ -54,7 +57,7 @@ select * from InventoryDeliveries where InventoryDeliveriesID = 201748
 select * from InventoryDeliveries order by 1 desc
 select * from InventoryDeliveries where InventoryDeliveriesID = 171798
 select * from InventoryDeliveries where AtomeUID250 = '4504210504000033'
-select * from InventoryDeliveries where PackagesUIDs like '%4504210504000033%'
+select * from InventoryDeliveries where PackagesUIDs like '%4504210531000026%'
 select * from MobileTransaction where InventoryDeliveriesLocationID = 398128
 select * from MobileTransaction where ScannedProductCode like '%2203210212000013%'
 select * from MobileTransaction where UIDCode like '%0100210511009175%'
@@ -68,6 +71,10 @@ group by InventoryDeliveriesID
 having count(*) > 1
 order by 2 desc
 
+select UIDCode, tsInsert,tsUpdateUserID, count(*) from MobileTransaction 
+group by UIDCode, tsInsert, tsUpdateUserID
+having count(*) > 1
+order by 4 desc
 
 
 SET IDENTITY_INSERT DeliveryNoteStatus ON;
@@ -83,6 +90,7 @@ update InventoryDeliveriesLocation set NeedsMatching = 1 where InventoryDeliveri
 
 select * from InventoryDeliveriesLocation where InventoryDeliveriesLocationID = 394921
 select * from DeliveryNote order by 1 desc
+select * from IssueDocument order by 1 desc
 select * from DeliveryNoteItem order by 1 desc
 select * from InventoryDeliveries order by 1 desc
 select * from InventoryDeliveries where PackagesUIDs like '%1900210209002335%'
@@ -90,3 +98,4 @@ select * from InventoryDeliveries where PackagesUIDs like '%1900210209002335%'
 select * from MobileTransaction where InventoryDeliveriesLocationID = 398128
 select * from MobileTransaction where ScannedProductCode like '%6304150219000013%'
 select * from MobileTransaction where UIDCode like '%0100210514002493%'
+select * from MobileTransaction where tsInsert between '2021-07-01' and '2021-07-18'  order by 1 desc

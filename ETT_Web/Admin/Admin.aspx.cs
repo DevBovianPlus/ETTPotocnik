@@ -36,7 +36,7 @@ namespace ETT_Web.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnMatchMobileTransactions_Click(object sender, EventArgs e)
@@ -55,9 +55,23 @@ namespace ETT_Web.Admin
             }
             catch (Exception ex)
             {
-                CommonMethods.LogThis("Err: " + ex.Message.ToString());                
+                CommonMethods.LogThis("Err: " + ex.Message.ToString());
             }
-           
+
+        }
+
+        protected void btnDnevneTransakcije_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                utilityServiceRepo.SetDaySummaryTransaction(new DateTime(2021, 1, 1), new DateTime(2021, 8, 22), session);
+                Master.NavigationBarMain.DataBind();
+            }
+            catch (Exception ex)
+            {
+                CommonMethods.LogThis("Err: " + ex.Message.ToString());
+            }
+
         }
     }
 }

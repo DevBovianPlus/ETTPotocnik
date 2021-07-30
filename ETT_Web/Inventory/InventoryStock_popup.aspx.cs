@@ -73,6 +73,7 @@ namespace ETT_Web.Inventory
             GridLookupProduct.Value = model.ProductID != null ? model.ProductID.ProductID : 0;
             GridLookupLocation.Value = model.LocationID != null ? model.LocationID.LocationID : 0;
             txtQuantity.Text = model.Quantity.ToString("N2");
+            txtQuantityPcs.Text = model.QuantityPcs.ToString("N2");
             MemoNotes.Text = model.Notes;
         }
 
@@ -102,6 +103,7 @@ namespace ETT_Web.Inventory
 
 
             model.Quantity = CommonMethods.ParseDecimal(txtQuantity.Text);
+            model.QuantityPcs = CommonMethods.ParseDecimal(txtQuantityPcs.Text);
             model.Notes = MemoNotes.Text;
 
             productRepo.SaveInventoryStock(model, PrincipalHelper.GetUserID());

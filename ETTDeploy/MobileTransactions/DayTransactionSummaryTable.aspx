@@ -89,10 +89,10 @@
                     <SettingsBehavior AllowEllipsisInText="true" />
                     <Paddings Padding="0" />
                     <Settings ShowVerticalScrollBar="True"
-                        VerticalScrollableHeight="600"
+                        ShowFilterBar="Auto" ShowFilterRow="True" VerticalScrollableHeight="600"
                         ShowFilterRowMenu="True" VerticalScrollBarStyle="Standard" VerticalScrollBarMode="Auto" />
-                    <SettingsPager PageSize="50" ShowNumericButtons="true">
-                        <PageSizeItemSettings Visible="true" Items="50,80,100" Caption="Zapisi na stran : " AllItemText="Vsi">
+                    <SettingsPager PageSize="100" ShowNumericButtons="true">
+                        <PageSizeItemSettings Visible="true" Items="100,200,500" Caption="Zapisi na stran : " AllItemText="Vsi">
                         </PageSizeItemSettings>
                         <Summary Visible="true" Text="Vseh zapisov : {2}" EmptyText="Ni zapisov" />
                     </SettingsPager>
@@ -107,7 +107,7 @@
                     <Columns>
                         <dx:GridViewDataTextColumn FieldName="RowCnt" Visible="true" Caption="#" CellStyle-HorizontalAlign="Center" AllowTextTruncationInAdaptiveMode="true" MinWidth="80" MaxWidth="80" Width="1%">
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataDateColumn Caption="Datum" FieldName="DateSum" AllowTextTruncationInAdaptiveMode="true" MinWidth="80" MaxWidth="200" Width="2%">
+                        <dx:GridViewDataDateColumn Caption="Datum" FieldName="CurrentDay" AllowTextTruncationInAdaptiveMode="true" MinWidth="80" MaxWidth="200" Width="2%">
                             <PropertiesDateEdit DisplayFormatString="dd. MMMM yyyy" />
                         </dx:GridViewDataDateColumn>
                         <dx:GridViewDataTextColumn Caption="Iz lokacije" FieldName="IzLokacije" MinWidth="200" MaxWidth="250" Width="4%">
@@ -116,13 +116,13 @@
                         <dx:GridViewDataTextColumn Caption="Na lokacijo" FieldName="NaLokacijo" MinWidth="200" MaxWidth="250" Width="4%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Produkt" MinWidth="200" MaxWidth="250" Width="10%">
+                        <dx:GridViewDataTextColumn Caption="Komercialno ime eksploziva" FieldName="Product" MinWidth="200" MaxWidth="250" Width="10%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Količina v kom" FieldName="QuantitySum" MinWidth="200" MaxWidth="250" Width="2%">
+                        <dx:GridViewDataTextColumn Caption="Količina v kom" FieldName="Quantity" MinWidth="200" MaxWidth="250" Width="2%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
-                        <dx:GridViewDataTextColumn Caption="Količina v kg" FieldName="QuantitySumKg" MinWidth="200" MaxWidth="250" Width="2%">
+                        <dx:GridViewDataTextColumn Caption="Količina v kg" FieldName="QuantityKG" MinWidth="200" MaxWidth="250" Width="2%">
                             <Settings AllowAutoFilter="True" AutoFilterCondition="Contains" />
                         </dx:GridViewDataTextColumn>
                     </Columns>

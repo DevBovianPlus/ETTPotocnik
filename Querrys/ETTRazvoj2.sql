@@ -36,3 +36,5 @@ select UIDCode, tsInsert,tsUpdateUserID, count(*) from MobileTransaction
 group by UIDCode, tsInsert, tsUpdateUserID
 having count(*) > 1
 order by 4 desc
+
+DBCC SHRINKDATABASE (Grafolit55SI);

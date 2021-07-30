@@ -148,6 +148,10 @@
     <Compile Include="ETTPotocnikCode\ContactPerson.Designer.cs">
       <DependentUpon>ContactPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="ETTPotocnikCode\DayTransaction.cs" />
+    <Compile Include="ETTPotocnikCode\DayTransaction.Designer.cs">
+      <DependentUpon>DayTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="ETTPotocnikCode\DeliveryNote.cs" />
     <Compile Include="ETTPotocnikCode\DeliveryNote.Designer.cs">
       <DependentUpon>DeliveryNote.cs</DependentUpon>
